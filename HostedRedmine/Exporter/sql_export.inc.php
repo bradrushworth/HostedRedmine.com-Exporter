@@ -25,7 +25,7 @@ class SQL_Export
 		
 		$sa = explode(":", $server);
 		$this->server = $sa[0];
-		$this->port = $sa[1];
+		$this->port = @$sa[1];
 		unset($sa);
 		
 		$this->cnx = mysql_connect($this->server, $this->user, $this->password) or $this->error(mysql_error());

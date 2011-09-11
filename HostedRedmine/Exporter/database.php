@@ -1,36 +1,16 @@
 <?php
 
-$server = "localhost";	  //Port is not really necessary
-$username = "root"; 	   //Username for MySQL server
-$password = "bonger84"; 		   //Password for MySQL server
-$db = "hostedredmine";			  //Name of database 
+require("sql.inc.php");
+require("sql_export.inc.php");
 
-if (PHP_SAPI === 'cli') {
-	if (count($argv)==2) {
-		$userId = $argv[1];
-	}
-}
 
-if (!isset($userId)) {
-	die("You did not set the input User ID!\n");
-}
-
-// Connecting, selecting database
-$link = mysqli_connect($server, $username, $password) or die('Could not connect: ' . mysql_error());
-$link->select_db($db) or die("Could not select database!\n");
-
-// Escape inputs
-$userId = $link->real_escape_string($userId);
-
+/*
 // Find relevant user
 $query = "SELECT * FROM `users` where `id`='$userId'";
-$result = $link->query($query) or die("Query failed: ".$link->error."\n");
-
-
+$result = mysql_query($query) or die("Query failed: ".mysql_error()."\n");
 
 // Printing results
-/*
-while ($row = mysqli_fetch_array($result, MYSQL_ASSOC)) {
+while ($row = mysql_fetch_array($result, MYSQL_ASSOC)) {
 	foreach ($row as $key=>$val) {
 		echo "$key => $val\n";
 	}
@@ -38,11 +18,12 @@ while ($row = mysqli_fetch_array($result, MYSQL_ASSOC)) {
 }
 */
 
+
 // Find projects used by user
 $query = "SELECT `project_id` FROM `members` where `user_id`='$userId'";
-$result = $link->query($query) or die("Query projects failed: ".$link->error."\n");
+$result = mysql_query($query) or die("Query members failed: ".mysql_error()."\n");
 $projects = "";
-while ($row = mysqli_fetch_array($result, MYSQL_NUM)) {
+while ($row = mysql_fetch_array($result, MYSQL_NUM)) {
 	$projects .= $row[0] . ",";
 	//echo "projects: {$row[0]}\n";
 }
@@ -52,9 +33,9 @@ if (!empty($projects)) {
 	
 	// Find wikis by project
 	$query = "SELECT `id` FROM `wikis` where `project_id` IN ($projects)";
-	$result = $link->query($query) or die("Query wikis failed: ".$link->error."\n");
+	$result = mysql_query($query) or die("Query wikis failed: ".mysql_error()."\n");
 	$wikis = "";
-	while ($row = mysqli_fetch_array($result, MYSQL_NUM)) {
+	while ($row = mysql_fetch_array($result, MYSQL_NUM)) {
 		$wikis .= $row[0] . ",";
 		//echo "wikis: {$row[0]}\n";
 	}
@@ -62,9 +43,9 @@ if (!empty($projects)) {
 	
 	// Find issues by project
 	$query = "SELECT `id` FROM `issues` where `project_id` IN ($projects)";
-	$result = $link->query($query) or die("Query issues failed: ".$link->error."\n");
+	$result = mysql_query($query) or die("Query issues failed: ".mysql_error()."\n");
 	$issues = "";
-	while ($row = mysqli_fetch_array($result, MYSQL_NUM)) {
+	while ($row = mysql_fetch_array($result, MYSQL_NUM)) {
 		$issues .= $row[0] . ",";
 		//echo "issues: {$row[0]}\n";
 	}
@@ -72,9 +53,9 @@ if (!empty($projects)) {
 	
 	// Find news by project
 	$query = "SELECT `id` FROM `news` where `project_id` IN ($projects)";
-	$result = $link->query($query) or die("Query news failed: ".$link->error."\n");
+	$result = mysql_query($query) or die("Query news failed: ".mysql_error()."\n");
 	$news = "";
-	while ($row = mysqli_fetch_array($result, MYSQL_NUM)) {
+	while ($row = mysql_fetch_array($result, MYSQL_NUM)) {
 		$news .= $row[0] . ",";
 		//echo "news: {$row[0]}\n";
 	}
@@ -82,9 +63,9 @@ if (!empty($projects)) {
 	
 	// Find repositories by project
 	$query = "SELECT `id` FROM `repositories` where `project_id` IN ($projects)";
-	$result = $link->query($query) or die("Query repositories failed: ".$link->error."\n");
+	$result = mysql_query($query) or die("Query repositories failed: ".mysql_error()."\n");
 	$repositories = "";
-	while ($row = mysqli_fetch_array($result, MYSQL_NUM)) {
+	while ($row = mysql_fetch_array($result, MYSQL_NUM)) {
 		$repositories .= $row[0] . ",";
 		//echo "repositories: {$row[0]}\n";
 	}
@@ -96,9 +77,9 @@ if (!empty($repositories)) {
 
 	// Find changesets by project
 	$query = "SELECT `id` FROM `changesets` where `repository_id` IN ($repositories)";
-	$result = $link->query($query) or die("Query changesets failed: ".$link->error."\n");
+	$result = mysql_query($query) or die("Query changesets failed: ".mysql_error()."\n");
 	$changesets = "";
-	while ($row = mysqli_fetch_array($result, MYSQL_NUM)) {
+	while ($row = mysql_fetch_array($result, MYSQL_NUM)) {
 		$changesets .= $row[0] . ",";
 		//echo "changesets: {$row[0]}\n";
 	}
@@ -110,36 +91,19 @@ if (!empty($projects)) {
 	
 	// Find versions by project
 	$query = "SELECT `id` FROM `versions` where `project_id` IN ($projects)";
-	$result = $link->query($query) or die("Query versions failed: ".$link->error."\n");
+	$result = mysql_query($query) or die("Query versions failed: ".mysql_error()."\n");
 	$versions = "";
-	while ($row = mysqli_fetch_array($result, MYSQL_NUM)) {
+	while ($row = mysql_fetch_array($result, MYSQL_NUM)) {
 		$versions .= $row[0] . ",";
 		//echo "versions: {$row[0]}\n";
 	}
 	$versions = substr($versions, 0, -1);
 	
-	// Find attachments
-	$query = "SELECT `id` FROM `attachments` where ";
-	if (!empty($documents)) $query .= "(`container_type`='Document' AND `container_id` IN ($documents)) OR ";
-	if (!empty($wikis))     $query .= "(`container_type`='WikiPage' AND `container_id` IN ($wikis)) OR ";
-	if (!empty($versions))  $query .= "(`container_type`='Version' AND `container_id` IN ($versions)) OR ";
-	if (!empty($projects))  $query .= "(`container_type`='Project' AND `container_id` IN ($projects)) OR ";
-	if (!empty($issues))    $query .= "(`container_type`='Issue' AND `container_id` IN ($issues)) OR ";
-	if (!empty($messages))  $query .= "(`container_type`='Message' AND `container_id` IN ($messages)) OR ";
-	$query .= "FALSE";
-	$result = $link->query($query) or die("Query attachments failed: ".$link->error."\n");
-	$attachments = "";
-	while ($row = mysqli_fetch_array($result, MYSQL_NUM)) {
-		$attachments .= $row[0] . ",";
-		//echo "attachments: {$row[0]}\n";
-	}
-	$attachments = substr($attachments, 0, -1);
-	
 	// Find boards by project
 	$query = "SELECT `id` FROM `boards` where `project_id` IN ($projects)";
-	$result = $link->query($query) or die("Query boards failed: ".$link->error."\n");
+	$result = mysql_query($query) or die("Query boards failed: ".mysql_error()."\n");
 	$boards = "";
-	while ($row = mysqli_fetch_array($result, MYSQL_NUM)) {
+	while ($row = mysql_fetch_array($result, MYSQL_NUM)) {
 		$boards .= $row[0] . ",";
 		//echo "boards: {$row[0]}\n";
 	}
@@ -149,9 +113,9 @@ if (!empty($projects)) {
 		
 		// Find messages by project
 		$query = "SELECT `id` FROM `messages` where `board_id` IN ($boards)";
-		$result = $link->query($query) or die("Query messages failed: ".$link->error."\n");
+		$result = mysql_query($query) or die("Query messages failed: ".mysql_error()."\n");
 		$messages = "";
-		while ($row = mysqli_fetch_array($result, MYSQL_NUM)) {
+		while ($row = mysql_fetch_array($result, MYSQL_NUM)) {
 			$messages .= $row[0] . ",";
 			//echo "messages: {$row[0]}\n";
 		}
@@ -165,9 +129,9 @@ if (!empty($projects)) {
 		if (!empty($wikis))    $query .= "(`watchable_type`='WikiPage' AND `watchable_id` IN ($wikis)) OR ";
 		if (!empty($news))     $query .= "(`watchable_type`='News' AND `watchable_id` IN ($news)) OR ";
 		$query .= "FALSE";
-		$result = $link->query($query) or die("Query watchers failed: ".$link->error."\n");
+		$result = mysql_query($query) or die("Query watchers failed: ".mysql_error()."\n");
 		$watchers = "";
-		while ($row = mysqli_fetch_array($result, MYSQL_NUM)) {
+		while ($row = mysql_fetch_array($result, MYSQL_NUM)) {
 			$watchers .= $row[0] . ",";
 			//echo "watchers: {$row[0]}\n";
 		}
@@ -175,13 +139,40 @@ if (!empty($projects)) {
 		
 	}
 	
+	// Find documents by project
+	$query = "SELECT `id` FROM `documents` where `project_id` IN ($projects)";
+	$result = mysql_query($query) or die("Query documents failed: ".mysql_error()."\n");
+	$documents = "";
+	while ($row = mysql_fetch_array($result, MYSQL_NUM)) {
+		$documents .= $row[0] . ",";
+		//echo "documents: {$row[0]}\n";
+	}
+	$documents = substr($documents, 0, -1);
+	
+	// Find attachments
+	$query = "SELECT `id` FROM `attachments` where ";
+	if (!empty($documents)) $query .= "(`container_type`='Document' AND `container_id` IN ($documents)) OR ";
+	if (!empty($wikis))     $query .= "(`container_type`='WikiPage' AND `container_id` IN ($wikis)) OR ";
+	if (!empty($versions))  $query .= "(`container_type`='Version' AND `container_id` IN ($versions)) OR ";
+	if (!empty($projects))  $query .= "(`container_type`='Project' AND `container_id` IN ($projects)) OR ";
+	if (!empty($issues))    $query .= "(`container_type`='Issue' AND `container_id` IN ($issues)) OR ";
+	if (!empty($messages))  $query .= "(`container_type`='Message' AND `container_id` IN ($messages)) OR ";
+	$query .= "FALSE";
+	$result = mysql_query($query) or die("Query attachments failed: ".mysql_error()."\n");
+	$attachments = "";
+	while ($row = mysql_fetch_array($result, MYSQL_NUM)) {
+		$attachments .= $row[0] . ",";
+		//echo "attachments: {$row[0]}\n";
+	}
+	$attachments = substr($attachments, 0, -1);
+	
 	// Find members used by project
 	// Find users used by project
 	$query = "SELECT `id`, `user_id` FROM `members` where `project_id` IN ($projects)";
-	$result = $link->query($query) or die("Query projects failed: ".$link->error."\n");
+	$result = mysql_query($query) or die("Query members failed: ".mysql_error()."\n");
 	$members = "";
 	$users = "2,"; // We need the Anonymous user
-	while ($row = mysqli_fetch_array($result, MYSQL_NUM)) {
+	while ($row = mysql_fetch_array($result, MYSQL_NUM)) {
 		$members .= $row[0] . ",";
 		$users .= $row[1] . ",";
 		//echo "members: {$row[0]}\n";
@@ -195,10 +186,10 @@ if (!empty($projects)) {
 	$query = "SELECT `id`, `user_id` FROM `journals` where ";
 	if (!empty($issues)) $query .= "(`journalized_type`='Issue' AND `journalized_id` IN ($issues)) OR ";
 	$query .= "FALSE";
-	$result = $link->query($query) or die("Query journals failed: ".$link->error."\n");
+	$result = mysql_query($query) or die("Query journals failed: ".mysql_error()."\n");
 	$journals = "";
 	//$users is already initalised
-	while ($row = mysqli_fetch_array($result, MYSQL_NUM)) {
+	while ($row = mysql_fetch_array($result, MYSQL_NUM)) {
 		$journals .= $row[0] . ",";
 		$users .= $row[1] . ",";
 		//echo "journals: {$row[0]}\n";
@@ -216,7 +207,6 @@ if (!empty($projects)) {
 //$backupFile = "hostedredmine_user_{$userId}_date_".date("Ymd_Hm").".sql";
 
 //Instantiate the SQL_Export class
-require("SQL_Export.php");
 $e = new SQL_Export($server, $username, $password, $db);
 
 // Define the database tables
@@ -246,7 +236,7 @@ foreach ($tables as $t) {
 			if (!empty($news)) $data = $e->get_data($t, "`commented_id` IN ($news)");
 			break;
 		case 'documents':
-			if (!empty($projects)) $data = $e->get_data($t, "`project_id` IN ($projects)");
+			if (!empty($documents)) $data = $e->get_data($t, "`id` IN ($documents)");
 			break;
 		case 'enabled_modules':
 			if (!empty($projects)) $data = $e->get_data($t, "`project_id` IN ($projects)");
@@ -338,8 +328,5 @@ foreach ($tables as $t) {
 	}
 	echo "\n###################\n# Dumping table `$t`\n###################\n\n$header\n$data\n";
 }
-
-// Closing connection
-$link->close();
 
 ?>
