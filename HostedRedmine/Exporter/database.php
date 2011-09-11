@@ -258,7 +258,7 @@ foreach ($tables as $t) {
 			if (!empty($projects)) $data = $e->get_data($t, "`project_id` IN ($projects)");
 			break;
 		case 'custom_values':
-			if (!empty($custom_values)) $data = $e->get_data($t, "`id` IN ($custom_values}");
+			if (!empty($custom_values)) $data = $e->get_data($t, "`id` IN ($custom_values)");
 			break;
 		case 'documents':
 			if (!empty($documents)) $data = $e->get_data($t, "`id` IN ($documents)");
