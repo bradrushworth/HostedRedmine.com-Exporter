@@ -205,9 +205,9 @@ if (!empty($projects)) {
 	
 	// Find custom_values
 	$query = "SELECT `id` FROM `custom_values` where ";
-	if (!empty($issues))   $query .= "(`container_type`='Issue' AND `container_id` IN ($issues)) OR ";
-	if (!empty($users))    $query .= "(`container_type`='Principal' AND `container_id` IN ($users)) OR ";
-	if (!empty($projects)) $query .= "(`container_type`='Project' AND `container_id` IN ($projects)) OR ";
+	if (!empty($issues))   $query .= "(`customized_type`='Issue' AND `customized_id` IN ($issues)) OR ";
+	if (!empty($users))    $query .= "(`customized_type`='Principal' AND `customized_id` IN ($users)) OR ";
+	if (!empty($projects)) $query .= "(`customized_type`='Project' AND `customized_id` IN ($projects)) OR ";
 	$query .= "FALSE";
 	$result = mysql_query($query) or die("Query custom_values failed: ".mysql_error()."\n");
 	$custom_values = "";
