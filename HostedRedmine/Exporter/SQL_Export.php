@@ -67,27 +67,7 @@ class SQL_Export
 	
 	function create_header($table)
 	{
-		$fields = mysql_list_fields($this->db, $table, $this->cnx);
-		$h = "CREATE TABLE `" . $table . "` (\n";
-		
-		for($i=0; $i<mysql_num_fields($fields); $i++)
-		{
-			$name = mysql_field_name($fields, $i);
-			$flags = mysql_field_flags($fields, $i);
-			$len = mysql_field_len($fields, $i);
-			$type = mysql_field_type($fields, $i);
-			
-			$h .= "`$name` $type($len) $flags,\n";
-			
-			//if(strpos($flags, "primary_key")) {
-			//	$pkey = " PRIMARY KEY (`$name`)\n";
-			//}
-		}
-		
-		$h = substr($h, 0, -2);
-		$h .= "\n";
-		$h .= ") TYPE=MyISAM;\n\n";
-		return($h);
+		return(`mysqldump -u {$this->user} -p{$this->password} {$this->db} --tables {$table} --no-data`);
 	}
 	
 	function get_data($table, $conditions = "TRUE")
@@ -101,7 +81,7 @@ class SQL_Export
 			
 			for($i=0; $i<sizeof($cr); $i++)
 			{
-				if($cr[$i] == '') {
+				if(is_null($cr[$i])) {
 					$d .= 'NULL,';
 				} else {
 					$d .= "'".mysql_real_escape_string($cr[$i])."',";

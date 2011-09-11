@@ -38,8 +38,6 @@ while ($row = mysqli_fetch_array($result, MYSQL_ASSOC)) {
 }
 */
 
-
-
 // Find projects used by user
 $query = "SELECT `project_id` FROM `members` where `user_id`='$userId'";
 $result = $link->query($query) or die("Query projects failed: ".$link->error."\n");
@@ -49,20 +47,8 @@ while ($row = mysqli_fetch_array($result, MYSQL_NUM)) {
 	//echo "projects: {$row[0]}\n";
 }
 $projects = substr($projects, 0, -1);
-//echo "\n";
 
 if (!empty($projects)) {
-
-	// Find users used by project
-	$query = "SELECT `user_id` FROM `members` where `project_id` IN ($projects)";
-	$result = $link->query($query) or die("Query users failed: ".$link->error."\n");
-	$users = "";
-	while ($row = mysqli_fetch_array($result, MYSQL_NUM)) {
-		$users .= $row[0] . ",";
-		//echo "users: {$row[0]}\n";
-	}
-	$users = substr($users, 0, -1);
-	//echo "\n";
 	
 	// Find wikis by project
 	$query = "SELECT `id` FROM `wikis` where `project_id` IN ($projects)";
@@ -73,7 +59,6 @@ if (!empty($projects)) {
 		//echo "wikis: {$row[0]}\n";
 	}
 	$wikis = substr($wikis, 0, -1);
-	//echo "\n";
 	
 	// Find issues by project
 	$query = "SELECT `id` FROM `issues` where `project_id` IN ($projects)";
@@ -84,7 +69,6 @@ if (!empty($projects)) {
 		//echo "issues: {$row[0]}\n";
 	}
 	$issues = substr($issues, 0, -1);
-	//echo "\n";
 	
 	// Find news by project
 	$query = "SELECT `id` FROM `news` where `project_id` IN ($projects)";
@@ -95,7 +79,6 @@ if (!empty($projects)) {
 		//echo "news: {$row[0]}\n";
 	}
 	$news = substr($news, 0, -1);
-	//echo "\n";
 	
 	// Find repositories by project
 	$query = "SELECT `id` FROM `repositories` where `project_id` IN ($projects)";
@@ -106,7 +89,6 @@ if (!empty($projects)) {
 		//echo "repositories: {$row[0]}\n";
 	}
 	$repositories = substr($repositories, 0, -1);
-	//echo "\n";
 	
 }
 
@@ -121,7 +103,6 @@ if (!empty($repositories)) {
 		//echo "changesets: {$row[0]}\n";
 	}
 	$changesets = substr($changesets, 0, -1);
-	//echo "\n";
 	
 }
 
@@ -136,7 +117,6 @@ if (!empty($projects)) {
 		//echo "versions: {$row[0]}\n";
 	}
 	$versions = substr($versions, 0, -1);
-	//echo "\n";
 	
 	// Find attachments
 	$query = "SELECT `id` FROM `attachments` where ";
@@ -154,7 +134,6 @@ if (!empty($projects)) {
 		//echo "attachments: {$row[0]}\n";
 	}
 	$attachments = substr($attachments, 0, -1);
-	//echo "\n";
 	
 	// Find boards by project
 	$query = "SELECT `id` FROM `boards` where `project_id` IN ($projects)";
@@ -165,7 +144,6 @@ if (!empty($projects)) {
 		//echo "boards: {$row[0]}\n";
 	}
 	$boards = substr($boards, 0, -1);
-	//echo "\n";
 	
 	if (!empty($boards)) {
 		
@@ -178,8 +156,6 @@ if (!empty($projects)) {
 			//echo "messages: {$row[0]}\n";
 		}
 		$messages = substr($messages, 0, -1);
-		//echo "\n";
-		
 		
 		// Find watchers
 		$query = "SELECT `id` FROM `watchers` where ";
@@ -196,22 +172,43 @@ if (!empty($projects)) {
 			//echo "watchers: {$row[0]}\n";
 		}
 		$watchers = substr($watchers, 0, -1);
-		//echo "\n";
 		
 	}
 	
+	// Find members used by project
+	// Find users used by project
+	$query = "SELECT `id`, `user_id` FROM `members` where `project_id` IN ($projects)";
+	$result = $link->query($query) or die("Query projects failed: ".$link->error."\n");
+	$members = "";
+	$users = "2,"; // We need the Anonymous user
+	while ($row = mysqli_fetch_array($result, MYSQL_NUM)) {
+		$members .= $row[0] . ",";
+		$users .= $row[1] . ",";
+		//echo "members: {$row[0]}\n";
+		//echo "users: {$row[1]}\n";
+	}
+	$members = substr($members, 0, -1);
+	$users = substr($users, 0, -1);
+
+	// Find journals
+	// Add contributing users that are not members
+	$query = "SELECT `id`, `user_id` FROM `journals` where ";
+	if (!empty($issues)) $query .= "(`journalized_type`='Issue' AND `journalized_id` IN ($issues)) OR ";
+	$query .= "FALSE";
+	$result = $link->query($query) or die("Query journals failed: ".$link->error."\n");
+	$journals = "";
+	//$users is already initalised
+	while ($row = mysqli_fetch_array($result, MYSQL_NUM)) {
+		$journals .= $row[0] . ",";
+		$users .= $row[1] . ",";
+		//echo "journals: {$row[0]}\n";
+		//echo "users: {$row[1]}\n";
+	}
+	$journals = substr($journals, 0, -1);
+	$users = substr($users, 0, -1);
+	
 }
 
-// Find journals by project
-$query = "SELECT `id` FROM `journals` where `user_id` IN ($users)";
-$result = $link->query($query) or die("Query journals failed: ".$link->error."\n");
-$journals = "";
-while ($row = mysqli_fetch_array($result, MYSQL_NUM)) {
-	$journals .= $row[0] . ",";
-	//echo "journals: {$row[0]}\n";
-}
-$journals = substr($journals, 0, -1);
-//echo "\n";
 
 
 
@@ -257,6 +254,9 @@ foreach ($tables as $t) {
 		case 'gitosis_public_keys':
 			$data = $e->get_data($t, "FALSE");
 			break;
+		case 'groups_users':
+			if (!empty($users)) $data = $e->get_data($t, "`user_id` IN ($users)");
+			break;
 		case 'issues':
 			if (!empty($issues)) $data = $e->get_data($t, "`id` IN ($issues)");
 			break;
@@ -273,10 +273,10 @@ foreach ($tables as $t) {
 			if (!empty($journals)) $data = $e->get_data($t, "`journal_id` IN ($journals)");
 			break;
 		case 'members':
-			if (!empty($projects)) $data = $e->get_data($t, "`project_id` IN ($projects) OR `user_id` IN ($users)");
+			if (!empty($members)) $data = $e->get_data($t, "`id` IN ($members)");
 			break;
 		case 'member_roles':
-			if (!empty($users)) $data = $e->get_data($t, "`member_id` IN ($users)");
+			if (!empty($members)) $data = $e->get_data($t, "`member_id` IN ($members)");
 			break;
 		case 'messages':
 			if (!empty($messages)) $data = $e->get_data($t, "`id` IN ($messages)");
