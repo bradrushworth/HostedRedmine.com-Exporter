@@ -240,6 +240,12 @@ foreach ($tables as $t) {
 		case 'comments':
 			if (!empty($news)) $data = $e->get_data($t, "`commented_id` IN ($news)");
 			break;
+		case 'custom_fields_projects':
+			if (!empty($projects)) $data = $e->get_data($t, "`project_id` IN ($projects)");
+			break;
+		case 'custom_values':
+			$data = $e->get_data($t, "`customized_type` != 'Principal'");
+			break;
 		case 'documents':
 			if (!empty($documents)) $data = $e->get_data($t, "`id` IN ($documents)");
 			break;
