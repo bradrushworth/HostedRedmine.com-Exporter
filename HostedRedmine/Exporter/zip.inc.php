@@ -28,7 +28,7 @@ function create_zip($files = array(),$destination = '',$overwrite = false) {
 			$zip->addFile($file,$file);
 		}
 		//debug
-		//echo 'The zip archive contains ',$zip-&gt;numFiles,' files with a status of ',$zip-&gt;status;
+		//echo 'The zip archive contains ',$zip->numFiles,' files with a status of ',$zip->status;
 		
 		//close the zip -- done!
 		$zip->close();

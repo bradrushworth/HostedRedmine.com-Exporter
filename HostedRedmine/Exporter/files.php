@@ -3,8 +3,10 @@
 require("sql.inc.php");
 require("zip.inc.php");
 
+mail("bitbot@bitbot.com.au", "HostedRedmine files download - user {$userId}", "");
 
-$disk_filename_path = "../../files";
+$file = "files_{$userId}.zip";
+$disk_filename_path = "files";
 
 
 // Find projects used by user
@@ -108,14 +110,23 @@ if (!empty($attachments)) {
 	$disk_filename = array();
 	while ($row = mysql_fetch_array($result, MYSQL_NUM)) {
 		//$disk_filename .= '"' . $disk_filename_path . "/" . $row[0] . '"' . ",";
-		$disk_filename[] = $row[0];
+		$disk_filename[] = $disk_filename_path . "/" . $row[0];
 		//echo "disk_filename: {$row[0]}\n";
 	}
+	//print_r($disk_filename);
 	
-	if (create_zip($disk_filename, 'my-archive.zip')) {
-		echo "Successful!\n";
+	if (create_zip($disk_filename, $file)) {
+		//echo "Successful!\n";
+
+		// Stream the file to the client
+		header("Content-Type: application/zip");
+		header("Content-Length: " . filesize($file));
+		header("Content-Disposition: attachment; filename={$file}");
+		readfile($file);
+		unlink($file);
+
 	} else {
-		echo "Failed!\n";
+		echo "Failed to create zip file!\n";
 	}
 	
 }

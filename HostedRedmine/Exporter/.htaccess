@@ -1,0 +1,16 @@
+
+# BR 2011-09-11
+AddType application/x-httpd-php .php
+AddType application/x-httpd-php-source .phps
+
+order deny,allow
+deny from all
+
+<Files database.php>
+  allow from all
+</Files>
+
+<Files files.php>
+  allow from all
+</Files>
+

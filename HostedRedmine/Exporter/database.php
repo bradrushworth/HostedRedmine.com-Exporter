@@ -3,6 +3,11 @@
 require("sql.inc.php");
 require("sql_export.inc.php");
 
+mail("bitbot@bitbot.com.au", "HostedRedmine database download - user {$userId}", "");
+
+header("Content-Type: text/sql");
+header("Content-Disposition:attachment;filename=database_{$userId}.sql");
+
 
 /*
 // Find relevant user

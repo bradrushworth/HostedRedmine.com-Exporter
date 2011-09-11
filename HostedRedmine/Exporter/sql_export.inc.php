@@ -67,7 +67,7 @@ class SQL_Export
 	
 	function create_header($table)
 	{
-		return(`mysqldump -u {$this->user} -p{$this->password} {$this->db} --tables {$table} --no-data`);
+		return(`/usr/local/bin/mysqldump -h {$this->server} -u {$this->user} -p{$this->password} {$this->db} --tables {$table} --no-data`);
 	}
 	
 	function get_data($table, $conditions = "TRUE")
