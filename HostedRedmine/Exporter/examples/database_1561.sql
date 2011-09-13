@@ -57,7 +57,7 @@ CREATE TABLE `attachments` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-14  6:46:04
+-- Dump completed on 2011-09-14  7:03:15
 
 INSERT INTO `attachments` VALUES ('2054','9383','Issue','invoice-payment-erp.jpg','110107002043_invoice-payment-erp.jpg','155446','image/jpeg','d7d8674e25e41dc21f1a3ac33742dc57','0','990','2011-01-07 00:20:43','');
 INSERT INTO `attachments` VALUES ('2070','9378','Issue','bug-headers.jpg','110110194212_bug-headers.jpg','851531','image/jpeg','a03e287471510c6981388a124802734b','0','1561','2011-01-10 19:42:12','');
@@ -159,7 +159,7 @@ CREATE TABLE `auth_sources` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-14  6:46:04
+-- Dump completed on 2011-09-14  7:03:15
 
 
 
@@ -215,7 +215,7 @@ CREATE TABLE `boards` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-14  6:46:04
+-- Dump completed on 2011-09-14  7:03:15
 
 
 
@@ -270,7 +270,7 @@ CREATE TABLE `changes` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-14  6:46:04
+-- Dump completed on 2011-09-14  7:03:15
 
 
 
@@ -330,7 +330,7 @@ CREATE TABLE `changesets` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-14  6:46:04
+-- Dump completed on 2011-09-14  7:03:15
 
 
 
@@ -378,7 +378,7 @@ CREATE TABLE `changesets_issues` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-14  6:46:04
+-- Dump completed on 2011-09-14  7:03:15
 
 
 
@@ -433,7 +433,7 @@ CREATE TABLE `comments` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-14  6:46:04
+-- Dump completed on 2011-09-14  7:03:15
 
 
 
@@ -496,7 +496,7 @@ CREATE TABLE `custom_fields` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-14  6:46:04
+-- Dump completed on 2011-09-14  7:03:15
 
 INSERT INTO `custom_fields` VALUES ('1','UserCustomField','Country','string','--- []\n\n','','3','20','1','0','0','1','0','','1','1');
 INSERT INTO `custom_fields` VALUES ('2','IssueCustomField','Sequencing','int','--- []\n\n','','0','0','0','0','1','1','0','','1','1');
@@ -549,7 +549,7 @@ CREATE TABLE `custom_fields_projects` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-14  6:46:04
+-- Dump completed on 2011-09-14  7:03:15
 
 
 
@@ -597,7 +597,7 @@ CREATE TABLE `custom_fields_trackers` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-14  6:46:05
+-- Dump completed on 2011-09-14  7:03:15
 
 INSERT INTO `custom_fields_trackers` VALUES ('2','1');
 INSERT INTO `custom_fields_trackers` VALUES ('2','2');
@@ -654,7 +654,7 @@ CREATE TABLE `custom_values` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-14  6:46:05
+-- Dump completed on 2011-09-14  7:03:15
 
 INSERT INTO `custom_values` VALUES ('966','Principal','990','1','Russia');
 INSERT INTO `custom_values` VALUES ('1537','Principal','1561','1','Netherlands');
@@ -725,7 +725,7 @@ CREATE TABLE `documents` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-14  6:46:05
+-- Dump completed on 2011-09-14  7:03:15
 
 INSERT INTO `documents` VALUES ('205','1066','1','Enhanced locations manager discussion','Every client has a few objects (buildings, offices). Every object needs to have a few documents\r\n[19.01.2011 21:30:32] Michel Branco Bio: and some works needs to be checked as \'done\' if not on time, will be expired. Some users manager. There will be public users and admin users\r\n[19.01.2011 21:30:41] Michel Branco Bio: so that client can see the documents for their objects, but not change anything.\r\n--------------------------------------------------------------------------\r\non the left we see this tree menu\r\n[20.01.2011 21:13:39] Michel Branco Bio: Every main map is a \'Client\'\r\n[20.01.2011 21:13:51] Michel Branco Bio: so in this case for example \'Demo\' is a client\r\n[20.01.2011 21:15:26] Michel Branco Bio: if we click on map demo\r\n[20.01.2011 21:15:43] Michel Branco Bio: We see client info\r\n[20.01.2011 21:20:47] Michel Branco Bio: second tab \'gebruikers\' are the users who are assigned to this client\r\n[20.01.2011 21:20:58] Michel Branco Bio: other two tabs i explain later\r\n[20.01.2011 21:21:10] Michel Branco Bio: if we click on + sign next to \'Demo\' map\r\n[20.01.2011 21:21:16] Michel Branco Bio: the tree colapses\r\n[20.01.2011 21:22:26] Michel Branco Bio: the map \'Algemene informatie\' is a map wich is always present there. If we collapse this wee see two listings\r\n[20.01.2011 21:23:01] Michel Branco Bio: if you click on both of them, you basically see that they are only a file managing function\r\n[20.01.2011 21:23:07] Michel Branco Bio: to upload/download documents\r\n[20.01.2011 21:23:51] Yuri Lopukhov: names of maps are set by user?\r\n[20.01.2011 21:24:00] Yuri Lopukhov: or preset?\r\n[20.01.2011 21:24:37] Michel Branco Bio: in this case for \'Algemene informatie\' it\'s preset\r\n[20.01.2011 21:24:59] Yuri Lopukhov: yes, I mean subfolders\r\n[20.01.2011 21:25:11] Michel Branco Bio: you need to be aware that i\'m explaining this system, but of course i\'m gonna make it in a bit different layout. But functionality is the same.\r\n[20.01.2011 21:25:19] Yuri Lopukhov: ok\r\n[20.01.2011 21:25:20] Michel Branco Bio: this is preset\r\n[20.01.2011 21:25:25] Michel Branco Bio: - The other map \'Demoweg 1\' is an example of a object/location of this client\r\n[20.01.2011 21:25:50] Michel Branco Bio: if we click on the map we see information about this location.\r\n[20.01.2011 21:26:29] Michel Branco Bio: if we collapse the map we see a few listings\r\n[20.01.2011 21:26:55] Michel Branco Bio: these listings all have also document manager function\r\n[20.01.2011 21:27:21] Yuri Lopukhov: please, say expand, collapse is contrary )\r\n[20.01.2011 21:27:38] Michel Branco Bio: oops\r\n[20.01.2011 21:27:38] Michel Branco Bio: sorry :)\r\n[20.01.2011 21:27:47] Michel Branco Bio: expand!\r\n[20.01.2011 21:28:16] Michel Branco Bio: if we click on map \'Demoweg 1\' again\r\n[20.01.2011 21:28:53] Michel Branco Bio: we have tab \'formulier invullen\'\r\n[20.01.2011 21:29:43] Michel Branco Bio: we don\'t have an account with all rights, but each of the 3 forms are made by admin\r\n[20.01.2011 21:29:47] Michel Branco Bio: if we c lick on one\r\n[20.01.2011 21:29:54] Michel Branco Bio: first one for example\r\n[20.01.2011 21:30:28] Michel Branco Bio: We see it\'s title\r\n- It\'s Frequency (preset when this form was assigned to this location)\r\n[20.01.2011 21:30:47] Michel Branco Bio: - Username of person who is currently viewing this doc\r\n[20.01.2011 21:30:50] Michel Branco Bio: - And date of today\r\n[20.01.2011 21:31:45] Michel Branco Bio: Basically these forms have some prefilled listings (by admin) wich the user (in this case Michel Branco) have to set each task to \'Akkoord\', by clicking on the tickbox\r\n[20.01.2011 21:32:07] Michel Branco Bio: if everything ticked, we can also tick \'Gereed\' wich means \'done\'.\r\n[20.01.2011 21:32:17 | ???????? 21:32:23] Michel Branco Bio: System then knows task has been done\r\n[20.01.2011 21:33:34] Michel Branco Bio: so what is important here the date of saving \'completed\' form, and it\'s preset frequency. system then knows if it\'s expired (expired: when form is not marked as \'done\' in the frequency ammount of time)\r\n[20.01.2011 21:33:46] Michel Branco Bio: in the tab \'ingevulde formulieren\' we can see history of filled in forms\r\n[20.01.2011 21:33:58] Michel Branco Bio: for this location\r\n[20.01.2011 21:34:16] Michel Branco Bio: and eventually also from other locations for this client (selecting in dropdown)\r\n[20.01.2011 21:36:52] Michel Branco Bio: in tab \'Planning\' then system shows wich forms are completed, planned, expired/not complete\r\n[20.01.2011 21:37:14] Michel Branco Bio: so system must make these listings automatically based on the frequency set in form (by admin)\r\n[20.01.2011 21:37:23] Michel Branco Bio: so that worker only can open and fill in, and mark as \'done\'\r\n[20.01.2011 21:39:18] Michel Branco Bio: I will ask them to make me admin so it\'s more clear about the admin functions\r\n[20.01.2011 21:39:35] Michel Branco Bio: Is it a bit clear about the system it\'s meaning?\r\n[20.01.2011 21:39:51] Yuri Lopukhov: yes\r\n[20.01.2011 21:40:11] Michel Branco Bio: so we have\r\n\r\nClient > Locations/Objects > Documents > Forms > Planning\r\n[20.01.2011 21:40:15] Michel Branco Bio: globally\r\n[20.01.2011 21:40:54] Yuri Lopukhov: so is this what we have in our system? or something else?\r\n[20.01.2011 21:41:16] Yuri Lopukhov: apart files manager I mean\r\n[20.01.2011 21:41:28] Michel Branco Bio: what you mean?\r\n[20.01.2011 21:41:55] Yuri Lopukhov: well planning is the same planning we made, or it\'s planning for something else?\r\n[20.01.2011 21:42:15] Michel Branco Bio: apart\r\n[20.01.2011 21:42:26] Michel Branco Bio: they only possible connection is maybe same client/locations\r\n[20.01.2011 21:42:39] Michel Branco Bio: but the thing is they want system asap\r\n[20.01.2011 21:42:49] Michel Branco Bio: so it depends about the complexity to integrate some things with current erp.\r\n[20.01.2011 21:42:53] Yuri Lopukhov: so what is this planning plans and what are those checkmarks?\r\n[20.01.2011 21:43:29] Michel Branco Bio: this is meant to autogenerate forms, indicating that it needs to be filled in\r\n--------------------------------------------------------------------------\r\nlet\'s click on \'Demo\'\r\n[18:03:05] Michel Branco Bio: in map\r\n[18:03:16] Michel Branco Bio: let\'s make this map, expand\r\n[18:03:32] Michel Branco Bio: click on map \'Demoweg 1\'\r\n[18:03:58] Michel Branco Bio: most tabs are clear as we discussed them last time. Let\'s click on tab \'Formulier invullen\'\r\n[18:04:12] Michel Branco Bio: there we see 4 forms, wich are assigned to this location\r\n[18:04:27] Michel Branco Bio: let\'s click on the third one \'Demoweg 1 spoelen tappunten wekelijks\'\r\n[18:05:18] Michel Branco Bio: what we can do here tell per row, if it has been checked. By giving a \'check\' on column \'Akkoord\'\r\n[18:05:34] Michel Branco Bio: It can also be that there have to be filled in values, but this depends on the made form.\r\n[18:05:45] Michel Branco Bio: Also in field \'opmerkingen\' we can add comments\r\n[18:06:05] Michel Branco Bio: On save the form/doc is automatically saved with Username\r\n[18:06:17] Michel Branco Bio: on the last tab \'Planning\' we can see the statusses of the forms.\r\n[18:06:37] Michel Branco Bio: What\'s important, is where we can pre-make this forms\r\n[18:06:47] Michel Branco Bio: since we assign them to locations\r\n[18:07:00] Michel Branco Bio: for this we have to click on \'Dossier\' in left menu\r\n[18:07:10] Yuri Lopukhov: each location have it\'s own set of forms?\r\n[18:07:26] Michel Branco Bio: how they made now yes\r\n[18:07:45] Michel Branco Bio: because they preset the \'points\' in the building, where they have to their services\r\n[18:08:30] Michel Branco Bio: I will just explain they way they do it know in this system. As i see it, i think we can make some tings more easy and logical\r\n[18:09:59] Michel Branco Bio: for now clear?\r\n[18:10:09] Yuri Lopukhov: for what these forms are anyway? What they do with these checks or data? is this what monsterforms for? or something else?\r\n[18:11:38 | ???????? 18:12:01] Michel Branco Bio: Well in this system, they make forms. In every form, they preset points where they take samples or do maintainence (so location specific). After this they can fill in values from points, or set it as \'done\'. For now i\'m not sure about the relation between monsterforms, but we don\'t have to take this into account. We can see it as an apart system\r\n[18:12:40] Yuri Lopukhov: but when these forms are filled in? when subproject is in progress on location?\r\n[18:13:04] Michel Branco Bio: Basically what the system does, is tracking all maintence done on a object/location. This way owner of a location/object (their client) can show to inspections what they do or did.\r\n[18:13:34] Michel Branco Bio: They fill it in for a location, after they have done the job\r\n[18:13:47] Yuri Lopukhov: ok, more or less clear now\r\n[18:14:02] Michel Branco Bio: yeah, you know right know they use it as a stand-al-one system\r\n[18:14:20] Yuri Lopukhov: I think these forms should be connected with products somehow\r\n[18:14:28] Michel Branco Bio: i think we should build it also this way. Probably in the future, client wants maybe location/monsterform/planning integration\r\n[18:14:48] Michel Branco Bio: but to save time on the short run, we build it stand-alone\r\n[18:14:54] Yuri Lopukhov: ok\r\n[18:15:25] Michel Branco Bio: yeah maybe, with products, because i think the needed data (columns) for a product are usually the same\r\n[18:16:05] Michel Branco Bio: only they preset points are different. But when making a new form, they can select product, right form columns are loaded, they can fill in the points, save form.\r\n[18:16:10] Michel Branco Bio: Shall we take a look at form creation here?\r\n[18:16:29] Michel Branco Bio: Left menu > Dossier > E-Forms\r\n[18:16:57] Michel Branco Bio: Let\'s click on \'Demoweg 1 spoelen tappunten wekelijks\'\r\n[18:17:03] Michel Branco Bio: third from above\r\n[18:17:13] Yuri Lopukhov: ok\r\n[18:17:31] Michel Branco Bio: As you can see we give this form a name on top\r\n[18:18:21] Michel Branco Bio: then at \'Frequentie\' we can choose it\'s frequency. In other words, if it\'s weekly, the system will make every week a new listing of the form, for a location. When a form after some time is not filled in (expire time) it will show expired. This is what is visible in tab \'Planning\' for a location\r\n[18:18:49 | ???????? 18:18:55] Michel Branco Bio: Also in \'Geef de ingangs datum voor dit rapport (specifiek voor dit object):\' we can set the start date, from where system will count it\'s frequency\r\n[18:20:54] Michel Branco Bio: this is clear?\r\n[18:21:04] Yuri Lopukhov: yes\r\n[18:21:58] Michel Branco Bio: only the \'Type\' dropdown i didn\'t figure out yet\r\n[18:22:20] Michel Branco Bio: in \'Opmerkingen / omschrijving\' we can fill in a comment  wich will be always visible in all form listings\r\n[18:22:46] Michel Branco Bio: there under we can basically make columns and rows. eventually with preset values\r\n[18:23:52] Michel Branco Bio: after making a form\r\n[18:24:05] Michel Branco Bio: we can go again back to  left menu > structuur\r\n[18:24:18] Michel Branco Bio: and then click again on \'Demoweg 1\' from mainmap \'Demo\'\r\n[18:24:41] Michel Branco Bio: if we click on righttop on second icon (with pencil)\r\n[18:24:52] Michel Branco Bio: we can assign forms to this location, from right to left\r\n[18:26:53] Michel Branco Bio: this is clear ?\r\n[18:27:02] Yuri Lopukhov: yes\r\n[18:27:54] Michel Branco Bio: so then about other functions wich i\'ve seen about statistisks\r\n[18:28:25 | ???????? 18:30:32] Michel Branco Bio: for sure user management/groups rights\r\n[18:30:44] Michel Branco Bio: file browser/manager\r\n[18:30:52] Michel Branco Bio: a bit same as in the menu tree is used\r\n[18:31:06] Michel Branco Bio: is it a bit clear?\r\n[18:31:14] Yuri Lopukhov: yes\r\n[18:31:20] Michel Branco Bio: so basically we have Clients > Locations > Forms > Planning\r\n[18:31:34] Michel Branco Bio: where planning is nothig more then a form overview with their statusses\r\n[18:31:51] Yuri Lopukhov: also points on location\r\n[18:31:57] Michel Branco Bio: points?\r\n[18:32:54] Yuri Lopukhov: In every form, they preset points where they take samples or do maintainence (so location specific)about them\r\n[18:33:07] Michel Branco Bio: yeah\r\n[18:33:45] Michel Branco Bio: they must be able to make their form, by making columnheaders,and prefill rows. And be able to check/unchek them as done. And give overall check to document when done.\r\n[18:34:28] Yuri Lopukhov: enter values too?\r\n[18:34:38] Yuri Lopukhov: or only check?\r\n[18:35:35] Michel Branco Bio: yes enter values too\r\n[18:35:55] Michel Branco Bio: it can be that they set column headers, and first row with sample points.\r\n[18:36:28] Michel Branco Bio: in the other rows they have to fill in then the values from the work they did on lcation, on the specific point. A bit the way the Monsterforms are working in ERP\r\n[18:36:36] Yuri Lopukhov: so any reports? or just show them in planning?\r\n[18:36:52] Michel Branco Bio: what you mean?\r\n[18:37:09] Yuri Lopukhov: well, if you fill in values, these values are used somewhere?\r\n[18:37:34] Yuri Lopukhov: for generating reports or to review somewhere\r\n[18:38:22] Michel Branco Bio: no','2011-01-26 05:57:19');
 INSERT INTO `documents` VALUES ('236','1307','2','Task discuss','[08.02.2011 21:16:09] Michel Branco Bio: On the left menu tree, same as it works now\r\n[08.02.2011 21:16:32] Michel Branco Bio: On top of menutree you see, \'Nieuw dossier / client\'. This is where we create a new Main map\r\n[08.02.2011 21:17:12] Michel Branco Bio: on the right we see file manager\r\n[08.02.2011 21:17:22] Michel Branco Bio: where we can upload/download files\r\n[08.02.2011 21:17:24] Michel Branco Bio: this is clear right?\r\n[08.02.2011 21:17:36] Michel Branco Bio: in actions, the middle icon means that you can edit filename\r\n[08.02.2011 21:18:34] Yuri Lopukhov: ok\r\n[08.02.2011 21:18:49] Michel Branco Bio: also menutree has right click menu\r\n[08.02.2011 21:19:30] Michel Branco Bio: page2\r\n[08.02.2011 21:20:18] Michel Branco Bio: When creating a \'Nieuw dossier / client\' there is made a  mainmap.\r\n[08.02.2011 21:20:30] Michel Branco Bio: Then the comments of \'Note 2\' will be applied\r\n[08.02.2011 21:20:31] Yuri Lopukhov: creating new client have any popup or something?\r\n[08.02.2011 21:21:08] Michel Branco Bio: new page\r\n[08.02.2011 21:21:11] Michel Branco Bio: will show later\r\n[08.02.2011 21:21:13] Yuri Lopukhov: ok\r\n[08.02.2011 21:21:26] Michel Branco Bio: So about notes 2 is clear?\r\n[08.02.2011 21:21:46] Michel Branco Bio: so when mainmap is made\r\n[08.02.2011 21:21:54] Michel Branco Bio: we can make submaps/items\r\n[08.02.2011 21:22:15] Yuri Lopukhov: what is 1-2-3-4 items?\r\n[08.02.2011 21:23:38] Michel Branco Bio: when making a new subitem\r\n[08.02.2011 21:24:49] Michel Branco Bio: we can attach a function to it\r\n[08.02.2011 21:26:11] Michel Branco Bio: 1- Attach simple page (html editor) like in current system\r\n\r\n2- Attach image (upload image) is to attach an image\r\n[08.02.2011 21:26:22] Michel Branco Bio: 3- Attach file (show page with linkable file)\r\n[08.02.2011 21:26:50] Michel Branco Bio: 4- Attach location (attach a fysical location)\r\n[08.02.2011 21:28:13] Michel Branco Bio: this is clear?\r\n[08.02.2011 21:29:09] Yuri Lopukhov: is this popup or how do we select what to attach?\r\n[08.02.2011 21:30:10] Michel Branco Bio: in new window\r\n[08.02.2011 21:30:12] Michel Branco Bio: like in current system\r\n[08.02.2011 21:30:39] Michel Branco Bio: new page i mean\r\n[08.02.2011 21:30:43] Michel Branco Bio: where you can select what you want\r\n[08.02.2011 21:32:00] Michel Branco Bio: in current system it\'s called \'Add object\'\r\n[08.02.2011 21:32:37] Michel Branco Bio: This is clear?\r\n[08.02.2011 21:32:45 | ???????? 21:32:47] Yuri Lopukhov: yes\r\n[08.02.2011 21:32:59] Michel Branco Bio: page 3\r\n[08.02.2011 21:33:07] Michel Branco Bio: this is the Mainmap (client) data\r\n[08.02.2011 21:33:41] Michel Branco Bio: page 4\r\n[08.02.2011 21:33:46] Michel Branco Bio: this is the planning overview\r\n[08.02.2011 21:34:02] Michel Branco Bio: in other words: overview of the automatic generated forms\r\n[08.02.2011 21:34:12] Michel Branco Bio: and it\'s stasses\r\n[08.02.2011 21:34:19] Michel Branco Bio: *statusses\r\n[08.02.2011 21:34:38] Michel Branco Bio: this is clear?\r\n[08.02.2011 21:35:02] Yuri Lopukhov: what is controle\r\n[08.02.2011 21:35:54] Michel Branco Bio: form name\r\n[08.02.2011 21:36:06] Michel Branco Bio: name of the pre made form\r\n[08.02.2011 21:36:27] Yuri Lopukhov: previous form is same as for erp project?\r\n[08.02.2011 21:36:44] Michel Branco Bio: uhm i think so\r\n[08.02.2011 21:36:49] Michel Branco Bio: yes\r\n[08.02.2011 21:37:03] Michel Branco Bio: maybe we can link it somehow, or use something to retrieve clients/locations\r\n[08.02.2011 21:37:21] Yuri Lopukhov: ok\r\n[08.02.2011 21:37:54] Michel Branco Bio: page 5\r\n- This is a bit same as mainmap (client) but specifically for a location. Also under we can attach premade forms to this location (design is from current system, but to understand idea)\r\n[08.02.2011 21:38:37] Michel Branco Bio: this is clear?\r\n[08.02.2011 21:39:11] Yuri Lopukhov: so this is location?\r\n[08.02.2011 21:39:55] Yuri Lopukhov: is there some client data in form?\r\n[08.02.2011 21:40:38] Michel Branco Bio: yes\r\n[08.02.2011 21:40:50 | ???????? 21:40:56] Michel Branco Bio: \'Organisatie\' is company\r\n[08.02.2011 21:41:18] Michel Branco Bio: so let\'s say adres is only different and \'dossier naam\'\r\n[08.02.2011 21:41:25] Yuri Lopukhov: ok\r\n[08.02.2011 21:41:58] Michel Branco Bio: this is also clear?\r\n[08.02.2011 21:42:09] Yuri Lopukhov: yeah\r\n[08.02.2011 21:42:23] Michel Branco Bio: page 6 is where we are making/edit a form\r\n[08.02.2011 21:42:35] Michel Branco Bio: so we can choose how many columns (aantal kolommen)\r\n[08.02.2011 21:42:44] Yuri Lopukhov: how do we get here?\r\n[08.02.2011 21:43:01] Michel Branco Bio: module \'Formulieren\'\r\n[08.02.2011 21:43:06] Michel Branco Bio: later you will see it\r\n[08.02.2011 21:43:29] Michel Branco Bio: actually here tabs are not relevant, my bad. \'Dossiergegevens\' and \'planning\'\r\n[08.02.2011 21:43:41] Michel Branco Bio: but this is also clear?\r\n[08.02.2011 21:44:19] Yuri Lopukhov: yes\r\n[08.02.2011 21:47:14] Michel Branco Bio: page 7\r\n[08.02.2011 21:47:26] Michel Branco Bio: its the same form, but not editing modus. Here we are actually filling in\r\n[08.02.2011 21:48:19] Michel Branco Bio: in \'paraaf\' on save, the current date/time and user will be set there (readonly)\r\n[08.02.2011 21:48:32] Yuri Lopukhov: ok\r\n[08.02.2011 21:48:43] Yuri Lopukhov: how does print view look?\r\n[08.02.2011 21:48:52] Yuri Lopukhov: or later?\r\n[08.02.2011 21:50:01] Michel Branco Bio: view i don\'t have\r\n[08.02.2011 21:50:08] Michel Branco Bio: i only have from current system\r\n[08.02.2011 21:50:19] Michel Branco Bio: but if we have print view, then pdf view is easy or not?\r\n[08.02.2011 21:50:41] Yuri Lopukhov: no, it doesn\'t matter\r\n[08.02.2011 21:50:58] Michel Branco Bio: okay\r\n[08.02.2011 21:51:26] Michel Branco Bio: so this page is clear?\r\n[08.02.2011 21:51:35] Yuri Lopukhov: yeah\r\n[08.02.2011 21:51:43] Michel Branco Bio: page 8\r\n[08.02.2011 21:51:46] Michel Branco Bio: this is the form overview\r\n[08.02.2011 21:51:50] Michel Branco Bio: where we see all forms\r\n[08.02.2011 21:51:53] Michel Branco Bio: on click we can edit them\r\n[08.02.2011 21:52:04] Michel Branco Bio: on top we see icon \'nieuw formulier\' to create new one\r\n[08.02.2011 21:52:35] Yuri Lopukhov: forms are unique for each location? or shared between locations/clients?\r\n[08.02.2011 21:52:50] Michel Branco Bio: can be shared\r\n[08.02.2011 21:52:53] Michel Branco Bio: i mean\r\n[08.02.2011 21:52:56] Michel Branco Bio: we can make a form\r\n[08.02.2011 21:53:04] Michel Branco Bio: and assign it to multiple locations\r\n[08.02.2011 21:53:10] Michel Branco Bio: but ussually the forms are very location specific\r\n[08.02.2011 21:53:47] Yuri Lopukhov: ok, but in current design there is no such function?\r\n[08.02.2011 21:54:06] Michel Branco Bio: well on page http://amigu.nl/biolab/gd/page5.html\r\n[08.02.2011 21:54:07] Michel Branco Bio: on the bottom\r\n[08.02.2011 21:54:12] Michel Branco Bio: i took it from current system\r\n[08.02.2011 21:54:13] Michel Branco Bio: needs redesign\r\n[08.02.2011 21:54:22] Michel Branco Bio: but there we can assign existing forms to this location\r\n[08.02.2011 21:54:26] Yuri Lopukhov: ok\r\n[08.02.2011 21:54:31] Michel Branco Bio: from right to left\r\n[08.02.2011 21:55:13] Yuri Lopukhov: in list there are form templates or forms that needs to be filled in?\r\n[08.02.2011 21:55:34] Michel Branco Bio: formtemplate/form to be filled in is the same for me\r\n[08.02.2011 21:55:46] Michel Branco Bio: we create a form >> assign to location >> fill in\r\n[08.02.2011 21:56:11] Yuri Lopukhov: on click on form which page opens?\r\n[08.02.2011 21:56:24] Michel Branco Bio: http://amigu.nl/biolab/gd/page6.html\r\n[08.02.2011 21:56:26] Michel Branco Bio: editing\r\n[08.02.2011 21:56:36] Michel Branco Bio: not filling in. Filling in is only in \'Planning\' overview\r\n[08.02.2011 21:56:41] Yuri Lopukhov: ok\r\n[08.02.2011 21:56:46] Michel Branco Bio: if we click there on form we get the fill in screen\r\n[08.02.2011 21:57:03] Michel Branco Bio: so there is a difference in editing and filling in modus\r\n[08.02.2011 21:57:12] Michel Branco Bio: this is clear?\r\n[08.02.2011 21:57:16] Yuri Lopukhov: yes\r\n[08.02.2011 21:57:22] Michel Branco Bio: http://amigu.nl/biolab/gd/page9.html  page 9\r\n[08.02.2011 21:57:30] Michel Branco Bio: i took it from current system\r\n[08.02.2011 21:57:35] Michel Branco Bio: this is to edit user acces rights\r\n[08.02.2011 21:57:42] Michel Branco Bio: so we can say per user, wich rights\r\n[08.02.2011 21:58:03] Michel Branco Bio: i was thinkg about also assiging users to user groups, so that they have some predefined rights\r\n[08.02.2011 21:58:21] Michel Branco Bio: So that an \'user group\'  automatically has acces to some maps\r\n[08.02.2011 21:58:35] Michel Branco Bio: but you understand the idea right?\r\n\r\nhttp://amigu.nl/biolab/gd/page10.html on page 10 we have the module \'Gebruikers\'  (users)\r\n\r\n Michel Branco Bio (22:44:19 8/02/2011)\r\nhere we can manage the users\r\n\r\n Michel Branco Bio (22:44:47 8/02/2011)\r\nalso the first icon, in actions, on click it will open window from http://amigu.nl/biolab/gd/page9.html\r\n\r\n 203602371@qip.ru (22:45:14 8/02/2011)\r\nok\r\n\r\n Michel Branco Bio (22:45:27 8/02/2011)\r\non page 11 http://amigu.nl/biolab/gd/page11.html we see the user details, i just copied from current system, but this is user editor screen\r\n\r\n Michel Branco Bio (22:45:46 8/02/2011)\r\nthere are some icons to export to excel. etc\r\n\r\n Michel Branco Bio (22:45:56 8/02/2011)\r\nmaybe we can put this somewhere else, in main settings screen or something\r\n\r\n 203602371@qip.ru (22:46:03 8/02/2011)\r\nok\r\n\r\n Michel Branco Bio (22:46:19 8/02/2011)\r\nand that\'s it','2011-02-11 17:50:22');
@@ -778,7 +778,7 @@ CREATE TABLE `enabled_modules` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-14  6:46:05
+-- Dump completed on 2011-09-14  7:03:15
 
 INSERT INTO `enabled_modules` VALUES ('9695','1066','issue_tracking');
 INSERT INTO `enabled_modules` VALUES ('9696','1066','time_tracking');
@@ -855,102 +855,12 @@ CREATE TABLE `enumerations` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-14  6:46:05
+-- Dump completed on 2011-09-14  7:03:15
 
-INSERT INTO `enumerations` VALUES ('1','User documentation','1','0','DocumentCategory','1',NULL,NULL);
-INSERT INTO `enumerations` VALUES ('2','Technical documentation','2','0','DocumentCategory','1',NULL,NULL);
-INSERT INTO `enumerations` VALUES ('3','Low','1','0','IssuePriority','1',NULL,NULL);
-INSERT INTO `enumerations` VALUES ('4','Normal','2','1','IssuePriority','1',NULL,NULL);
-INSERT INTO `enumerations` VALUES ('5','High','3','0','IssuePriority','1',NULL,NULL);
-INSERT INTO `enumerations` VALUES ('6','Urgent','4','0','IssuePriority','1',NULL,NULL);
-INSERT INTO `enumerations` VALUES ('7','Immediate','5','0','IssuePriority','1',NULL,NULL);
-INSERT INTO `enumerations` VALUES ('8','Design','1','0','TimeEntryActivity','1',NULL,NULL);
-INSERT INTO `enumerations` VALUES ('9','Development','2','0','TimeEntryActivity','1',NULL,NULL);
-INSERT INTO `enumerations` VALUES ('10','Administrative','3','0','TimeEntryActivity','1',NULL,NULL);
-INSERT INTO `enumerations` VALUES ('11','Design','4','0','TimeEntryActivity','1','7','8');
-INSERT INTO `enumerations` VALUES ('12','Development','5','0','TimeEntryActivity','1','7','9');
-INSERT INTO `enumerations` VALUES ('13','Administrative','6','0','TimeEntryActivity','1','7','10');
-INSERT INTO `enumerations` VALUES ('14','Design','7','0','TimeEntryActivity','0','293','8');
-INSERT INTO `enumerations` VALUES ('15','Development','8','0','TimeEntryActivity','0','293','9');
-INSERT INTO `enumerations` VALUES ('16','Design','9','0','TimeEntryActivity','0','309','8');
-INSERT INTO `enumerations` VALUES ('17','Development','10','0','TimeEntryActivity','0','309','9');
-INSERT INTO `enumerations` VALUES ('18','Administrative','11','0','TimeEntryActivity','0','309','10');
-INSERT INTO `enumerations` VALUES ('19','Design','12','0','TimeEntryActivity','0','560','8');
-INSERT INTO `enumerations` VALUES ('20','Administrative','13','0','TimeEntryActivity','0','560','10');
-INSERT INTO `enumerations` VALUES ('21','Design','14','0','TimeEntryActivity','0','657','8');
-INSERT INTO `enumerations` VALUES ('22','Development','15','0','TimeEntryActivity','0','657','9');
-INSERT INTO `enumerations` VALUES ('23','Design','16','0','TimeEntryActivity','0','710','8');
-INSERT INTO `enumerations` VALUES ('24','Administrative','17','0','TimeEntryActivity','0','710','10');
-INSERT INTO `enumerations` VALUES ('25','Design','18','0','TimeEntryActivity','0','322','8');
-INSERT INTO `enumerations` VALUES ('26','Development','19','0','TimeEntryActivity','0','322','9');
-INSERT INTO `enumerations` VALUES ('27','Administrative','20','0','TimeEntryActivity','0','322','10');
-INSERT INTO `enumerations` VALUES ('28','Design','21','0','TimeEntryActivity','0','887','8');
-INSERT INTO `enumerations` VALUES ('29','Development','22','0','TimeEntryActivity','0','887','9');
-INSERT INTO `enumerations` VALUES ('30','Administrative','23','0','TimeEntryActivity','0','887','10');
-INSERT INTO `enumerations` VALUES ('31','Design','24','0','TimeEntryActivity','0','134','8');
-INSERT INTO `enumerations` VALUES ('32','Development','25','0','TimeEntryActivity','0','134','9');
-INSERT INTO `enumerations` VALUES ('33','Administrative','26','0','TimeEntryActivity','0','134','10');
-INSERT INTO `enumerations` VALUES ('34','Design','27','0','TimeEntryActivity','0','935','8');
-INSERT INTO `enumerations` VALUES ('35','Development','28','0','TimeEntryActivity','0','935','9');
-INSERT INTO `enumerations` VALUES ('36','Administrative','29','0','TimeEntryActivity','0','935','10');
-INSERT INTO `enumerations` VALUES ('37','Design','30','0','TimeEntryActivity','0','1085','8');
-INSERT INTO `enumerations` VALUES ('38','Administrative','31','0','TimeEntryActivity','0','1085','10');
 INSERT INTO `enumerations` VALUES ('39','Design','32','0','TimeEntryActivity','0','1066','8');
 INSERT INTO `enumerations` VALUES ('40','Administrative','33','0','TimeEntryActivity','0','1066','10');
 INSERT INTO `enumerations` VALUES ('41','Design','34','0','TimeEntryActivity','0','1307','8');
 INSERT INTO `enumerations` VALUES ('42','Administrative','35','0','TimeEntryActivity','0','1307','10');
-INSERT INTO `enumerations` VALUES ('43','Design','36','0','TimeEntryActivity','0','1105','8');
-INSERT INTO `enumerations` VALUES ('44','Development','37','0','TimeEntryActivity','0','1105','9');
-INSERT INTO `enumerations` VALUES ('45','Administrative','38','0','TimeEntryActivity','0','1105','10');
-INSERT INTO `enumerations` VALUES ('46','Design','39','0','TimeEntryActivity','0','1669','8');
-INSERT INTO `enumerations` VALUES ('47','Development','40','0','TimeEntryActivity','0','1669','9');
-INSERT INTO `enumerations` VALUES ('48','Administrative','41','0','TimeEntryActivity','0','1669','10');
-INSERT INTO `enumerations` VALUES ('49','Design','42','0','TimeEntryActivity','0','1673','8');
-INSERT INTO `enumerations` VALUES ('50','Development','43','0','TimeEntryActivity','0','1673','9');
-INSERT INTO `enumerations` VALUES ('51','Design','44','0','TimeEntryActivity','0','1732','8');
-INSERT INTO `enumerations` VALUES ('52','Development','45','0','TimeEntryActivity','0','1732','9');
-INSERT INTO `enumerations` VALUES ('53','Design','46','0','TimeEntryActivity','0','1823','8');
-INSERT INTO `enumerations` VALUES ('54','Development','47','0','TimeEntryActivity','0','1823','9');
-INSERT INTO `enumerations` VALUES ('55','Administrative','48','0','TimeEntryActivity','0','1823','10');
-INSERT INTO `enumerations` VALUES ('56','Planning','49','0','TimeEntryActivity','1',NULL,NULL);
-INSERT INTO `enumerations` VALUES ('57','Administrative','50','0','TimeEntryActivity','0','2009','10');
-INSERT INTO `enumerations` VALUES ('58','Planning','51','0','TimeEntryActivity','0','2174','56');
-INSERT INTO `enumerations` VALUES ('59','Administrative','52','0','TimeEntryActivity','0','2174','10');
-INSERT INTO `enumerations` VALUES ('60','Planning','53','0','TimeEntryActivity','0','2181','56');
-INSERT INTO `enumerations` VALUES ('61','Administrative','54','0','TimeEntryActivity','0','2181','10');
-INSERT INTO `enumerations` VALUES ('62','Planning','55','0','TimeEntryActivity','1','2212','56');
-INSERT INTO `enumerations` VALUES ('63','Design','56','0','TimeEntryActivity','1','2212','8');
-INSERT INTO `enumerations` VALUES ('64','Development','57','0','TimeEntryActivity','1','2212','9');
-INSERT INTO `enumerations` VALUES ('65','Administrative','58','0','TimeEntryActivity','1','2212','10');
-INSERT INTO `enumerations` VALUES ('66','Planning','59','0','TimeEntryActivity','0','939','56');
-INSERT INTO `enumerations` VALUES ('67','Design','60','0','TimeEntryActivity','0','2235','8');
-INSERT INTO `enumerations` VALUES ('68','Administrative','61','0','TimeEntryActivity','0','2235','10');
-INSERT INTO `enumerations` VALUES ('69','Administrative','62','0','TimeEntryActivity','0','2265','10');
-INSERT INTO `enumerations` VALUES ('70','Planning','63','0','TimeEntryActivity','0','2447','56');
-INSERT INTO `enumerations` VALUES ('71','Administrative','64','0','TimeEntryActivity','0','2447','10');
-INSERT INTO `enumerations` VALUES ('72','Design','65','0','TimeEntryActivity','0','2481','8');
-INSERT INTO `enumerations` VALUES ('73','Development','66','0','TimeEntryActivity','0','2481','9');
-INSERT INTO `enumerations` VALUES ('74','Planning','67','0','TimeEntryActivity','0','2493','56');
-INSERT INTO `enumerations` VALUES ('75','Planning','68','0','TimeEntryActivity','0','2596','56');
-INSERT INTO `enumerations` VALUES ('76','Design','69','0','TimeEntryActivity','1','2596','8');
-INSERT INTO `enumerations` VALUES ('77','Development','70','0','TimeEntryActivity','1','2596','9');
-INSERT INTO `enumerations` VALUES ('78','Administrative','71','0','TimeEntryActivity','1','2596','10');
-INSERT INTO `enumerations` VALUES ('79','Design','72','0','TimeEntryActivity','1','2547','8');
-INSERT INTO `enumerations` VALUES ('80','Development','73','0','TimeEntryActivity','1','2547','9');
-INSERT INTO `enumerations` VALUES ('81','Administrative','74','0','TimeEntryActivity','1','2547','10');
-INSERT INTO `enumerations` VALUES ('82','Design','75','0','TimeEntryActivity','0','2416','8');
-INSERT INTO `enumerations` VALUES ('83','Development','76','0','TimeEntryActivity','0','2416','9');
-INSERT INTO `enumerations` VALUES ('84','Development','77','0','TimeEntryActivity','1','2680','9');
-INSERT INTO `enumerations` VALUES ('85','Administrative','78','0','TimeEntryActivity','0','2806','10');
-INSERT INTO `enumerations` VALUES ('86','Planning','79','0','TimeEntryActivity','0','2806','56');
-INSERT INTO `enumerations` VALUES ('87','Design','80','0','TimeEntryActivity','0','2806','8');
-INSERT INTO `enumerations` VALUES ('88','Development','81','0','TimeEntryActivity','0','2806','9');
-INSERT INTO `enumerations` VALUES ('89','Planning','82','0','TimeEntryActivity','0','3065','56');
-INSERT INTO `enumerations` VALUES ('90','Design','83','0','TimeEntryActivity','0','3065','8');
-INSERT INTO `enumerations` VALUES ('91','Administrative','84','0','TimeEntryActivity','0','3065','10');
-INSERT INTO `enumerations` VALUES ('92','Planning','85','0','TimeEntryActivity','0','3157','56');
-INSERT INTO `enumerations` VALUES ('93','Design','86','0','TimeEntryActivity','0','3157','8');
-INSERT INTO `enumerations` VALUES ('94','Administrative','87','0','TimeEntryActivity','0','3157','10');
 
 
 ###################
@@ -1003,7 +913,7 @@ CREATE TABLE `gitosis_public_keys` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-14  6:46:05
+-- Dump completed on 2011-09-14  7:03:15
 
 
 
@@ -1051,7 +961,7 @@ CREATE TABLE `groups_users` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-14  6:46:05
+-- Dump completed on 2011-09-14  7:03:15
 
 
 
@@ -1103,7 +1013,7 @@ CREATE TABLE `issue_categories` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-14  6:46:05
+-- Dump completed on 2011-09-14  7:03:15
 
 INSERT INTO `issue_categories` VALUES ('1429','1066','Invoicing',NULL);
 INSERT INTO `issue_categories` VALUES ('1628','2379','Offer_SabonERP_debugging','3626');
@@ -1160,7 +1070,7 @@ CREATE TABLE `issue_relations` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-14  6:46:05
+-- Dump completed on 2011-09-14  7:03:15
 
 
 
@@ -1215,7 +1125,7 @@ CREATE TABLE `issue_statuses` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-14  6:46:05
+-- Dump completed on 2011-09-14  7:03:15
 
 INSERT INTO `issue_statuses` VALUES ('1','New','0','1','1',NULL);
 INSERT INTO `issue_statuses` VALUES ('2','Assigned','0','0','2',NULL);
@@ -1288,7 +1198,7 @@ CREATE TABLE `issues` (
   KEY `index_issues_on_author_id` (`author_id`),
   KEY `index_issues_on_created_on` (`created_on`),
   KEY `index_issues_on_root_id_and_lft_and_rgt` (`root_id`,`lft`,`rgt`)
-) ENGINE=InnoDB AUTO_INCREMENT=30577 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=30578 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -1300,7 +1210,7 @@ CREATE TABLE `issues` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-14  6:46:05
+-- Dump completed on 2011-09-14  7:03:16
 
 INSERT INTO `issues` VALUES ('9310','4','1066','Clients','',NULL,NULL,'5','990','7','503','990','19','2011-01-06 21:51:21','2011-04-12 05:01:15','2011-01-06','100','10',NULL,'9310','1','18','0');
 INSERT INTO `issues` VALUES ('9311','4','1066','Projects','',NULL,NULL,'5','1561','7','505','990','27','2011-01-06 21:51:49','2011-09-05 20:29:13','2011-01-06','100','15.5',NULL,'9311','1','26','0');
@@ -2063,7 +1973,7 @@ CREATE TABLE `journal_details` (
   `value` text COLLATE utf8_unicode_ci,
   PRIMARY KEY (`id`),
   KEY `journal_details_journal_id` (`journal_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=68728 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=68737 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -2075,7 +1985,7 @@ CREATE TABLE `journal_details` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-14  6:46:06
+-- Dump completed on 2011-09-14  7:03:17
 
 INSERT INTO `journal_details` VALUES ('20785','17299','attr','estimated_hours',NULL,'1.0');
 INSERT INTO `journal_details` VALUES ('20786','17303','attr','fixed_version_id','503','504');
@@ -5658,7 +5568,7 @@ CREATE TABLE `journals` (
   KEY `index_journals_on_user_id` (`user_id`),
   KEY `index_journals_on_journalized_id` (`journalized_id`),
   KEY `index_journals_on_created_on` (`created_on`)
-) ENGINE=InnoDB AUTO_INCREMENT=57899 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=57908 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -5670,7 +5580,7 @@ CREATE TABLE `journals` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-14  6:46:08
+-- Dump completed on 2011-09-14  7:03:19
 
 INSERT INTO `journals` VALUES ('17299','9335','Issue','990','','2011-01-06 23:15:34');
 INSERT INTO `journals` VALUES ('17302','9347','Issue','990','Michel: I need to define the exact templates for the report. Also including page margin. We can implement margin to be used for PDF/DOC ?\r\n\r\nYuri:For pdf probably yes. For doc probably not. We can try that commercial solution for this. Or maybe try using OpenOffice on server, if itís possible.','2011-01-06 23:35:33');
@@ -8579,7 +8489,7 @@ CREATE TABLE `member_roles` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-14  6:46:11
+-- Dump completed on 2011-09-14  7:03:22
 
 INSERT INTO `member_roles` VALUES ('2659','1913','3',NULL);
 INSERT INTO `member_roles` VALUES ('2660','1913','4',NULL);
@@ -8648,7 +8558,7 @@ CREATE TABLE `members` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-14  6:46:11
+-- Dump completed on 2011-09-14  7:03:22
 
 INSERT INTO `members` VALUES ('1913','990','1066','2011-01-06 21:22:29','0');
 INSERT INTO `members` VALUES ('1914','1561','1066','2011-01-06 21:36:18','0');
@@ -8719,7 +8629,7 @@ CREATE TABLE `messages` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-14  6:46:11
+-- Dump completed on 2011-09-14  7:03:22
 
 
 
@@ -8776,7 +8686,7 @@ CREATE TABLE `news` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-14  6:46:11
+-- Dump completed on 2011-09-14  7:03:22
 
 
 
@@ -8829,7 +8739,7 @@ CREATE TABLE `open_id_authentication_associations` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-14  6:46:11
+-- Dump completed on 2011-09-14  7:03:22
 
 INSERT INTO `open_id_authentication_associations` VALUES ('1','1315779665','1799','oida-1315779668040-1825990640','HMAC-SHA1','http://www.blogger.com/openid-server.g','¶ù~∫º\ZEE—⁄◊Bmnµ');
 INSERT INTO `open_id_authentication_associations` VALUES ('2','1315779793','1208213','1315779787:gdUJM3N2isvB7WIZcqOA:c709525541','HMAC-SHA1','http://www.livejournal.com/openid/server.bml','˚fÈö\"9 aﬂ1Õáe*÷∂Uo');
@@ -8881,7 +8791,7 @@ CREATE TABLE `open_id_authentication_nonces` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-14  6:46:11
+-- Dump completed on 2011-09-14  7:03:22
 
 INSERT INTO `open_id_authentication_nonces` VALUES ('1','1315779817','http://www.livejournal.com/openid/server.bml','E5gZfM');
 
@@ -8942,7 +8852,7 @@ CREATE TABLE `projects` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-14  6:46:11
+-- Dump completed on 2011-09-14  7:03:22
 
 INSERT INTO `projects` VALUES ('1066','ERP system','ERP system for Biolab','http://erp.biolab.nl','0',NULL,'2011-01-06 21:22:28','2011-01-07 01:21:04','biolab-erp','1','367','370');
 INSERT INTO `projects` VALUES ('1307','GebouwDossier','Objects manager for ERP project','','0','1066','2011-02-11 17:18:15','2011-02-11 17:18:15','gebouwdossier','1','368','369');
@@ -8994,7 +8904,7 @@ CREATE TABLE `projects_trackers` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-14  6:46:11
+-- Dump completed on 2011-09-14  7:03:22
 
 INSERT INTO `projects_trackers` VALUES ('1066','1');
 INSERT INTO `projects_trackers` VALUES ('1066','2');
@@ -9063,7 +8973,7 @@ CREATE TABLE `queries` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-14  6:46:11
+-- Dump completed on 2011-09-14  7:03:22
 
 INSERT INTO `queries` VALUES ('291','1066','Tasks','--- \nsubproject_id: \n  :values: \n  - \"1307\"\n  :operator: \"!*\"\ntracker_id: \n  :values: \n  - \"4\"\n  :operator: \"=\"\nstatus_id: \n  :values: \n  - \"1\"\n  - \"2\"\n  :operator: o\n','990','1','--- \n- :tracker\n- :subject\n- :parent\n- :fixed_version\n','--- []\n\n','priority');
 INSERT INTO `queries` VALUES ('313','1066','Current','--- \nsubproject_id: \n  :values: \n  - \"1307\"\n  :operator: \"!*\"\nassigned_to_id: \n  :values: \n  - \"990\"\n  :operator: \"=\"\ntracker_id: \n  :values: \n  - \"4\"\n  :operator: \"!\"\nstatus_id: \n  :values: \n  - \"1\"\n  - \"2\"\n  :operator: \"=\"\n','990','1','--- \n- :tracker\n- :subject\n- :parent\n- :estimated_hours\n- :fixed_version\n','--- \n- - priority\n  - desc\n- - tracker\n  - desc\n- - fixed_version\n  - asc\n','priority');
@@ -9131,7 +9041,7 @@ CREATE TABLE `repositories` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-14  6:46:11
+-- Dump completed on 2011-09-14  7:03:22
 
 
 
@@ -9184,7 +9094,7 @@ CREATE TABLE `roles` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-14  6:46:11
+-- Dump completed on 2011-09-14  7:03:22
 
 INSERT INTO `roles` VALUES ('1','Non member','1','1','1','--- \n- :add_project\n- :add_messages\n- :view_calendar\n- :view_documents\n- :view_files\n- :view_gantt\n- :view_issues\n- :add_issues\n- :add_issue_notes\n- :comment_news\n- :browse_repository\n- :view_changesets\n- :view_wiki_pages\n- :view_wiki_edits\n- :edit_wiki_pages\n','default');
 INSERT INTO `roles` VALUES ('2','Anonymous','2','1','2','--- \n- :view_calendar\n- :view_documents\n- :view_files\n- :view_gantt\n- :view_issues\n- :browse_repository\n- :view_changesets\n- :view_wiki_pages\n','default');
@@ -9237,7 +9147,7 @@ CREATE TABLE `schema_migrations` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-14  6:46:11
+-- Dump completed on 2011-09-14  7:03:22
 
 INSERT INTO `schema_migrations` VALUES ('1');
 INSERT INTO `schema_migrations` VALUES ('1-redmine_theme_changer');
@@ -9481,7 +9391,7 @@ CREATE TABLE `settings` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-14  6:46:11
+-- Dump completed on 2011-09-14  7:03:22
 
 INSERT INTO `settings` VALUES ('1','text_formatting','textile','2010-03-26 23:31:32');
 INSERT INTO `settings` VALUES ('2','protocol','http','2011-06-08 19:11:29');
@@ -9591,7 +9501,7 @@ CREATE TABLE `theme_changer_user_settings` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-14  6:46:11
+-- Dump completed on 2011-09-14  7:03:22
 
 INSERT INTO `theme_changer_user_settings` VALUES ('222','990','ModulaMartini','2011-04-13 19:47:06');
 INSERT INTO `theme_changer_user_settings` VALUES ('229','1561','__system_setting__','2011-01-10 19:45:42');
@@ -9660,7 +9570,7 @@ CREATE TABLE `time_entries` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-14  6:46:11
+-- Dump completed on 2011-09-14  7:03:22
 
 INSERT INTO `time_entries` VALUES ('29','28','2','190','2','','8','2010-04-14','2010','4','15','2010-04-14 17:55:37','2010-04-14 17:55:37');
 INSERT INTO `time_entries` VALUES ('42','28','2','196','1.5','','8','2010-04-20','2010','4','16','2010-04-20 01:27:26','2010-04-20 01:27:26');
@@ -9798,7 +9708,7 @@ CREATE TABLE `tokens` (
   `created_on` datetime NOT NULL,
   PRIMARY KEY (`id`),
   KEY `index_tokens_on_user_id` (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=22482 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=22483 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -9810,7 +9720,7 @@ CREATE TABLE `tokens` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-14  6:46:11
+-- Dump completed on 2011-09-14  7:03:22
 
 INSERT INTO `tokens` VALUES ('11263','2','recovery','9297b56e757c08c07724bf44da116616ceff23e9','2011-02-28 10:08:19');
 INSERT INTO `tokens` VALUES ('4960','990','feeds','9051a8e465d0e9baab05d3fdb3cb7eb6a1e900da','2010-10-22 15:49:14');
@@ -9876,7 +9786,7 @@ CREATE TABLE `trackers` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-14  6:46:11
+-- Dump completed on 2011-09-14  7:03:22
 
 INSERT INTO `trackers` VALUES ('1','Bug','1','3','1');
 INSERT INTO `trackers` VALUES ('2','Feature','1','1','1');
@@ -9932,7 +9842,7 @@ CREATE TABLE `user_preferences` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-14  6:46:11
+-- Dump completed on 2011-09-14  7:03:22
 
 INSERT INTO `user_preferences` VALUES ('2','2','--- {}\n\n','0',NULL);
 INSERT INTO `user_preferences` VALUES ('906','990','--- \n:comments_sorting: asc\n:diff_type: inline\n:no_self_notified: true\n:gantt_zoom: 4\n:gantt_months: 1\n','0','Ekaterinburg');
@@ -10004,7 +9914,7 @@ CREATE TABLE `users` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-14  6:46:12
+-- Dump completed on 2011-09-14  7:03:23
 
 INSERT INTO `users` VALUES ('2','','','','Anonymous','','0','0',NULL,'',NULL,'2010-03-26 22:55:32','2010-03-26 22:55:32','AnonymousUser',NULL,'only_my_events',NULL);
 INSERT INTO `users` VALUES ('990','yuri_lopukhov','2535e055ec721afeeecbaa5ab90384bc46a218ec','Yuri','Lopukhov','yuvl32@gmail.com','0','1','2011-08-31 03:23:56','en',NULL,'2010-10-22 15:48:48','2011-08-31 03:23:56','User',NULL,'all','28463f7a351901fffef286e385d3df37');
@@ -10068,7 +9978,7 @@ CREATE TABLE `versions` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-14  6:46:12
+-- Dump completed on 2011-09-14  7:03:23
 
 INSERT INTO `versions` VALUES ('503','1066','0.7','Bug fixes','2011-04-15','2011-01-06 21:30:00','2011-04-18 20:56:52','','closed','none');
 INSERT INTO `versions` VALUES ('504','1066','0.8','Dashboard, settings, sales ','2011-04-22','2011-01-06 21:53:37','2011-04-21 23:01:27','','open','none');
@@ -10127,7 +10037,7 @@ CREATE TABLE `watchers` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-14  6:46:12
+-- Dump completed on 2011-09-14  7:03:23
 
 
 
@@ -10184,7 +10094,7 @@ CREATE TABLE `wiki_content_versions` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-14  6:46:12
+-- Dump completed on 2011-09-14  7:03:23
 
 INSERT INTO `wiki_content_versions` VALUES ('5165','1236','1236','1503','h1. Datos sitio web dancingmonkeyscomar\r\n\r\nbase: alejorot_dancingmonkeys\r\nalejorot_dancing\r\npass: v9@#.+,TzA3]\r\n\r\nFtp: \r\nFTP Username: dancingmonkeys@alejorotemberg.com\r\nFTP Server: ftp.alejorotemberg.com\r\npassword: 3_m1979\r\n\r\nAdministrador Joomla:\r\n\r\nuser: admin\r\nclave: qwerty','','','2011-06-01 23:31:31','1');
 
@@ -10240,7 +10150,7 @@ CREATE TABLE `wiki_contents` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-14  6:46:12
+-- Dump completed on 2011-09-14  7:03:23
 
 INSERT INTO `wiki_contents` VALUES ('1236','1236','1503','h1. Datos sitio web dancingmonkeyscomar\r\n\r\nbase: alejorot_dancingmonkeys\r\nalejorot_dancing\r\npass: v9@#.+,TzA3]\r\n\r\nFtp: \r\nFTP Username: dancingmonkeys@alejorotemberg.com\r\nFTP Server: ftp.alejorotemberg.com\r\npassword: 3_m1979\r\n\r\nAdministrador Joomla:\r\n\r\nuser: admin\r\nclave: qwerty','','2011-06-01 23:31:31','1');
 
@@ -10296,7 +10206,7 @@ CREATE TABLE `wiki_pages` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-14  6:46:12
+-- Dump completed on 2011-09-14  7:03:23
 
 INSERT INTO `wiki_pages` VALUES ('628','1006','Acl','2011-01-19 05:43:54','0',NULL);
 INSERT INTO `wiki_pages` VALUES ('629','1006','Logging','2011-01-19 05:45:06','0',NULL);
@@ -10352,7 +10262,7 @@ CREATE TABLE `wiki_redirects` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-14  6:46:12
+-- Dump completed on 2011-09-14  7:03:23
 
 
 
@@ -10403,7 +10313,7 @@ CREATE TABLE `wikis` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-14  6:46:12
+-- Dump completed on 2011-09-14  7:03:23
 
 INSERT INTO `wikis` VALUES ('1006','1066','Task','1');
 INSERT INTO `wikis` VALUES ('1236','1307','Wiki','1');
@@ -10462,7 +10372,7 @@ CREATE TABLE `workflows` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-14  6:46:12
+-- Dump completed on 2011-09-14  7:03:23
 
 INSERT INTO `workflows` VALUES ('31','2','1','2','3','0','0');
 INSERT INTO `workflows` VALUES ('32','2','1','3','3','0','0');
