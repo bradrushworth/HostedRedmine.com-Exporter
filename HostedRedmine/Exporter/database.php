@@ -266,6 +266,9 @@ foreach ($tables as $t) {
 		case 'enabled_modules':
 			if (!empty($projects)) $data = $e->get_data($t, "`project_id` IN ($projects)");
 			break;
+		case 'enumerations':
+			if (!empty($projects)) $data = $e->get_data($t, "`project_id` IN ($projects)");
+			break;
 		case 'gitosis_public_keys':
 			$data = $e->get_data($t, "FALSE");
 			break;
