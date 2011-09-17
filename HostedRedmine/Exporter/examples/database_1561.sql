@@ -45,7 +45,7 @@ CREATE TABLE `attachments` (
   KEY `index_attachments_on_container_id_and_container_type` (`container_id`,`container_type`),
   KEY `index_attachments_on_author_id` (`author_id`),
   KEY `index_attachments_on_created_on` (`created_on`)
-) ENGINE=InnoDB AUTO_INCREMENT=6666 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6746 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -57,7 +57,7 @@ CREATE TABLE `attachments` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-14  7:03:15
+-- Dump completed on 2011-09-17 10:24:40
 
 INSERT INTO `attachments` VALUES ('2054','9383','Issue','invoice-payment-erp.jpg','110107002043_invoice-payment-erp.jpg','155446','image/jpeg','d7d8674e25e41dc21f1a3ac33742dc57','0','990','2011-01-07 00:20:43','');
 INSERT INTO `attachments` VALUES ('2070','9378','Issue','bug-headers.jpg','110110194212_bug-headers.jpg','851531','image/jpeg','a03e287471510c6981388a124802734b','0','1561','2011-01-10 19:42:12','');
@@ -159,7 +159,7 @@ CREATE TABLE `auth_sources` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-14  7:03:15
+-- Dump completed on 2011-09-17 10:24:40
 
 
 
@@ -203,7 +203,7 @@ CREATE TABLE `boards` (
   PRIMARY KEY (`id`),
   KEY `boards_project_id` (`project_id`),
   KEY `index_boards_on_last_message_id` (`last_message_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=339 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=344 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -215,7 +215,7 @@ CREATE TABLE `boards` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-14  7:03:15
+-- Dump completed on 2011-09-17 10:24:40
 
 
 
@@ -258,7 +258,7 @@ CREATE TABLE `changes` (
   `branch` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `changesets_changeset_id` (`changeset_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=611038 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=617335 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -270,7 +270,7 @@ CREATE TABLE `changes` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-14  7:03:15
+-- Dump completed on 2011-09-17 10:24:40
 
 
 
@@ -318,7 +318,7 @@ CREATE TABLE `changesets` (
   KEY `index_changesets_on_repository_id` (`repository_id`),
   KEY `index_changesets_on_committed_on` (`committed_on`),
   KEY `changesets_repos_scmid` (`repository_id`,`scmid`)
-) ENGINE=InnoDB AUTO_INCREMENT=52104 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=53320 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -330,7 +330,7 @@ CREATE TABLE `changesets` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-14  7:03:15
+-- Dump completed on 2011-09-17 10:24:40
 
 
 
@@ -378,7 +378,7 @@ CREATE TABLE `changesets_issues` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-14  7:03:15
+-- Dump completed on 2011-09-17 10:24:40
 
 
 
@@ -433,7 +433,7 @@ CREATE TABLE `comments` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-14  7:03:15
+-- Dump completed on 2011-09-17 10:24:40
 
 
 
@@ -496,7 +496,7 @@ CREATE TABLE `custom_fields` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-14  7:03:15
+-- Dump completed on 2011-09-17 10:24:40
 
 INSERT INTO `custom_fields` VALUES ('1','UserCustomField','Country','string','--- []\n\n','','3','20','1','0','0','1','0','','1','1');
 INSERT INTO `custom_fields` VALUES ('2','IssueCustomField','Sequencing','int','--- []\n\n','','0','0','0','0','1','1','0','','1','1');
@@ -549,7 +549,7 @@ CREATE TABLE `custom_fields_projects` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-14  7:03:15
+-- Dump completed on 2011-09-17 10:24:40
 
 
 
@@ -597,7 +597,7 @@ CREATE TABLE `custom_fields_trackers` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-14  7:03:15
+-- Dump completed on 2011-09-17 10:24:40
 
 INSERT INTO `custom_fields_trackers` VALUES ('2','1');
 INSERT INTO `custom_fields_trackers` VALUES ('2','2');
@@ -642,7 +642,7 @@ CREATE TABLE `custom_values` (
   PRIMARY KEY (`id`),
   KEY `custom_values_customized` (`customized_type`,`customized_id`),
   KEY `index_custom_values_on_custom_field_id` (`custom_field_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=17488 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=17706 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -654,7 +654,7 @@ CREATE TABLE `custom_values` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-14  7:03:15
+-- Dump completed on 2011-09-17 10:24:40
 
 INSERT INTO `custom_values` VALUES ('966','Principal','990','1','Russia');
 INSERT INTO `custom_values` VALUES ('1537','Principal','1561','1','Netherlands');
@@ -713,7 +713,7 @@ CREATE TABLE `documents` (
   KEY `documents_project_id` (`project_id`),
   KEY `index_documents_on_category_id` (`category_id`),
   KEY `index_documents_on_created_on` (`created_on`)
-) ENGINE=InnoDB AUTO_INCREMENT=622 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=632 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -725,7 +725,7 @@ CREATE TABLE `documents` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-14  7:03:15
+-- Dump completed on 2011-09-17 10:24:40
 
 INSERT INTO `documents` VALUES ('205','1066','1','Enhanced locations manager discussion','Every client has a few objects (buildings, offices). Every object needs to have a few documents\r\n[19.01.2011 21:30:32] Michel Branco Bio: and some works needs to be checked as \'done\' if not on time, will be expired. Some users manager. There will be public users and admin users\r\n[19.01.2011 21:30:41] Michel Branco Bio: so that client can see the documents for their objects, but not change anything.\r\n--------------------------------------------------------------------------\r\non the left we see this tree menu\r\n[20.01.2011 21:13:39] Michel Branco Bio: Every main map is a \'Client\'\r\n[20.01.2011 21:13:51] Michel Branco Bio: so in this case for example \'Demo\' is a client\r\n[20.01.2011 21:15:26] Michel Branco Bio: if we click on map demo\r\n[20.01.2011 21:15:43] Michel Branco Bio: We see client info\r\n[20.01.2011 21:20:47] Michel Branco Bio: second tab \'gebruikers\' are the users who are assigned to this client\r\n[20.01.2011 21:20:58] Michel Branco Bio: other two tabs i explain later\r\n[20.01.2011 21:21:10] Michel Branco Bio: if we click on + sign next to \'Demo\' map\r\n[20.01.2011 21:21:16] Michel Branco Bio: the tree colapses\r\n[20.01.2011 21:22:26] Michel Branco Bio: the map \'Algemene informatie\' is a map wich is always present there. If we collapse this wee see two listings\r\n[20.01.2011 21:23:01] Michel Branco Bio: if you click on both of them, you basically see that they are only a file managing function\r\n[20.01.2011 21:23:07] Michel Branco Bio: to upload/download documents\r\n[20.01.2011 21:23:51] Yuri Lopukhov: names of maps are set by user?\r\n[20.01.2011 21:24:00] Yuri Lopukhov: or preset?\r\n[20.01.2011 21:24:37] Michel Branco Bio: in this case for \'Algemene informatie\' it\'s preset\r\n[20.01.2011 21:24:59] Yuri Lopukhov: yes, I mean subfolders\r\n[20.01.2011 21:25:11] Michel Branco Bio: you need to be aware that i\'m explaining this system, but of course i\'m gonna make it in a bit different layout. But functionality is the same.\r\n[20.01.2011 21:25:19] Yuri Lopukhov: ok\r\n[20.01.2011 21:25:20] Michel Branco Bio: this is preset\r\n[20.01.2011 21:25:25] Michel Branco Bio: - The other map \'Demoweg 1\' is an example of a object/location of this client\r\n[20.01.2011 21:25:50] Michel Branco Bio: if we click on the map we see information about this location.\r\n[20.01.2011 21:26:29] Michel Branco Bio: if we collapse the map we see a few listings\r\n[20.01.2011 21:26:55] Michel Branco Bio: these listings all have also document manager function\r\n[20.01.2011 21:27:21] Yuri Lopukhov: please, say expand, collapse is contrary )\r\n[20.01.2011 21:27:38] Michel Branco Bio: oops\r\n[20.01.2011 21:27:38] Michel Branco Bio: sorry :)\r\n[20.01.2011 21:27:47] Michel Branco Bio: expand!\r\n[20.01.2011 21:28:16] Michel Branco Bio: if we click on map \'Demoweg 1\' again\r\n[20.01.2011 21:28:53] Michel Branco Bio: we have tab \'formulier invullen\'\r\n[20.01.2011 21:29:43] Michel Branco Bio: we don\'t have an account with all rights, but each of the 3 forms are made by admin\r\n[20.01.2011 21:29:47] Michel Branco Bio: if we c lick on one\r\n[20.01.2011 21:29:54] Michel Branco Bio: first one for example\r\n[20.01.2011 21:30:28] Michel Branco Bio: We see it\'s title\r\n- It\'s Frequency (preset when this form was assigned to this location)\r\n[20.01.2011 21:30:47] Michel Branco Bio: - Username of person who is currently viewing this doc\r\n[20.01.2011 21:30:50] Michel Branco Bio: - And date of today\r\n[20.01.2011 21:31:45] Michel Branco Bio: Basically these forms have some prefilled listings (by admin) wich the user (in this case Michel Branco) have to set each task to \'Akkoord\', by clicking on the tickbox\r\n[20.01.2011 21:32:07] Michel Branco Bio: if everything ticked, we can also tick \'Gereed\' wich means \'done\'.\r\n[20.01.2011 21:32:17 | ???????? 21:32:23] Michel Branco Bio: System then knows task has been done\r\n[20.01.2011 21:33:34] Michel Branco Bio: so what is important here the date of saving \'completed\' form, and it\'s preset frequency. system then knows if it\'s expired (expired: when form is not marked as \'done\' in the frequency ammount of time)\r\n[20.01.2011 21:33:46] Michel Branco Bio: in the tab \'ingevulde formulieren\' we can see history of filled in forms\r\n[20.01.2011 21:33:58] Michel Branco Bio: for this location\r\n[20.01.2011 21:34:16] Michel Branco Bio: and eventually also from other locations for this client (selecting in dropdown)\r\n[20.01.2011 21:36:52] Michel Branco Bio: in tab \'Planning\' then system shows wich forms are completed, planned, expired/not complete\r\n[20.01.2011 21:37:14] Michel Branco Bio: so system must make these listings automatically based on the frequency set in form (by admin)\r\n[20.01.2011 21:37:23] Michel Branco Bio: so that worker only can open and fill in, and mark as \'done\'\r\n[20.01.2011 21:39:18] Michel Branco Bio: I will ask them to make me admin so it\'s more clear about the admin functions\r\n[20.01.2011 21:39:35] Michel Branco Bio: Is it a bit clear about the system it\'s meaning?\r\n[20.01.2011 21:39:51] Yuri Lopukhov: yes\r\n[20.01.2011 21:40:11] Michel Branco Bio: so we have\r\n\r\nClient > Locations/Objects > Documents > Forms > Planning\r\n[20.01.2011 21:40:15] Michel Branco Bio: globally\r\n[20.01.2011 21:40:54] Yuri Lopukhov: so is this what we have in our system? or something else?\r\n[20.01.2011 21:41:16] Yuri Lopukhov: apart files manager I mean\r\n[20.01.2011 21:41:28] Michel Branco Bio: what you mean?\r\n[20.01.2011 21:41:55] Yuri Lopukhov: well planning is the same planning we made, or it\'s planning for something else?\r\n[20.01.2011 21:42:15] Michel Branco Bio: apart\r\n[20.01.2011 21:42:26] Michel Branco Bio: they only possible connection is maybe same client/locations\r\n[20.01.2011 21:42:39] Michel Branco Bio: but the thing is they want system asap\r\n[20.01.2011 21:42:49] Michel Branco Bio: so it depends about the complexity to integrate some things with current erp.\r\n[20.01.2011 21:42:53] Yuri Lopukhov: so what is this planning plans and what are those checkmarks?\r\n[20.01.2011 21:43:29] Michel Branco Bio: this is meant to autogenerate forms, indicating that it needs to be filled in\r\n--------------------------------------------------------------------------\r\nlet\'s click on \'Demo\'\r\n[18:03:05] Michel Branco Bio: in map\r\n[18:03:16] Michel Branco Bio: let\'s make this map, expand\r\n[18:03:32] Michel Branco Bio: click on map \'Demoweg 1\'\r\n[18:03:58] Michel Branco Bio: most tabs are clear as we discussed them last time. Let\'s click on tab \'Formulier invullen\'\r\n[18:04:12] Michel Branco Bio: there we see 4 forms, wich are assigned to this location\r\n[18:04:27] Michel Branco Bio: let\'s click on the third one \'Demoweg 1 spoelen tappunten wekelijks\'\r\n[18:05:18] Michel Branco Bio: what we can do here tell per row, if it has been checked. By giving a \'check\' on column \'Akkoord\'\r\n[18:05:34] Michel Branco Bio: It can also be that there have to be filled in values, but this depends on the made form.\r\n[18:05:45] Michel Branco Bio: Also in field \'opmerkingen\' we can add comments\r\n[18:06:05] Michel Branco Bio: On save the form/doc is automatically saved with Username\r\n[18:06:17] Michel Branco Bio: on the last tab \'Planning\' we can see the statusses of the forms.\r\n[18:06:37] Michel Branco Bio: What\'s important, is where we can pre-make this forms\r\n[18:06:47] Michel Branco Bio: since we assign them to locations\r\n[18:07:00] Michel Branco Bio: for this we have to click on \'Dossier\' in left menu\r\n[18:07:10] Yuri Lopukhov: each location have it\'s own set of forms?\r\n[18:07:26] Michel Branco Bio: how they made now yes\r\n[18:07:45] Michel Branco Bio: because they preset the \'points\' in the building, where they have to their services\r\n[18:08:30] Michel Branco Bio: I will just explain they way they do it know in this system. As i see it, i think we can make some tings more easy and logical\r\n[18:09:59] Michel Branco Bio: for now clear?\r\n[18:10:09] Yuri Lopukhov: for what these forms are anyway? What they do with these checks or data? is this what monsterforms for? or something else?\r\n[18:11:38 | ???????? 18:12:01] Michel Branco Bio: Well in this system, they make forms. In every form, they preset points where they take samples or do maintainence (so location specific). After this they can fill in values from points, or set it as \'done\'. For now i\'m not sure about the relation between monsterforms, but we don\'t have to take this into account. We can see it as an apart system\r\n[18:12:40] Yuri Lopukhov: but when these forms are filled in? when subproject is in progress on location?\r\n[18:13:04] Michel Branco Bio: Basically what the system does, is tracking all maintence done on a object/location. This way owner of a location/object (their client) can show to inspections what they do or did.\r\n[18:13:34] Michel Branco Bio: They fill it in for a location, after they have done the job\r\n[18:13:47] Yuri Lopukhov: ok, more or less clear now\r\n[18:14:02] Michel Branco Bio: yeah, you know right know they use it as a stand-al-one system\r\n[18:14:20] Yuri Lopukhov: I think these forms should be connected with products somehow\r\n[18:14:28] Michel Branco Bio: i think we should build it also this way. Probably in the future, client wants maybe location/monsterform/planning integration\r\n[18:14:48] Michel Branco Bio: but to save time on the short run, we build it stand-alone\r\n[18:14:54] Yuri Lopukhov: ok\r\n[18:15:25] Michel Branco Bio: yeah maybe, with products, because i think the needed data (columns) for a product are usually the same\r\n[18:16:05] Michel Branco Bio: only they preset points are different. But when making a new form, they can select product, right form columns are loaded, they can fill in the points, save form.\r\n[18:16:10] Michel Branco Bio: Shall we take a look at form creation here?\r\n[18:16:29] Michel Branco Bio: Left menu > Dossier > E-Forms\r\n[18:16:57] Michel Branco Bio: Let\'s click on \'Demoweg 1 spoelen tappunten wekelijks\'\r\n[18:17:03] Michel Branco Bio: third from above\r\n[18:17:13] Yuri Lopukhov: ok\r\n[18:17:31] Michel Branco Bio: As you can see we give this form a name on top\r\n[18:18:21] Michel Branco Bio: then at \'Frequentie\' we can choose it\'s frequency. In other words, if it\'s weekly, the system will make every week a new listing of the form, for a location. When a form after some time is not filled in (expire time) it will show expired. This is what is visible in tab \'Planning\' for a location\r\n[18:18:49 | ???????? 18:18:55] Michel Branco Bio: Also in \'Geef de ingangs datum voor dit rapport (specifiek voor dit object):\' we can set the start date, from where system will count it\'s frequency\r\n[18:20:54] Michel Branco Bio: this is clear?\r\n[18:21:04] Yuri Lopukhov: yes\r\n[18:21:58] Michel Branco Bio: only the \'Type\' dropdown i didn\'t figure out yet\r\n[18:22:20] Michel Branco Bio: in \'Opmerkingen / omschrijving\' we can fill in a comment  wich will be always visible in all form listings\r\n[18:22:46] Michel Branco Bio: there under we can basically make columns and rows. eventually with preset values\r\n[18:23:52] Michel Branco Bio: after making a form\r\n[18:24:05] Michel Branco Bio: we can go again back to  left menu > structuur\r\n[18:24:18] Michel Branco Bio: and then click again on \'Demoweg 1\' from mainmap \'Demo\'\r\n[18:24:41] Michel Branco Bio: if we click on righttop on second icon (with pencil)\r\n[18:24:52] Michel Branco Bio: we can assign forms to this location, from right to left\r\n[18:26:53] Michel Branco Bio: this is clear ?\r\n[18:27:02] Yuri Lopukhov: yes\r\n[18:27:54] Michel Branco Bio: so then about other functions wich i\'ve seen about statistisks\r\n[18:28:25 | ???????? 18:30:32] Michel Branco Bio: for sure user management/groups rights\r\n[18:30:44] Michel Branco Bio: file browser/manager\r\n[18:30:52] Michel Branco Bio: a bit same as in the menu tree is used\r\n[18:31:06] Michel Branco Bio: is it a bit clear?\r\n[18:31:14] Yuri Lopukhov: yes\r\n[18:31:20] Michel Branco Bio: so basically we have Clients > Locations > Forms > Planning\r\n[18:31:34] Michel Branco Bio: where planning is nothig more then a form overview with their statusses\r\n[18:31:51] Yuri Lopukhov: also points on location\r\n[18:31:57] Michel Branco Bio: points?\r\n[18:32:54] Yuri Lopukhov: In every form, they preset points where they take samples or do maintainence (so location specific)about them\r\n[18:33:07] Michel Branco Bio: yeah\r\n[18:33:45] Michel Branco Bio: they must be able to make their form, by making columnheaders,and prefill rows. And be able to check/unchek them as done. And give overall check to document when done.\r\n[18:34:28] Yuri Lopukhov: enter values too?\r\n[18:34:38] Yuri Lopukhov: or only check?\r\n[18:35:35] Michel Branco Bio: yes enter values too\r\n[18:35:55] Michel Branco Bio: it can be that they set column headers, and first row with sample points.\r\n[18:36:28] Michel Branco Bio: in the other rows they have to fill in then the values from the work they did on lcation, on the specific point. A bit the way the Monsterforms are working in ERP\r\n[18:36:36] Yuri Lopukhov: so any reports? or just show them in planning?\r\n[18:36:52] Michel Branco Bio: what you mean?\r\n[18:37:09] Yuri Lopukhov: well, if you fill in values, these values are used somewhere?\r\n[18:37:34] Yuri Lopukhov: for generating reports or to review somewhere\r\n[18:38:22] Michel Branco Bio: no','2011-01-26 05:57:19');
 INSERT INTO `documents` VALUES ('236','1307','2','Task discuss','[08.02.2011 21:16:09] Michel Branco Bio: On the left menu tree, same as it works now\r\n[08.02.2011 21:16:32] Michel Branco Bio: On top of menutree you see, \'Nieuw dossier / client\'. This is where we create a new Main map\r\n[08.02.2011 21:17:12] Michel Branco Bio: on the right we see file manager\r\n[08.02.2011 21:17:22] Michel Branco Bio: where we can upload/download files\r\n[08.02.2011 21:17:24] Michel Branco Bio: this is clear right?\r\n[08.02.2011 21:17:36] Michel Branco Bio: in actions, the middle icon means that you can edit filename\r\n[08.02.2011 21:18:34] Yuri Lopukhov: ok\r\n[08.02.2011 21:18:49] Michel Branco Bio: also menutree has right click menu\r\n[08.02.2011 21:19:30] Michel Branco Bio: page2\r\n[08.02.2011 21:20:18] Michel Branco Bio: When creating a \'Nieuw dossier / client\' there is made a  mainmap.\r\n[08.02.2011 21:20:30] Michel Branco Bio: Then the comments of \'Note 2\' will be applied\r\n[08.02.2011 21:20:31] Yuri Lopukhov: creating new client have any popup or something?\r\n[08.02.2011 21:21:08] Michel Branco Bio: new page\r\n[08.02.2011 21:21:11] Michel Branco Bio: will show later\r\n[08.02.2011 21:21:13] Yuri Lopukhov: ok\r\n[08.02.2011 21:21:26] Michel Branco Bio: So about notes 2 is clear?\r\n[08.02.2011 21:21:46] Michel Branco Bio: so when mainmap is made\r\n[08.02.2011 21:21:54] Michel Branco Bio: we can make submaps/items\r\n[08.02.2011 21:22:15] Yuri Lopukhov: what is 1-2-3-4 items?\r\n[08.02.2011 21:23:38] Michel Branco Bio: when making a new subitem\r\n[08.02.2011 21:24:49] Michel Branco Bio: we can attach a function to it\r\n[08.02.2011 21:26:11] Michel Branco Bio: 1- Attach simple page (html editor) like in current system\r\n\r\n2- Attach image (upload image) is to attach an image\r\n[08.02.2011 21:26:22] Michel Branco Bio: 3- Attach file (show page with linkable file)\r\n[08.02.2011 21:26:50] Michel Branco Bio: 4- Attach location (attach a fysical location)\r\n[08.02.2011 21:28:13] Michel Branco Bio: this is clear?\r\n[08.02.2011 21:29:09] Yuri Lopukhov: is this popup or how do we select what to attach?\r\n[08.02.2011 21:30:10] Michel Branco Bio: in new window\r\n[08.02.2011 21:30:12] Michel Branco Bio: like in current system\r\n[08.02.2011 21:30:39] Michel Branco Bio: new page i mean\r\n[08.02.2011 21:30:43] Michel Branco Bio: where you can select what you want\r\n[08.02.2011 21:32:00] Michel Branco Bio: in current system it\'s called \'Add object\'\r\n[08.02.2011 21:32:37] Michel Branco Bio: This is clear?\r\n[08.02.2011 21:32:45 | ???????? 21:32:47] Yuri Lopukhov: yes\r\n[08.02.2011 21:32:59] Michel Branco Bio: page 3\r\n[08.02.2011 21:33:07] Michel Branco Bio: this is the Mainmap (client) data\r\n[08.02.2011 21:33:41] Michel Branco Bio: page 4\r\n[08.02.2011 21:33:46] Michel Branco Bio: this is the planning overview\r\n[08.02.2011 21:34:02] Michel Branco Bio: in other words: overview of the automatic generated forms\r\n[08.02.2011 21:34:12] Michel Branco Bio: and it\'s stasses\r\n[08.02.2011 21:34:19] Michel Branco Bio: *statusses\r\n[08.02.2011 21:34:38] Michel Branco Bio: this is clear?\r\n[08.02.2011 21:35:02] Yuri Lopukhov: what is controle\r\n[08.02.2011 21:35:54] Michel Branco Bio: form name\r\n[08.02.2011 21:36:06] Michel Branco Bio: name of the pre made form\r\n[08.02.2011 21:36:27] Yuri Lopukhov: previous form is same as for erp project?\r\n[08.02.2011 21:36:44] Michel Branco Bio: uhm i think so\r\n[08.02.2011 21:36:49] Michel Branco Bio: yes\r\n[08.02.2011 21:37:03] Michel Branco Bio: maybe we can link it somehow, or use something to retrieve clients/locations\r\n[08.02.2011 21:37:21] Yuri Lopukhov: ok\r\n[08.02.2011 21:37:54] Michel Branco Bio: page 5\r\n- This is a bit same as mainmap (client) but specifically for a location. Also under we can attach premade forms to this location (design is from current system, but to understand idea)\r\n[08.02.2011 21:38:37] Michel Branco Bio: this is clear?\r\n[08.02.2011 21:39:11] Yuri Lopukhov: so this is location?\r\n[08.02.2011 21:39:55] Yuri Lopukhov: is there some client data in form?\r\n[08.02.2011 21:40:38] Michel Branco Bio: yes\r\n[08.02.2011 21:40:50 | ???????? 21:40:56] Michel Branco Bio: \'Organisatie\' is company\r\n[08.02.2011 21:41:18] Michel Branco Bio: so let\'s say adres is only different and \'dossier naam\'\r\n[08.02.2011 21:41:25] Yuri Lopukhov: ok\r\n[08.02.2011 21:41:58] Michel Branco Bio: this is also clear?\r\n[08.02.2011 21:42:09] Yuri Lopukhov: yeah\r\n[08.02.2011 21:42:23] Michel Branco Bio: page 6 is where we are making/edit a form\r\n[08.02.2011 21:42:35] Michel Branco Bio: so we can choose how many columns (aantal kolommen)\r\n[08.02.2011 21:42:44] Yuri Lopukhov: how do we get here?\r\n[08.02.2011 21:43:01] Michel Branco Bio: module \'Formulieren\'\r\n[08.02.2011 21:43:06] Michel Branco Bio: later you will see it\r\n[08.02.2011 21:43:29] Michel Branco Bio: actually here tabs are not relevant, my bad. \'Dossiergegevens\' and \'planning\'\r\n[08.02.2011 21:43:41] Michel Branco Bio: but this is also clear?\r\n[08.02.2011 21:44:19] Yuri Lopukhov: yes\r\n[08.02.2011 21:47:14] Michel Branco Bio: page 7\r\n[08.02.2011 21:47:26] Michel Branco Bio: its the same form, but not editing modus. Here we are actually filling in\r\n[08.02.2011 21:48:19] Michel Branco Bio: in \'paraaf\' on save, the current date/time and user will be set there (readonly)\r\n[08.02.2011 21:48:32] Yuri Lopukhov: ok\r\n[08.02.2011 21:48:43] Yuri Lopukhov: how does print view look?\r\n[08.02.2011 21:48:52] Yuri Lopukhov: or later?\r\n[08.02.2011 21:50:01] Michel Branco Bio: view i don\'t have\r\n[08.02.2011 21:50:08] Michel Branco Bio: i only have from current system\r\n[08.02.2011 21:50:19] Michel Branco Bio: but if we have print view, then pdf view is easy or not?\r\n[08.02.2011 21:50:41] Yuri Lopukhov: no, it doesn\'t matter\r\n[08.02.2011 21:50:58] Michel Branco Bio: okay\r\n[08.02.2011 21:51:26] Michel Branco Bio: so this page is clear?\r\n[08.02.2011 21:51:35] Yuri Lopukhov: yeah\r\n[08.02.2011 21:51:43] Michel Branco Bio: page 8\r\n[08.02.2011 21:51:46] Michel Branco Bio: this is the form overview\r\n[08.02.2011 21:51:50] Michel Branco Bio: where we see all forms\r\n[08.02.2011 21:51:53] Michel Branco Bio: on click we can edit them\r\n[08.02.2011 21:52:04] Michel Branco Bio: on top we see icon \'nieuw formulier\' to create new one\r\n[08.02.2011 21:52:35] Yuri Lopukhov: forms are unique for each location? or shared between locations/clients?\r\n[08.02.2011 21:52:50] Michel Branco Bio: can be shared\r\n[08.02.2011 21:52:53] Michel Branco Bio: i mean\r\n[08.02.2011 21:52:56] Michel Branco Bio: we can make a form\r\n[08.02.2011 21:53:04] Michel Branco Bio: and assign it to multiple locations\r\n[08.02.2011 21:53:10] Michel Branco Bio: but ussually the forms are very location specific\r\n[08.02.2011 21:53:47] Yuri Lopukhov: ok, but in current design there is no such function?\r\n[08.02.2011 21:54:06] Michel Branco Bio: well on page http://amigu.nl/biolab/gd/page5.html\r\n[08.02.2011 21:54:07] Michel Branco Bio: on the bottom\r\n[08.02.2011 21:54:12] Michel Branco Bio: i took it from current system\r\n[08.02.2011 21:54:13] Michel Branco Bio: needs redesign\r\n[08.02.2011 21:54:22] Michel Branco Bio: but there we can assign existing forms to this location\r\n[08.02.2011 21:54:26] Yuri Lopukhov: ok\r\n[08.02.2011 21:54:31] Michel Branco Bio: from right to left\r\n[08.02.2011 21:55:13] Yuri Lopukhov: in list there are form templates or forms that needs to be filled in?\r\n[08.02.2011 21:55:34] Michel Branco Bio: formtemplate/form to be filled in is the same for me\r\n[08.02.2011 21:55:46] Michel Branco Bio: we create a form >> assign to location >> fill in\r\n[08.02.2011 21:56:11] Yuri Lopukhov: on click on form which page opens?\r\n[08.02.2011 21:56:24] Michel Branco Bio: http://amigu.nl/biolab/gd/page6.html\r\n[08.02.2011 21:56:26] Michel Branco Bio: editing\r\n[08.02.2011 21:56:36] Michel Branco Bio: not filling in. Filling in is only in \'Planning\' overview\r\n[08.02.2011 21:56:41] Yuri Lopukhov: ok\r\n[08.02.2011 21:56:46] Michel Branco Bio: if we click there on form we get the fill in screen\r\n[08.02.2011 21:57:03] Michel Branco Bio: so there is a difference in editing and filling in modus\r\n[08.02.2011 21:57:12] Michel Branco Bio: this is clear?\r\n[08.02.2011 21:57:16] Yuri Lopukhov: yes\r\n[08.02.2011 21:57:22] Michel Branco Bio: http://amigu.nl/biolab/gd/page9.html  page 9\r\n[08.02.2011 21:57:30] Michel Branco Bio: i took it from current system\r\n[08.02.2011 21:57:35] Michel Branco Bio: this is to edit user acces rights\r\n[08.02.2011 21:57:42] Michel Branco Bio: so we can say per user, wich rights\r\n[08.02.2011 21:58:03] Michel Branco Bio: i was thinkg about also assiging users to user groups, so that they have some predefined rights\r\n[08.02.2011 21:58:21] Michel Branco Bio: So that an \'user group\'  automatically has acces to some maps\r\n[08.02.2011 21:58:35] Michel Branco Bio: but you understand the idea right?\r\n\r\nhttp://amigu.nl/biolab/gd/page10.html on page 10 we have the module \'Gebruikers\'  (users)\r\n\r\n Michel Branco Bio (22:44:19 8/02/2011)\r\nhere we can manage the users\r\n\r\n Michel Branco Bio (22:44:47 8/02/2011)\r\nalso the first icon, in actions, on click it will open window from http://amigu.nl/biolab/gd/page9.html\r\n\r\n 203602371@qip.ru (22:45:14 8/02/2011)\r\nok\r\n\r\n Michel Branco Bio (22:45:27 8/02/2011)\r\non page 11 http://amigu.nl/biolab/gd/page11.html we see the user details, i just copied from current system, but this is user editor screen\r\n\r\n Michel Branco Bio (22:45:46 8/02/2011)\r\nthere are some icons to export to excel. etc\r\n\r\n Michel Branco Bio (22:45:56 8/02/2011)\r\nmaybe we can put this somewhere else, in main settings screen or something\r\n\r\n 203602371@qip.ru (22:46:03 8/02/2011)\r\nok\r\n\r\n Michel Branco Bio (22:46:19 8/02/2011)\r\nand that\'s it','2011-02-11 17:50:22');
@@ -766,7 +766,7 @@ CREATE TABLE `enabled_modules` (
   `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`id`),
   KEY `enabled_modules_project_id` (`project_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=27843 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=28053 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -778,7 +778,7 @@ CREATE TABLE `enabled_modules` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-14  7:03:15
+-- Dump completed on 2011-09-17 10:24:40
 
 INSERT INTO `enabled_modules` VALUES ('9695','1066','issue_tracking');
 INSERT INTO `enabled_modules` VALUES ('9696','1066','time_tracking');
@@ -855,12 +855,23 @@ CREATE TABLE `enumerations` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-14  7:03:15
+-- Dump completed on 2011-09-17 10:24:40
 
+INSERT INTO `enumerations` VALUES ('1','User documentation','1','0','DocumentCategory','1',NULL,NULL);
+INSERT INTO `enumerations` VALUES ('2','Technical documentation','2','0','DocumentCategory','1',NULL,NULL);
+INSERT INTO `enumerations` VALUES ('3','Low','1','0','IssuePriority','1',NULL,NULL);
+INSERT INTO `enumerations` VALUES ('4','Normal','2','1','IssuePriority','1',NULL,NULL);
+INSERT INTO `enumerations` VALUES ('5','High','3','0','IssuePriority','1',NULL,NULL);
+INSERT INTO `enumerations` VALUES ('6','Urgent','4','0','IssuePriority','1',NULL,NULL);
+INSERT INTO `enumerations` VALUES ('7','Immediate','5','0','IssuePriority','1',NULL,NULL);
+INSERT INTO `enumerations` VALUES ('8','Design','1','0','TimeEntryActivity','1',NULL,NULL);
+INSERT INTO `enumerations` VALUES ('9','Development','2','0','TimeEntryActivity','1',NULL,NULL);
+INSERT INTO `enumerations` VALUES ('10','Administrative','3','0','TimeEntryActivity','1',NULL,NULL);
 INSERT INTO `enumerations` VALUES ('39','Design','32','0','TimeEntryActivity','0','1066','8');
 INSERT INTO `enumerations` VALUES ('40','Administrative','33','0','TimeEntryActivity','0','1066','10');
 INSERT INTO `enumerations` VALUES ('41','Design','34','0','TimeEntryActivity','0','1307','8');
 INSERT INTO `enumerations` VALUES ('42','Administrative','35','0','TimeEntryActivity','0','1307','10');
+INSERT INTO `enumerations` VALUES ('56','Planning','49','0','TimeEntryActivity','1',NULL,NULL);
 
 
 ###################
@@ -913,7 +924,7 @@ CREATE TABLE `gitosis_public_keys` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-14  7:03:15
+-- Dump completed on 2011-09-17 10:24:40
 
 
 
@@ -961,7 +972,7 @@ CREATE TABLE `groups_users` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-14  7:03:15
+-- Dump completed on 2011-09-17 10:24:40
 
 
 
@@ -1001,7 +1012,7 @@ CREATE TABLE `issue_categories` (
   PRIMARY KEY (`id`),
   KEY `issue_categories_project_id` (`project_id`),
   KEY `index_issue_categories_on_assigned_to_id` (`assigned_to_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1863 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=1895 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -1013,12 +1024,13 @@ CREATE TABLE `issue_categories` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-14  7:03:15
+-- Dump completed on 2011-09-17 10:24:41
 
 INSERT INTO `issue_categories` VALUES ('1429','1066','Invoicing',NULL);
 INSERT INTO `issue_categories` VALUES ('1628','2379','Offer_SabonERP_debugging','3626');
 INSERT INTO `issue_categories` VALUES ('1630','2379','Quote','3626');
 INSERT INTO `issue_categories` VALUES ('1738','2379','SabonERP_debugging_II','3626');
+INSERT INTO `issue_categories` VALUES ('1881','2379','SabonERP_debugging_III',NULL);
 
 
 ###################
@@ -1058,7 +1070,7 @@ CREATE TABLE `issue_relations` (
   PRIMARY KEY (`id`),
   KEY `index_issue_relations_on_issue_from_id` (`issue_from_id`),
   KEY `index_issue_relations_on_issue_to_id` (`issue_to_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=771 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=796 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -1070,7 +1082,7 @@ CREATE TABLE `issue_relations` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-14  7:03:15
+-- Dump completed on 2011-09-17 10:24:41
 
 
 
@@ -1125,7 +1137,7 @@ CREATE TABLE `issue_statuses` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-14  7:03:15
+-- Dump completed on 2011-09-17 10:24:41
 
 INSERT INTO `issue_statuses` VALUES ('1','New','0','1','1',NULL);
 INSERT INTO `issue_statuses` VALUES ('2','Assigned','0','0','2',NULL);
@@ -1198,7 +1210,7 @@ CREATE TABLE `issues` (
   KEY `index_issues_on_author_id` (`author_id`),
   KEY `index_issues_on_created_on` (`created_on`),
   KEY `index_issues_on_root_id_and_lft_and_rgt` (`root_id`,`lft`,`rgt`)
-) ENGINE=InnoDB AUTO_INCREMENT=30578 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=30962 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -1210,7 +1222,7 @@ CREATE TABLE `issues` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-14  7:03:16
+-- Dump completed on 2011-09-17 10:24:41
 
 INSERT INTO `issues` VALUES ('9310','4','1066','Clients','',NULL,NULL,'5','990','7','503','990','19','2011-01-06 21:51:21','2011-04-12 05:01:15','2011-01-06','100','10',NULL,'9310','1','18','0');
 INSERT INTO `issues` VALUES ('9311','4','1066','Projects','',NULL,NULL,'5','1561','7','505','990','27','2011-01-06 21:51:49','2011-09-05 20:29:13','2011-01-06','100','15.5',NULL,'9311','1','26','0');
@@ -1674,7 +1686,7 @@ INSERT INTO `issues` VALUES ('21518','2','2379','Cashregister: Add inputfield \'
 INSERT INTO `issues` VALUES ('21519','2','2379','Cashregister: Indicate absent hours worker','In the Cashregister create screen, on step 2, there should come an extra dropdown under the dropdown fields, where they select the start/endtime. This field has label: \r\n\r\n\'Afwezige uren\' (absent hours). Here they choose a numeric value. This is to indicate how many hours they were absent/not working. We can start with value 0,25 uur - 0,5 uur - 0,75 uur - 1 uur - Etc....If they select here for example value \'1\', this ammount must be subtracted from total worked hours.',NULL,NULL,'5','1561','7',NULL,'1561','2','2011-06-24 20:10:15','2011-06-30 05:43:28','2011-06-24','0',NULL,NULL,'21519','1','2','0');
 INSERT INTO `issues` VALUES ('21520','2','2379','Planning: Comments field not mandatory','The comments field in planning shouldn\'t be mandatory. They are free to leave this empty.',NULL,NULL,'5','1561','7',NULL,'1561','2','2011-06-24 20:10:43','2011-06-25 20:37:50','2011-06-24','0',NULL,NULL,'21520','1','2','0');
 INSERT INTO `issues` VALUES ('21521','2','2379','Brancheditor: Add tickbox \'V&D shop\'','In the brancheditor we must add an extra tickbox with label \'V&D shop\'. If they enable this tickbox, it means this store is a \'V&D shop\'. This has impact on the cashregister for this branch. Some values in cashregister will be disabled (don\'t need to be filled in). More info will follow from my side.',NULL,NULL,'5','1561','5',NULL,'1561','6','2011-06-24 20:11:12','2011-08-19 22:54:16','2011-06-24','0',NULL,NULL,'21521','1','2','0');
-INSERT INTO `issues` VALUES ('21522','2','2379','Weekly report for testers --> V&D shops','For all \'V&D shop\' indicated branches, they want a weekly report, with all testers/barcodes. (Step 3 in cash register create screen). It must be 1 report, but they must be able to filter values per branch. You have some solution for this? I suggest to keep it in an overview, and eventually add option to download pdf or print.',NULL,'1630','2','3626','4',NULL,'1561','7','2011-06-24 20:11:46','2011-09-13 00:23:43','2011-06-24','0',NULL,NULL,'21522','1','2','0');
+INSERT INTO `issues` VALUES ('21522','2','2379','Weekly report for testers --> V&D shops','For all \'V&D shop\' indicated branches, they want a weekly report, with all testers/barcodes. (Step 3 in cash register create screen). It must be 1 report, but they must be able to filter values per branch. You have some solution for this? I suggest to keep it in an overview, and eventually add option to download pdf or print.',NULL,'1881','2','3626','4',NULL,'1561','8','2011-06-24 20:11:46','2011-09-15 23:05:11','2011-06-24','0',NULL,NULL,'21522','1','2','0');
 INSERT INTO `issues` VALUES ('21523','2','2379','Cash register overview screen: Add column \'Kasverschil\'','In the cash register overview screen, we need to add a column \'Kasverschil\'. Here we show the cashregister difference value. This way they can see immedeatly the cash register differences in overview.',NULL,NULL,'5','1561','7',NULL,'1561','2','2011-06-24 20:12:29','2011-06-27 08:05:31','2011-06-24','0',NULL,NULL,'21523','1','2','0');
 INSERT INTO `issues` VALUES ('21524','2','2379','Add usergroup: Afdeling HR','We need to create an extra usergroup: \'Afdeling HR\'. It has exactly same rights as \'Admin\' usergroup.',NULL,NULL,'5','1561','7',NULL,'1561','2','2011-06-24 20:13:23','2011-06-27 08:05:22','2011-06-24','0',NULL,NULL,'21524','1','2','0');
 INSERT INTO `issues` VALUES ('21525','2','2379','Changing own personal details: Needs approval','When an user wants to change their own personal details, they can edit the values. But on save, it must show message: \'Changes sent to manager for aproval\'. The usergroup \'Afdeling HR\' then will receive a notification that the specific user wants to change their personal details, including the specified mutations. Then the user of \'Afdeling HR\' can decide to \'decline\' or \'aprove\' these changes. In meantime the employer who changed his/her personal details, on open of their personal details will see that the all fields are set to  read-only. This is to not let the user send again changes immedeatly. It must wait for the first request to be approved. Generally this function is to maintain control on userinfo changes. Let me know if you have a better or simpeler idea about this.',NULL,'1628','2','3626','6',NULL,'1561','5','2011-06-24 20:13:49','2011-08-24 03:15:48','2011-06-24','0',NULL,NULL,'21525','1','2','0');
@@ -1688,9 +1700,9 @@ INSERT INTO `issues` VALUES ('21533','2','1066','Change all projects from projec
 INSERT INTO `issues` VALUES ('21618','2','2379','Export userlist including passwords ','Client needs an excel export wich contains:\r\n\r\n* employee number\r\n* full name\r\n* username\r\n* password\r\n\r\nAlso we need this asap (before monday) Let me know once you have it.',NULL,NULL,'5','1561','7',NULL,'1561','2','2011-06-25 19:09:16','2011-06-25 19:46:51','2011-06-25','0',NULL,NULL,'21618','1','2','0');
 INSERT INTO `issues` VALUES ('21619','2','2379','Planning: Make planning hours possible till 22:00','Right now we can only plan in till 21:30. This should be extended to 22:00 in dropdown.',NULL,NULL,'5','1561','7',NULL,'1561','4','2011-06-25 19:10:59','2011-06-25 19:56:11','2011-06-25','0',NULL,NULL,'21619','1','2','0');
 INSERT INTO `issues` VALUES ('21620','2','2379','Planning: Let plan in also Saturday + Sunday','Right now they can\'t plan in for Saturday and Sunday. Must be enabled.',NULL,NULL,'5','1561','7',NULL,'1561','2','2011-06-25 19:11:48','2011-06-25 20:37:42','2011-06-25','0',NULL,NULL,'21620','1','2','0');
-INSERT INTO `issues` VALUES ('21621','1','2379','Agenda: Sometimes shows \'undefined\' ','Sometimes in agenda it shows \' undefined \' in column headers where date should be. See attachment.',NULL,'1630','2','3626','7',NULL,'1561','17','2011-06-25 19:15:14','2011-09-13 00:23:43','2011-06-25','0',NULL,NULL,'21621','1','2','0');
+INSERT INTO `issues` VALUES ('21621','1','2379','Agenda: Sometimes shows \'undefined\' ','Sometimes in agenda it shows \' undefined \' in column headers where date should be. See attachment.',NULL,'1881','2','3626','7',NULL,'1561','18','2011-06-25 19:15:14','2011-09-15 23:08:35','2011-06-25','0',NULL,NULL,'21621','1','2','0');
 INSERT INTO `issues` VALUES ('21622','1','2379','Css not loaded on production server (www.teamsabon.nl)','It seems full header is not inserted/loaded. Especially you can see it on \' Staff \' pages, agenda etc.',NULL,NULL,'5','2684','7',NULL,'1561','2','2011-06-25 19:19:25','2011-06-27 03:41:20','2011-06-25','0',NULL,NULL,'21622','1','2','0');
-INSERT INTO `issues` VALUES ('21623','2','2379','Solution needed to encrypt code','The thing is that server is owned by client. What we want is that client can\'t take another developer on this project. They need us. To do this we need to encrypt code or some other method. Please let me know your thoughts.',NULL,'1628','2','1561','5',NULL,'1561','10','2011-06-25 19:39:10','2011-09-14 00:29:53','2011-06-25','0',NULL,NULL,'21623','1','2','0');
+INSERT INTO `issues` VALUES ('21623','2','2379','Solution needed to encrypt code','The thing is that server is owned by client. What we want is that client can\'t take another developer on this project. They need us. To do this we need to encrypt code or some other method. Please let me know your thoughts.',NULL,'1628','2','3626','5',NULL,'1561','11','2011-06-25 19:39:10','2011-09-14 23:05:41','2011-06-25','0',NULL,NULL,'21623','1','2','0');
 INSERT INTO `issues` VALUES ('21626','2','2379','Lost password? Feature','Needs to work',NULL,NULL,'5','1561','5',NULL,'1561','2','2011-06-25 20:09:36','2011-06-25 20:36:51','2011-06-25','0',NULL,NULL,'21626','1','2','0');
 INSERT INTO `issues` VALUES ('21630','2','2379','First time logged in > Force to choose new password','On first time login an user has to change their password. Let me know wich day you can add this feature.',NULL,NULL,'5','3626','7',NULL,'1561','19','2011-06-25 22:47:31','2011-09-08 19:13:05','2011-06-25','100',NULL,NULL,'21630','1','2','0');
 INSERT INTO `issues` VALUES ('21710','1','2379','Staff overview: function \'Employee schedule\' doesn\'t work','The function wich redirects you to planning, with selected user doesn\'t work.',NULL,NULL,'5','1561','7',NULL,'1561','2','2011-06-27 03:59:31','2011-06-30 05:43:19','2011-06-27','0',NULL,NULL,'21710','1','2','0');
@@ -1761,7 +1773,7 @@ INSERT INTO `issues` VALUES ('22684','1','2379','Hours not registrated in worksh
 INSERT INTO `issues` VALUES ('22696','2','2379','Finance > Visitor Counter','We need to make the visitor counter module. This visitor counter must be imported daily from a file. This file will be available in some FTP map of productionserver (right now: ftp://sabonftp@62.148.170.170/private/Klantenteller/sabon.csv). \r\n\r\nPlease find an example of the file as an attachment here.\r\n\r\nPlease note that now in the columns they gave names of the branches. But they will soon change this to the branch codes. Like the ones in the ERP system.\r\n\r\n\r\nThe second part of the client counter, is the conversion calculator. So for example:\r\n\r\n- period 13-07-2011 till 20-07-2011 we have: 500 Visitors (based on the imported client counter data)\r\n- In the same period we have 364 paying customers (based on data filled in cashregister listings: field: number of paying customers)\r\nSo if we want to know the conversion rate in %, for this period we do this sum: \r\n\r\n_364 paying customers / 500 visitors = 0,728 x 100 = 72,8% conversation rate._\r\n\r\n\r\n*Layout*\r\nI suggest we make an overview with following columns for the Visitor Counter:\r\n\r\n_Branchcode - Branchname - Visitors - Paying customers - Conversionrate %_\r\n\r\nThen of course on top they choose the period in calender picker + day/week/month button. (like worksheets)\r\n\r\n\r\n*This needs to be done for friday 8th july*\r\n',NULL,NULL,'5','1561','7',NULL,'1561','4','2011-07-06 20:51:52','2011-07-15 03:11:45','2011-07-06','0',NULL,NULL,'22696','1','2','0');
 INSERT INTO `issues` VALUES ('22703','4','2379','Finance > Leftmenu item > Branch sales','We need to add a leftmenu item in module \'Finance\'. The following functions will be there:\r\n\r\n- Turnover overview for every branch (per period, they select start/end date to see data)\r\n- Somewhere we have to indicate how many braches there are currently in total (just ammount of branches)\r\n- Ammount of costs per branch. This value is taken from values filled in, in cashregister field \'Amount Costs\'. *Also my client told something about worker costs. Not sure if they want to calculate this by their hourrate x hours worked. Will approve this later.*',NULL,'1628','5','1561','5',NULL,'1561','17','2011-07-06 21:06:45','2011-09-05 18:25:02','2011-07-06','100',NULL,NULL,'22703','1','2','0');
 INSERT INTO `issues` VALUES ('22762','1','1066','project 2011.26 problem','For project 2011.26 (subproject A, B and C) it has product DES1. The problem is that it doesn\'t invoice on every occurence, but invoices the first time for the whole year. Also the ammount in the invoices created, doesn\'t correspond with the ammount set in the subprojects. This project (2011.26) was edited sometime (changed product DES to DES1), but it looks like this change was not done/saved in the system?\r\n\r\nWe need to sort this.',NULL,NULL,'5','1561','7','504','990','2','2011-07-07 01:55:53','2011-08-30 21:37:20','2011-07-07','0',NULL,NULL,'22762','1','2','0');
-INSERT INTO `issues` VALUES ('22926','2','2379','Add log tab in system settings','Like in Biolab ERP, we need to have some log in settings. For admin usergroup only. ',NULL,'1630','2','3626','7',NULL,'1561','9','2011-07-07 23:56:26','2011-09-13 00:23:45','2011-07-07','100',NULL,NULL,'22926','1','2','0');
+INSERT INTO `issues` VALUES ('22926','2','2379','Add log tab in system settings','Like in Biolab ERP, we need to have some log in settings. For admin usergroup only. ',NULL,'1881','2','3626','7',NULL,'1561','10','2011-07-07 23:56:26','2011-09-15 23:08:35','2011-07-07','100',NULL,NULL,'22926','1','2','0');
 INSERT INTO `issues` VALUES ('22954','2','2379','Add button from GUI design \'Dagafsluiting\' ','Bartek like in the PSD i sent you we have the button next to the logo \'Dagafsluiting\' Wich will redirect to new cashregister create page.',NULL,NULL,'5','1561','7',NULL,'1561','2','2011-07-08 01:42:50','2011-07-15 03:11:46','2011-07-08','0',NULL,NULL,'22954','1','2','0');
 INSERT INTO `issues` VALUES ('22962','2','2379','Apply following colors for agenda planned items','From what i understand, right now it uses random colors for the agenda planned items. We would like to use the following fixed colors:\r\n\r\n#1111cc\r\n#d96666\r\n#cc0066\r\n#bfbfbf\r\n#ff6600\r\n#fbb818\r\n#228822\r\n#551a8b\r\n#ff0000',NULL,NULL,'5','1561','6',NULL,'1561','2','2011-07-08 02:35:55','2011-07-22 01:05:41','2011-07-08','0',NULL,NULL,'22962','1','2','0');
 INSERT INTO `issues` VALUES ('22963','2','2379','Review system GUI layout based on initially delivered PDF design','Bartek, \r\n\r\nWe need to fine-tune the GUI layout to make it look like in PSD i sent you.',NULL,'1628','2','3626','5',NULL,'1561','4','2011-07-08 02:46:47','2011-09-02 23:51:05','2011-07-08','0',NULL,NULL,'22963','1','2','0');
@@ -1769,7 +1781,7 @@ INSERT INTO `issues` VALUES ('23024','1','2379','Finance > Cashregisters overvie
 INSERT INTO `issues` VALUES ('23025','1','2379','Date pagination (Planning, Birthdays, Worksheets, etc.) shows sometimes year 1970','When in date pagination they press on the left or right arrows, it sometimes gives as a year value: 1970. The client thinks this is browser related.',NULL,'1630','2',NULL,'6',NULL,'1561','4','2011-07-08 16:35:56','2011-09-13 00:24:21','2011-07-08','0',NULL,NULL,'23025','1','2','0');
 INSERT INTO `issues` VALUES ('23027','1','2379','New message: Contactlist doesn\'t show all employers: Needs solution','When you go to messages, and make a new message (Berichten > Nieuw bericht), in the dropdown with label \'to\' it shows only a few contacts. I think we should make it a jquery/autofill field. So that when they type Ja... it will show all names containing this letters. This way they can search, and list will not be long.',NULL,NULL,'5','1561','6',NULL,'1561','4','2011-07-08 16:39:39','2011-09-03 00:15:53','2011-07-08','0',NULL,NULL,'23027','1','2','0');
 INSERT INTO `issues` VALUES ('23028','2','2379','Planning > Agenda overview: Make smaller','Client is using system on a notebook. Right now they say that they need to scroll alot, and that they want to make the height of current planning view, half smaller so that planning could be visible in one view (around 600px height)...\r\n\r\nIs there a solution?',NULL,'1628','5','1561','6',NULL,'1561','11','2011-07-08 16:46:53','2011-09-02 23:02:10','2011-07-08','100',NULL,NULL,'23028','1','2','0');
-INSERT INTO `issues` VALUES ('23030','2','1066','Translations needs to finalized','',NULL,NULL,'2','990','6',NULL,'1561','3','2011-07-08 18:18:56','2011-09-13 22:22:41','2011-07-08','0',NULL,NULL,'23030','1','2','0');
+INSERT INTO `issues` VALUES ('23030','2','1066','Translations needs to finalized','',NULL,NULL,'3','1561','6',NULL,'1561','4','2011-07-08 18:18:56','2011-09-16 16:33:49','2011-07-08','0',NULL,NULL,'23030','1','2','0');
 INSERT INTO `issues` VALUES ('23193','2','2379','Add menu-item in finance: Branch results','In this menu-item we will have an overview (same layout as client counter overview) with following column headers:\r\n\r\n- Target\r\nShow the branch target for the chosen day, week or year (in case of week and year, we take the sum of the set targets per day)\r\n\r\n- Visitors\r\nShow the ammount of visitors for the chosen day, week or year (same column values as in \'client counter\')\r\n\r\n- Paying customers\r\nSame as in \'client counter\'\r\n\r\n- Conversion Rate\r\nShow the calcuated conversion rate (paying customers / visitors). This is same column value as in \'client counter\'.\r\n\r\n- Worked hours\r\nShow the ammount of worked hours by planned employers per day, week or year. (values taken from cashregister data)\r\n\r\n- Turnover per worked hour\r\nShow the calculated value of the average turnover per hour. (per day, week or year). So if in one day turnover is 450 and total ammount of worked hours for that day is 22, the turnover per hour is 450 / 22 = 20,45\r\n\r\n- Average Turnover per paying customer\r\nSo ammount of paying customers divided by tunover per day, week or year.\r\n\r\n- Total turnover\r\nShow the total turnover for that branch, per day, week or year. Values taken from cashregister data.\r\n\r\n',NULL,NULL,'5','1561','7',NULL,'1561','2','2011-07-11 00:50:24','2011-07-15 03:11:46','2011-07-11','0',NULL,NULL,'23193','1','2','0');
 INSERT INTO `issues` VALUES ('23280','4','2379','Optimize DB query for fetching user status','We need to optimize DB query code for fetching user status and selecting available/unavailable users. The current code causes the process of retrieving users list in planning module (when creating new planning) takes long time to complete.\r\n\r\nThe functions that fetch user status are: getBranchUsersDropDownList(), getUsersDropDownList() and getUsersDropDownListAll() in User model.',NULL,'1628','5','1561','7',NULL,'2684','14','2011-07-11 17:55:31','2011-09-08 19:34:55','2011-07-11','100',NULL,NULL,'23280','1','2','0');
 INSERT INTO `issues` VALUES ('23295','2','2379','Cashregister difference rules & actions','- If the cashregister difference is less than 5 (negative and positive) it should be automatically approved (status approved).\r\n\r\n- If the cashregister difference is bigger than 5 (negative and positive) the following usergroups, should get an notification e-mail:\r\n* Teamleader\r\n* Branchmanager\r\n\r\nOf course only the attached users to the branch of the cashregister, should get a notification e-mail. The e-mail can contain the following message (message after --> is just tracker comment):\r\n\r\n------------\r\n------------\r\n\r\nh1. Kasverschil notificatie\r\n\r\nDe volgende kassaopmaak heeft een kasverschil groter dan 5:\r\n\r\n*Filiaal:* {BRANCH CODE} - {BRANCH NAME}\r\n*Datum:* {CASHREGISTER DATE} ---> (Just the date of the cashregister)\r\n*Kassa:* {CASHREGISTER NO.}  ---> (can be cashregister 01 or 02)\r\n*Totale omzet:* {TOTAL TURNOVER}\r\n*Kasverschil:* {CASHREGISTER DIFFERENCE}\r\n*Ondertekend door:* {SIGNED BY USERNAME}\r\n\r\nKassaopmaak direct bekijken (add link to cashregister listing)\r\n\r\n------------\r\n------------',NULL,'1628','2','1561','6',NULL,'1561','13','2011-07-11 19:50:37','2011-08-31 01:10:59','2011-07-11','0',NULL,NULL,'23295','1','2','0');
@@ -1800,7 +1812,7 @@ INSERT INTO `issues` VALUES ('23686','2','2379','Usergroup \'Shopcoach\' should 
 INSERT INTO `issues` VALUES ('23687','2','2379','Add new usergroup \'Guests\' ','This usergroup can view everything in system. But cannot make changes and/or save/edit',NULL,NULL,'5','1561','5',NULL,'1561','4','2011-07-15 19:18:25','2011-09-02 22:57:50','2011-07-15','0',NULL,NULL,'23687','1','2','0');
 INSERT INTO `issues` VALUES ('23688','2','2379','Cashregister: Remove print button on step 8 and...','On step 8 remove the button \'Kassopmaak printen\'. But then under add the button \'Save & print\' (Opslaan & printen). This wil replace current button \'Save\' (Opslaan). \r\n\r\nOf course then when they hit \'save &print\' it should save first, and the popup the print view + print command.',NULL,NULL,'5','1561','6',NULL,'1561','2','2011-07-15 19:30:58','2011-09-02 22:53:51','2011-07-15','0',NULL,NULL,'23688','1','2','0');
 INSERT INTO `issues` VALUES ('23691','2','2379','Add overview \'Branch working hours\'','We need to add in module \'Finance\' the overview \'Branch working hours\' (dutch translation: \'Gewerkte uren filialen\'.\r\nThe following columns will be available:\r\n\r\nDate - Branch code - Branch name - Total worked hours\r\n\r\n*We must show the worker hours per week, shown per day. So if we show Week 43, after choosing a branch location, it will show worked hours per day in every row. In the last row, must show totals.* \r\n\r\nAlso we need to add following options: Download as excel\r\n\r\nWho can view this?: Al usergroup starting from \'Assistent filiaalmanager\' and higher.\r\n',NULL,NULL,'5','1561','7',NULL,'1561','8','2011-07-15 20:10:50','2011-09-02 22:37:48','2011-07-15','0',NULL,NULL,'23691','1','2','0');
-INSERT INTO `issues` VALUES ('23692','2','2379','Add overview \'Netto bonussen\'','We need to add in module \'Finance\' the overview \'Netto bonusses\' (dutch translation: \'Netto bonussen\'.\r\nThe following columns will be available:\r\n\r\nBranch name - Employee no. - Fullname employer - Netto bonus total \r\n\r\n(netto bonus total, is the ammount of bonus an employer has got. Values from cashregister)\r\n\r\nAlso here we have view DAY, WEEK, MONTH. But standard it must be set on \'MONTH\' view.\r\n\r\n\r\nAlso we need to add following options: Download as excel\r\n\r\nWho can see this?: Afdeling HR, Admin, Finance usergroup',NULL,'1630','2','3626','5',NULL,'1561','3','2011-07-15 20:14:51','2011-09-13 00:23:46','2011-07-15','0',NULL,NULL,'23692','1','2','0');
+INSERT INTO `issues` VALUES ('23692','2','2379','Add overview \'Netto bonussen\'','We need to add in module \'Finance\' the overview \'Netto bonusses\' (dutch translation: \'Netto bonussen\'.\r\nThe following columns will be available:\r\n\r\nBranch name - Employee no. - Fullname employer - Netto bonus total \r\n\r\n(netto bonus total, is the ammount of bonus an employer has got. Values from cashregister)\r\n\r\nAlso here we have view DAY, WEEK, MONTH. But standard it must be set on \'MONTH\' view.\r\n\r\n\r\nAlso we need to add following options: Download as excel\r\n\r\nWho can see this?: Afdeling HR, Admin, Finance usergroup',NULL,'1881','2','3626','5',NULL,'1561','5','2011-07-15 20:14:51','2011-09-16 21:14:54','2011-07-15','0',NULL,NULL,'23692','1','2','0');
 INSERT INTO `issues` VALUES ('23693','2','2379','Add overview \'Per employee worked hours per day, show per month\'','We add this in module \'finance\'. Name of this overview: \'Hours per worker\' (Dutch: Uren per persoon)\r\n\r\nWe show the following columns:\r\n\r\n*Branchname - Employee no. - Fullname employee - Netto bonus ammount*\r\n\r\nThe only view is \'Month\'. So after selecting an employer, and choosing a month, it shows specified per day (so all days of the chosen month) the worked hours.\r\n\r\nWe need also to be able to export it to excel (xls)\r\n\r\n(later we have to check how can must calculate the compensation hours, sick hours and vacation days. But more info will follow about this)',NULL,NULL,'5','1561','7',NULL,'1561','8','2011-07-15 20:26:49','2011-09-02 22:37:53','2011-07-15','0',NULL,NULL,'23693','1','2','0');
 INSERT INTO `issues` VALUES ('23694','2','2379','Cashregister overview: Add column \'Complete date + time\'','We need to add a column in the cashregister overview, where we show the time of when a cashregister was marked as completed (signed):\r\n\r\nExample:\r\n*22:04*\r\n\r\nWe add it on right of column \'Datum\' (date)',NULL,NULL,'5','1561','6',NULL,'1561','2','2011-07-15 20:28:48','2011-09-02 22:49:09','2011-07-15','0',NULL,NULL,'23694','1','2','0');
 INSERT INTO `issues` VALUES ('23947','2','1066','Inside workers: Should also be able to accept more/less work and set planned in locations with status \'cancelled\' or \'not performed\'','',NULL,NULL,'5','1561','6',NULL,'1561','13','2011-07-19 00:33:40','2011-08-30 21:42:07','2011-07-19','0','1','23963','23963','4','5','0');
@@ -1881,9 +1893,9 @@ INSERT INTO `issues` VALUES ('27839','1','2379','Cashregister closing/approving:
 INSERT INTO `issues` VALUES ('27920','2','1066','Setting up Biolab ERP on test server + configuring SLSAPP for deploying','We need to have a test environment for Biolab ERP also we need to add Biolab ERP to our deployment system. ',NULL,'1429','5','1561','5',NULL,'1561','7','2011-08-24 17:27:24','2011-08-31 18:36:07','2011-08-24','0','2','27764','27764','8','9','0');
 INSERT INTO `issues` VALUES ('27957','1','2379','Cashregister: check if ticker \'I confirm and sign that I completed the cash register correctly and truthfully\' is really mandatory','Client reported that it happened that after making the cashregister, an user could press \'save & print\' and continue, without ticking the box \'I confirm and sign that I completed the cash register correctly and truthfully\'. This brings some problems to my client.\r\n\r\nAs i see in test environment it works good. Can we somehow verify this on Teamsabon.nl if it works good there?',NULL,'1738','5','1561','5',NULL,'1561','4','2011-08-24 20:51:11','2011-09-06 22:35:57','2011-08-24','0',NULL,NULL,'27957','1','2','0');
 INSERT INTO `issues` VALUES ('27958','1','2379','Cashregister overview: For branches \'V&D shops\' the column \'Signed by\' is not filled in with signing user.','In the cashregister you see that branches marked as \'V&D shops\' don\'t have any values in the column \'Signed by\'',NULL,'1738','5','1561','5',NULL,'1561','4','2011-08-24 20:54:54','2011-09-06 22:13:05','2011-08-24','0',NULL,NULL,'27958','1','2','0');
-INSERT INTO `issues` VALUES ('27959','2','2379','Cashregister: Make following inputfields mandatory','The following inputfields must be made mandatory in the cashregister steps:\r\n\r\n* Totale omzet\r\n* Aantal betalende klanten\r\n* Startgeld\r\n* Bedrag gepind\r\n* Bedrag in kas\r\n* Startgeld reservering\r\n* Enveloppe nummer',NULL,'1738','2','1561','6',NULL,'1561','10','2011-08-24 20:56:51','2011-09-13 21:19:05','2011-08-24','0',NULL,NULL,'27959','1','2','0');
+INSERT INTO `issues` VALUES ('27959','2','2379','Cashregister: Make following inputfields mandatory','The following inputfields must be made mandatory in the cashregister steps:\r\n\r\n* Totale omzet\r\n* Aantal betalende klanten\r\n* Startgeld\r\n* Bedrag gepind\r\n* Bedrag in kas\r\n* Startgeld reservering\r\n* Enveloppe nummer',NULL,'1738','2','3626','6',NULL,'1561','11','2011-08-24 20:56:51','2011-09-16 20:38:14','2011-08-24','0',NULL,NULL,'27959','1','2','0');
 INSERT INTO `issues` VALUES ('27960','2','2379','Staff profile editing: Remove textfield+dropdown from -> Is person sick?','',NULL,'1738','5','1561','4',NULL,'1561','3','2011-08-24 20:59:47','2011-08-31 20:40:28','2011-08-24','100',NULL,NULL,'27960','1','2','0');
-INSERT INTO `issues` VALUES ('27961','2','2379','Staff profile editing: Add textfield','Add the following textfield:\r\n*Werknemer uit dienst?*\r\n(this means if the employer is not working anymore in the company)\r\n\r\nAnd dropdown:\r\n*YES / NO*\r\n\r\nIf in the dropdown is chosen YES, then it should show an inputfield where they can choose a date (date picker). This date indicates since when the employer is not working anymore in the company. If an employer has the setting \'YES\' it should not be available anymore in all employer dropdowns. For example in planning, birthday\'s. Everywhere. BUT all the history and data for that user should be saved and remain available always!\r\n\r\nAlso in the staff overview on http://www.teamsabon.nl/user/admin the employer should get new status \'Uit dienst\'. And make it available in filter dropdown.',NULL,'1738','2','1561','5',NULL,'1561','7','2011-08-24 21:05:15','2011-09-09 22:04:54','2011-08-24','0',NULL,NULL,'27961','1','2','0');
+INSERT INTO `issues` VALUES ('27961','2','2379','Staff profile editing: Add textfield','Add the following textfield:\r\n*Werknemer uit dienst?*\r\n(this means if the employer is not working anymore in the company)\r\n\r\nAnd dropdown:\r\n*YES / NO*\r\n\r\nIf in the dropdown is chosen YES, then it should show an inputfield where they can choose a date (date picker). This date indicates since when the employer is not working anymore in the company. If an employer has the setting \'YES\' it should not be available anymore in all employer dropdowns. For example in planning, birthday\'s. Everywhere. BUT all the history and data for that user should be saved and remain available always!\r\n\r\nAlso in the staff overview on http://www.teamsabon.nl/user/admin the employer should get new status \'Uit dienst\'. And make it available in filter dropdown.',NULL,'1738','5','1561','5',NULL,'1561','8','2011-08-24 21:05:15','2011-09-16 20:38:53','2011-08-24','0',NULL,NULL,'27961','1','2','0');
 INSERT INTO `issues` VALUES ('27962','2','2379','Branch editor: Remove field \'mail\'','We need to remove the field \'mail\' for the branch editing window. Branches don\'t have e-mailadresses.',NULL,'1738','5','1561','5',NULL,'1561','3','2011-08-24 21:06:22','2011-09-02 21:32:24','2011-08-24','100',NULL,NULL,'27962','1','2','0');
 INSERT INTO `issues` VALUES ('27963','2','2379','Branch editor: Change way of working for \'Staff associated with this branch\'','Right now in the branch editor window, we have on the right \'Staff associated with this branch\'. There we can select all employers wich are associated with this branch. We need to replace this by the system used in the Staff profile editing window. There we use the \'add & remove\' method with dropdowns. Also we need the button \'Add employer\'. \r\n\r\nI think you know what i mean.',NULL,'1738','5','1561','6',NULL,'1561','3','2011-08-24 21:08:48','2011-09-12 23:28:44','2011-08-24','100',NULL,NULL,'27963','1','2','0');
 INSERT INTO `issues` VALUES ('27964','2','2379','System DB saving method: History issues','Right now it happens that for example, if you change a target from 7 days ago, the given bonus for that day is also changed. That means that values are not \'hard\' saved, but are still open for changes whenever we change some target values in history. This is a problem.\r\n\r\nWhat we need to do, is that whenever some target or cashregister data is saved, that it hard saves the data in database. ',NULL,'1738','2','1561','6',NULL,'1561','11','2011-08-24 21:16:07','2011-09-02 20:47:38','2011-08-24','100',NULL,NULL,'27964','1','2','0');
@@ -1901,7 +1913,7 @@ INSERT INTO `issues` VALUES ('27985','2','2379','Branches overview: On click of 
 INSERT INTO `issues` VALUES ('27986','2','2379','Branches > View or update targets for branch','In the window \'View or update targets for branch\' where we can set the targets for a branch, we need to add an extra set of inputfields, wich are shown always.\r\n\r\nThis fields we need, so we can insert there values and apply them for all fields. The thing is that right now they have to fill in every field apart. But sometimes for alot of days the values are the same. So it\'s easy to have an extra set of inputfields:\r\n\r\n-----------------------------\r\n\r\n\r\n*Apply targets to all field*\r\n\r\nBranch target: Ä 300 \r\nConversion rate: 30%\r\nTurnover per client: Ä 30 \r\n\r\nButton: Apply to all fields\r\n\r\n-----------------------------\r\n\r\nWhen they hit the button \'Apply to all fields\' it should show an confirmation box \'Are you sure you want to apply to all fields?\'. If they hit \'YES\' it should apply to all fields, EXCEPT for the fields older than today\'s date. So fields for day\'s wich are in history (starting from yesterday) should not be changed and must remain the same. THis is very important.\r\n\r\nNote: Please let me know when this issue is done, so i can provide dutch translation text for the functions.',NULL,'1738','5','1561','6',NULL,'1561','6','2011-08-24 22:27:16','2011-09-02 21:20:07','2011-08-24','100',NULL,NULL,'27986','1','2','0');
 INSERT INTO `issues` VALUES ('28001','2','2379','Branch ranking overview','in the module ¥Finance¥ we need to add an extra page ¥Branch rankings¥. This will be only available/visible to Administrators and Finiancial Manager usergroup. We need to show there the following overview:\r\n\r\n*Top 7 Ammount of visitors:*\r\n1. Amsterdam Heiligeweg\r\n2. Scheveningen\r\n3. Antwerpen\r\n4. Kalverstraat II\r\n5. Kalverstraat I\r\n6. Wijnegem\r\n7. Rotterdam Alexandrium\r\n\r\n*Top 7 Highest average turnover per client:*\r\n(show here top 7 branches)\r\n\r\n*Top 7 Highest turnover totals:*\r\n(show here top 7 branches)\r\n\r\n\r\nWe also need to be able to export the ranking to Excel (xls) and PDF. As an attachment you find here an example of how it could look like.',NULL,'1738','5','1561','5',NULL,'1561','14','2011-08-24 22:54:16','2011-09-07 19:04:39','2011-08-24','100',NULL,NULL,'28001','1','2','0');
 INSERT INTO `issues` VALUES ('28012','2','2379','Changelog version page','We need to add an extra \'tab\' on the page \'settings\'. (so in the left-menu under the item \'settings\'). We can give it the name \'Changelog\'. And we can show it like they do: http://php.net/ChangeLog-5.php',NULL,'1738','5','3626','6',NULL,'1561','9','2011-08-24 23:18:44','2011-08-31 22:13:21','2011-08-24','100',NULL,NULL,'28012','1','2','0');
-INSERT INTO `issues` VALUES ('28066','2','2379','Settings: Add option to disable \'Step 6\' in cashregister when branch ticker \'Disable bonus\' is checked','So in settings we get ticker:\r\n\r\n** Franchise filialen > Disable step 6 in cashregister*\r\n\r\nIt wil disable step 6 in cashregisters, ONLY for branches who have checked ticker \'Disable bonus\'. Also the ticker \'Disable bonus\' we must rename to \'Franchise filiaal\'.\r\n\r\nNote: When step 6 is disabled, the next step 7, must be recounted/renamed to step 6. To keep cashregister step numbering logic.',NULL,'1738','2','1561','5',NULL,'1561','7','2011-08-25 18:48:04','2011-09-08 21:24:46','2011-08-25','0',NULL,NULL,'28066','1','2','0');
+INSERT INTO `issues` VALUES ('28066','2','2379','Settings: Add option to disable \'Step 6\' in cashregister when branch ticker \'Disable bonus\' is checked','So in settings we get ticker:\r\n\r\n** Franchise filialen > Disable step 6 in cashregister*\r\n\r\nIt wil disable step 6 in cashregisters, ONLY for branches who have checked ticker \'Disable bonus\'. Also the ticker \'Disable bonus\' we must rename to \'Franchise filiaal\'.\r\n\r\nNote: When step 6 is disabled, the next step 7, must be recounted/renamed to step 6. To keep cashregister step numbering logic.',NULL,'1738','5','1561','5',NULL,'1561','8','2011-08-25 18:48:04','2011-09-16 20:41:07','2011-08-25','0',NULL,NULL,'28066','1','2','0');
 INSERT INTO `issues` VALUES ('28246','2','1066','(sub)project changes needs to be applied also to \'new\' and \'planned\' occurences','Yuri, not sure if we had already this issue. But we need to implement this:\r\n\r\nWhenever they make changes in project settings, it should be applied to all not performed occurences.',NULL,'1429','5','1561','6',NULL,'1561','7','2011-08-26 18:39:56','2011-09-05 18:40:58','2011-08-26','0','1','27764','27764','12','13','0');
 INSERT INTO `issues` VALUES ('28717','2','2379','Configure and set-up SSL certificate','',NULL,NULL,'2','1561','5',NULL,'1561','1','2011-08-30 20:23:11','2011-09-02 23:29:26','2011-08-30','0',NULL,NULL,'28717','1','2','0');
 INSERT INTO `issues` VALUES ('28738','2','1066','Removing invoices - need solution','When removing an invoice, the used invoice number (from deleted invoice) can\'t be used, as long as the invoice is still in the trashbin. We need to find a solution for this, so that the trashed invoice number, can be used by another generated invoice. \r\n\r\nso we need a solution where we can delete an invoice, without coming back, but the deleted invoice numbers must be able to be used again so that no \'gaps\' are created in the invoice numbers.',NULL,'1429','3','990','7',NULL,'1561','16','2011-08-30 22:04:53','2011-09-13 01:59:36','2011-08-30','0','2','27764','27764','16','17','0');
@@ -1909,31 +1921,32 @@ INSERT INTO `issues` VALUES ('28739','2','1066','Add project frequency \'Two wee
 INSERT INTO `issues` VALUES ('28740','2','1066','Systemnotification: project prolongation','Client reported this issue:\r\n\r\nWhen a project is prolonging it sends a notification that \'Project is planned in for last time\'. But in this case it\'s prolonging so it\'s not last time. It makes confusion to project owners. Can we adjust this so that system only send this notification if a project will not be prolonged? (In project settings they can set if a project will prolong after contract period). \r\n\r\nAlso they receive currently this notifcation 2 times, when a project is planned in for last time. We need to fix this.',NULL,NULL,'5','990','6',NULL,'1561','4','2011-08-30 22:10:17','2011-09-05 18:41:36','2011-08-30','0','0.1',NULL,'28740','1','2','0');
 INSERT INTO `issues` VALUES ('28741','1','1066','When making new project, monsterform can\'t be pre-filled in','So when we make a new project, we can\'t immedeatly fill in the monsterform per subproject. Project needs to be saved first. Initially it was working this way. We need to fix this.',NULL,NULL,'5','1561','6',NULL,'1561','2','2011-08-30 22:12:17','2011-09-05 18:41:45','2011-08-30','0',NULL,NULL,'28741','1','2','0');
 INSERT INTO `issues` VALUES ('28971','1','2379','Bonus not calculated well in netto bonus overview','For branch \'Rotterdam meent\' there is some issue with bonus, reported by client. This is what client reported:\r\n\r\nAccording to the cashregisters, branch \'Rotterdam meent\' has received a bonus on the following dates:\r\n \r\nThursday - 11 aug\r\nFriday   - 12 aug\r\nSaturday - 13 aug\r\nSunday   - 14 aug\r\n \r\nIn total this is for week 32 (8 - 14 AUG) a bonus ammount of Ä 200.00\r\n\r\nAccording to the ERP system (netto bonus overview) this is Ä 100.00. (Comment Michel: Right now i see it\'s 50.00) )\r\n \r\nRight now you see that employer \'Jessica de Klerk\' has bonus ammount 0 and that \'Friday 12 aug\' has 0 bonus. \r\n\r\nWe need to check why this happens and report back the problem. Also we have some issue open, regarding saving bonus values and keep them saved (no change afterwards).',NULL,NULL,'5','1561','7',NULL,'1561','4','2011-09-01 20:29:23','2011-09-02 21:16:19','2011-09-01','0',NULL,NULL,'28971','1','2','0');
-INSERT INTO `issues` VALUES ('29124','1','2379','Character \'&\' shown as \'&amp\'','For example \' V & D \' is shown as \' V&ampD \'\r\n\r\nwe need to fix it so we can show \'&\' normally',NULL,'1630','2','3626','4',NULL,'1561','1','2011-09-02 21:45:56','2011-09-13 00:23:47','2011-09-02','0',NULL,NULL,'29124','1','2','0');
-INSERT INTO `issues` VALUES ('29134','2','2379','V&D shops branches: Recheck bonus system','The bonussystem should work like this:\r\n\r\nV&D shop branches don\'t have client counter data. Right now (as i understand from Michal) it calculates bonus like this:\r\n\r\nTotal turnover - target turnover X bonus percent = bonus ammount\r\nThen bonus ammount divided by employers/hours\r\n\r\n-----------------------------------------------------------------\r\n\r\n*We have to change this to work like this:*\r\n\r\nTotal turnover higher or equal than target turnover?\r\nIf YES -> Bonusammount wich is set in \'settings\' (V&D shops - Bonus Value) will be divided bij employers/hours. Here under an example:\r\n\r\nTarget: 1000\r\nTurnover: 1100\r\nBonus: 50 (ammount is set in \'settings\')\r\n\r\nEmployer A (2,5 hours) - 12,50\r\nEmployer B (7,5 hours) - 37,50\r\n\r\n',NULL,'1630','2','3626','7',NULL,'1561','1','2011-09-02 22:31:26','2011-09-13 00:23:47','2011-09-02','0',NULL,NULL,'29134','1','2','0');
-INSERT INTO `issues` VALUES ('29136','1','2379','Overviews: Employee working hours & Branch working hours','For both overviews we need to fix some things:\r\n\r\n- Remove pagination for Employee working hours overview\r\n\r\n- Right now there is an issue. When we select \'week\' or \'month\' overview, it shows values per day in the overview. Also very often in \'Branch working hours\' it shows many values for same branch, since it shows the values per day. We need to display only 1 branch with values for the selected \'week\' or \'month\' date. Same for \'Employee working hours\' overview, there we need to display also only once the employer, with values from the chosen \'week\' or \'month\' date.\r\n\r\n- We then have also to check the excel exports so they are according to the overviews.',NULL,'1630','2','3626','6',NULL,'1561','1','2011-09-02 22:41:58','2011-09-13 00:23:47','2011-09-02','0',NULL,NULL,'29136','1','2','0');
+INSERT INTO `issues` VALUES ('29124','1','2379','Character \'&\' shown as \'&amp\'','For example \' V & D \' is shown as \' V&ampD \'\r\n\r\nwe need to fix it so we can show \'&\' normally',NULL,'1630','5','1561','4',NULL,'1561','4','2011-09-02 21:45:56','2011-09-14 22:42:50','2011-09-02','0',NULL,NULL,'29124','1','2','0');
+INSERT INTO `issues` VALUES ('29134','2','2379','V&D shops branches: Recheck bonus system','The bonussystem should work like this:\r\n\r\nV&D shop branches don\'t have client counter data. Right now (as i understand from Michal) it calculates bonus like this:\r\n\r\nTotal turnover - target turnover X bonus percent = bonus ammount\r\nThen bonus ammount divided by employers/hours\r\n\r\n-----------------------------------------------------------------\r\n\r\n*We have to change this to work like this:*\r\n\r\nTotal turnover higher or equal than target turnover?\r\nIf YES -> Bonusammount wich is set in \'settings\' (V&D shops - Bonus Value) will be divided bij employers/hours. Here under an example:\r\n\r\nTarget: 1000\r\nTurnover: 1100\r\nBonus: 50 (ammount is set in \'settings\')\r\n\r\nEmployer A (2,5 hours) - 12,50\r\nEmployer B (7,5 hours) - 37,50\r\n\r\n',NULL,'1881','5','1561','7',NULL,'1561','9','2011-09-02 22:31:26','2011-09-16 18:16:03','2011-09-02','0',NULL,NULL,'29134','1','2','0');
+INSERT INTO `issues` VALUES ('29136','1','2379','Overviews: Employee working hours & Branch working hours','For both overviews we need to fix some things:\r\n\r\n- Remove pagination for Employee working hours overview\r\n\r\n- Right now there is an issue. When we select \'week\' or \'month\' overview, it shows values per day in the overview. Also very often in \'Branch working hours\' it shows many values for same branch, since it shows the values per day. We need to display only 1 branch with values for the selected \'week\' or \'month\' date. Same for \'Employee working hours\' overview, there we need to display also only once the employer, with values from the chosen \'week\' or \'month\' date.\r\n\r\n- We then have also to check the excel exports so they are according to the overviews.',NULL,'1881','2','1561','6',NULL,'1561','5','2011-09-02 22:41:58','2011-09-15 23:05:11','2011-09-02','0',NULL,NULL,'29136','1','2','0');
 INSERT INTO `issues` VALUES ('29150','1','2379','When making new user, gives page without styling + form validation error','Here is a screenshot:\r\nhttp://www.amigu.nl/downloads/newuser.jpg\r\n\r\nAlso i see the validation error:\r\n- Sickness start moet van type date zijn\r\n\r\nWich means that we have to set sickness start date, but we removed that field.',NULL,NULL,'5','1561','7',NULL,'1561','2','2011-09-03 00:41:25','2011-09-06 21:42:15','2011-09-03','100',NULL,NULL,'29150','1','2','0');
 INSERT INTO `issues` VALUES ('29424','1','1066','Project 2011.101 issue','Project 2011.101 has a weekly performed product (SPOEL), is planned ahead and will be performed last time on 24-07-11. \r\n\r\nThe problem is that, even when the project is set as \'Prolong project after last occurence performed\', the system doesn\'t create a new project. So after the last performing of the subproject on 24-07-2011, it will not bring up new subprojects to be planned. We need to check why this happens.',NULL,NULL,'5','1561','7',NULL,'1561','6','2011-09-05 18:05:12','2011-09-07 19:38:29','2011-09-05','0',NULL,NULL,'29424','1','2','0');
 INSERT INTO `issues` VALUES ('29425','2','1066','Disable message notification + task creation on \'expired\' offer','Client wants to disable sending messages and task creation when an offer has been \'expired\'. I\'m thinkin can we add in settings somehow an enable/disable ticker for this feature? I think it\'s possible client somehow in the future wants the feature again.',NULL,NULL,'3','1561','6',NULL,'1561','6','2011-09-05 18:08:34','2011-09-10 18:52:26','2011-09-05','0','1','27764','27764','14','15','0');
 INSERT INTO `issues` VALUES ('29472','1','1066','Reports > status filter doesn\'t work after search query','So in reports overview when searching for for example \'135\' and selecting filter dropdown, it doesnt work.',NULL,NULL,'5','1561','5',NULL,'1561','4','2011-09-05 19:26:59','2011-09-06 23:53:05','2011-09-05','0',NULL,NULL,'29472','1','2','0');
-INSERT INTO `issues` VALUES ('29474','1','1066','Issue with duplicate subprojects','This is what client reported:\r\n\r\nSince last week we see project where some subproject are shown twice (duplicate subproject code + name). For example subproject 134-EQ. \r\nWe think the problem is caused by the fact that we change some subproject settings. In the initial fase of the ERP system, we didn\'t have yet the functionality where we can manually change the project occurence counter (1/2 to 2/2 for example). So now we see in the invoices overview some subprojects wich where already invoiced outside the Biolab ERP system. We then removed them manually and adjust the occurence counter in the subproject, so that the invoicing proces will go normal again. The problem now is that system generates duplicate subproject(codes). For example with client \'NOAB\'. If you open the project of this client (581) you see that subproject 581-A is listed 2 times. One time with [1/2] and the other [2/2]. It is also showed two times in planning overview.\r\n\r\nWe need to fix this and also check all other existing (sub)projects with this problem.',NULL,NULL,'2','1561','7',NULL,'1561','4','2011-09-05 19:42:49','2011-09-08 00:02:08','2011-09-05','0',NULL,NULL,'29474','1','2','0');
+INSERT INTO `issues` VALUES ('29474','1','1066','Issue with duplicate subprojects','This is what client reported:\r\n\r\nSince last week we see project where some subproject are shown twice (duplicate subproject code + name). For example subproject 134-EQ. \r\nWe think the problem is caused by the fact that we change some subproject settings. In the initial fase of the ERP system, we didn\'t have yet the functionality where we can manually change the project occurence counter (1/2 to 2/2 for example). So now we see in the invoices overview some subprojects wich where already invoiced outside the Biolab ERP system. We then removed them manually and adjust the occurence counter in the subproject, so that the invoicing proces will go normal again. The problem now is that system generates duplicate subproject(codes). For example with client \'NOAB\'. If you open the project of this client (581) you see that subproject 581-A is listed 2 times. One time with [1/2] and the other [2/2]. It is also showed two times in planning overview.\r\n\r\nWe need to fix this and also check all other existing (sub)projects with this problem.',NULL,NULL,'2','1561','7',NULL,'1561','5','2011-09-05 19:42:49','2011-09-16 13:21:34','2011-09-05','0',NULL,NULL,'29474','1','2','0');
 INSERT INTO `issues` VALUES ('29480','1','1066','Planning ahead of subprojects','When planning in of a monthly subproject, client reports that they still only can choose for \'weekly ahead planning\'. So not monthly. Can you check if it was implemented well?',NULL,NULL,'2','1561','5',NULL,'1561','1','2011-09-05 20:05:00','2011-09-06 16:26:35','2011-09-05','0',NULL,NULL,'29480','1','2','0');
 INSERT INTO `issues` VALUES ('29483','1','1066','Project 2011.5 issue','Client reported this:\r\n\r\nProject 2011.5 is a small project, wich has a contractyear of 1 year en includes 3 subprojects with each half-yearly product. Recently subproject A and B of this project where visible in planningovervie and performed normally. \r\n\r\nJust now i\'ve noticed that subproject D (C doesn\'t exist anymore), wich has exactly same settings as A and B, didn\'t came up in planningsoverview. It now shows it as \'new\' with date 1-1-2012. When i look further in to the project overview i see that it shows as [1/1]. This is strange since it\'s a half-yearly product with a contract-period of 1 year, so it should be performed 2 times. How can the system make [1/1] of this?\r\n\r\n_Comment Michel: Yuri, when i check self now in subproject D, i see frequency is \'yearly\'. Maybe they changed in between to continue working.._\r\n \r\nAlso, you can see in the attached image, that if i expand subproject D, you see that settings are normal/good (2 occurences). But it\'s not set as [2/2] like the other subprojects but as [1/2]. The problem now is that now the subproject is not performed, because it was not brought up in planningoverview. \r\n\r\nwe need to check if this issue also affects other subprojects/projects.',NULL,NULL,'2','1561','7',NULL,'1561','2','2011-09-05 20:15:33','2011-09-06 15:38:04','2011-09-05','0',NULL,NULL,'29483','1','2','0');
-INSERT INTO `issues` VALUES ('29933','2','2379','Planning > Planningsform. date select','In the Planningsoverview, we have the planningsform. Right now in the overview if we select some week/day/month and then go to planningsform, we have to select again the right date, in datepicker. What client wants is that for example if we are viewing in overview \'Week 35\' or a specific date, that on open of the planningsform, it will set date-picker according to set planningoverview date. This, so that the user doesn\'t have to pick date again necesseraly.\r\n\r\nClient attached this screenshot:\r\nhttp://www.amigu.nl/downloads/inplannen.png',NULL,'1630','2','3626','6',NULL,'1561','1','2011-09-08 20:15:21','2011-09-13 00:23:48','2011-09-08','0',NULL,NULL,'29933','1','2','0');
+INSERT INTO `issues` VALUES ('29933','2','2379','Planning > Planningsform. date select','In the Planningsoverview, we have the planningsform. Right now in the overview if we select some week/day/month and then go to planningsform, we have to select again the right date, in datepicker. What client wants is that for example if we are viewing in overview \'Week 35\' or a specific date, that on open of the planningsform, it will set date-picker according to set planningoverview date. This, so that the user doesn\'t have to pick date again necesseraly.\r\n\r\nClient attached this screenshot:\r\nhttp://www.amigu.nl/downloads/inplannen.png',NULL,'1881','2','3626','6',NULL,'1561','6','2011-09-08 20:15:21','2011-09-16 20:21:47','2011-09-08','0',NULL,NULL,'29933','1','2','0');
 INSERT INTO `issues` VALUES ('30074','1','1066','Project 589-A didn\'t generate report listing','Project 589-A is done, but no report generated. Project settings seems fine. Let me know.\r\n\r\n',NULL,NULL,'5','1561','7',NULL,'1561','2','2011-09-09 22:18:00','2011-09-12 18:44:46','2011-09-09','0',NULL,NULL,'30074','1','2','0');
 INSERT INTO `issues` VALUES ('30324','1','1066','Subprojects 129-J, K and P issue','Client reported this issue:\r\n\r\nSubprojects 129-J, K and P where planned in, but then they are put in agenda, in year 1970. But user planned these subprojects in for this week. They can\'t remove the planned subprojects from agenda, because they will have to scroll back to 1970. We need to fix this issue asap and check it\'s reason why.',NULL,NULL,'3','1561','7',NULL,'1561','2','2011-09-12 18:25:51','2011-09-12 20:28:27','2011-09-12','0',NULL,NULL,'30324','1','2','0');
-INSERT INTO `issues` VALUES ('30380','2','2379','Cashregisters: Don\'t show cashregisters with status \'approved\' for users of usergroup \'Worker\'','So we have to make cashregisters invisible for users in usergroup \'Workers\' when a cashregister has been approved.',NULL,'1630','2','3626','5',NULL,'1561','0','2011-09-13 00:19:00','2011-09-13 00:19:00','2011-09-13','0',NULL,NULL,'30380','1','2','0');
+INSERT INTO `issues` VALUES ('30380','2','2379','Cashregisters: Don\'t show cashregisters with status \'approved\' for users of usergroup \'Worker\'','So we have to make cashregisters invisible for users in usergroup \'Workers\' when a cashregister has been approved.',NULL,'1881','5','3626','5',NULL,'1561','3','2011-09-13 00:19:00','2011-09-16 20:24:18','2011-09-13','0',NULL,NULL,'30380','1','2','0');
 INSERT INTO `issues` VALUES ('30382','2','2379','Cashregisters: Be able to set date back for filled in cashregister','This is because it happens regularly that an employer only fills in the cashregister the next morning, for the previous day. Not sure if this is possible right now. If not we have to make it possible. (I thought it was possible since we have agenda picker in cashregister step 1 and system checks if for selected date doesn\'t exist already a cashregister).',NULL,NULL,'2','3626','6',NULL,'1561','0','2011-09-13 00:31:15','2011-09-13 00:31:15','2011-09-13','0',NULL,NULL,'30382','1','2','0');
-INSERT INTO `issues` VALUES ('30385','2','2379','Add logo in footer Sabon ERP','more info will follow',NULL,NULL,'2','1561','4',NULL,'1561','0','2011-09-13 00:34:23','2011-09-13 00:34:23','2011-09-13','0',NULL,NULL,'30385','1','2','0');
+INSERT INTO `issues` VALUES ('30385','2','2379','Add logo in footer Sabon ERP','more info will follow',NULL,'1630','2','3626','4',NULL,'1561','1','2011-09-13 00:34:23','2011-09-15 23:01:17','2011-09-13','0',NULL,NULL,'30385','1','2','0');
 INSERT INTO `issues` VALUES ('30386','2','2379','Final language review','Need to paste here elements wich need translation',NULL,NULL,'2','1561','4',NULL,'1561','0','2011-09-13 00:36:31','2011-09-13 00:36:31','2011-09-13','0',NULL,NULL,'30386','1','2','0');
-INSERT INTO `issues` VALUES ('30388','2','2379','Message sending: Option to send a message to a \'Branch\'. ','So when we send a message to a \'Branch\' all attached users will receive this internal message.',NULL,'1630','2','3626','4',NULL,'1561','0','2011-09-13 00:38:35','2011-09-13 00:38:35','2011-09-13','0',NULL,NULL,'30388','1','2','0');
-INSERT INTO `issues` VALUES ('30391','2','2379','Cashregister: Add options','We need to do the following:\r\n\r\n- In branch settings we need to specify if this branch has \'1\' or \'2\' cashregisters. \r\n\r\n- If a branch has 1 cashregister, we keep current cashregister step layout\r\n\r\n- If a branch has 2 cashregisters, we need to add in step 4 (turnover specification) two columns with same input fields. So we get one column for cashregister \'1\' and second column for cashregister \'2\'. For rest all steps remain same. Also final turnover is counted together from cashregister \'1\' and \'2\'.',NULL,'1630','2','3626','6',NULL,'1561','0','2011-09-13 00:43:06','2011-09-13 00:43:06','2011-09-13','0',NULL,NULL,'30391','1','2','0');
+INSERT INTO `issues` VALUES ('30388','2','2379','Message sending: Option to send a message to a \'Branch\'. ','So when we send a message to a \'Branch\' all attached users will receive this internal message.',NULL,'1881','2','3626','4',NULL,'1561','3','2011-09-13 00:38:35','2011-09-16 20:06:47','2011-09-13','0',NULL,NULL,'30388','1','2','0');
+INSERT INTO `issues` VALUES ('30391','2','2379','Cashregister: Add options','We need to do the following:\r\n\r\n- In branch settings we need to specify if this branch has \'1\' or \'2\' cashregisters. \r\n\r\n- If a branch has 1 cashregister, we keep current cashregister step layout\r\n\r\n- If a branch has 2 cashregisters, we need to add in step 4 (turnover specification) two columns with same input fields. So we get one column for cashregister \'1\' and second column for cashregister \'2\'. For rest all steps remain same. Also final turnover is counted together from cashregister \'1\' and \'2\'.',NULL,'1881','2','3626','6',NULL,'1561','1','2011-09-13 00:43:06','2011-09-15 23:05:14','2011-09-13','0',NULL,NULL,'30391','1','2','0');
 INSERT INTO `issues` VALUES ('30394','2','2379','Change dashboard layout','Info will follow',NULL,NULL,'2','1561','6',NULL,'1561','0','2011-09-13 00:47:38','2011-09-13 00:47:38','2011-09-13','0',NULL,NULL,'30394','1','2','0');
-INSERT INTO `issues` VALUES ('30399','2','2379','New \'dashboard news\' message: option','When making a new dashboard news item, we must add the following option:\r\n\r\n- We need to add the following tickers:\r\nV&D Shops (if enabled, all employers attached to this type of branch will see this newsitem on their dashboard)\r\nFranchise branches (if enabled, all employers attached to this type of branch will see this newsitem on their dashboard)\r\nSabon branches (if enabled, all employers attached to this type of branch will see this newsitem on their dashboard)\r\n\r\nNote: Sabon branches are all branches wich are not \'V&D shop\' or \'Filiaal branch\'.\r\n\r\n',NULL,'1630','2','3626','5',NULL,'1561','0','2011-09-13 00:52:18','2011-09-13 00:52:18','2011-09-13','0',NULL,NULL,'30399','1','2','0');
-INSERT INTO `issues` VALUES ('30401','2','2379','Add \'approve\' action in mass action on cashregister overview','',NULL,'1630','2','3626','6',NULL,'1561','0','2011-09-13 00:56:14','2011-09-13 00:56:14','2011-09-13','0',NULL,NULL,'30401','1','2','0');
+INSERT INTO `issues` VALUES ('30399','2','2379','New \'dashboard news\' message: option','When making a new dashboard news item, we must add the following option:\r\n\r\n- We need to add the following tickers:\r\nV&D Shops (if enabled, all employers attached to this type of branch will see this newsitem on their dashboard)\r\nFranchise branches (if enabled, all employers attached to this type of branch will see this newsitem on their dashboard)\r\nSabon branches (if enabled, all employers attached to this type of branch will see this newsitem on their dashboard)\r\n\r\nNote: Sabon branches are all branches wich are not \'V&D shop\' or \'Filiaal branch\'.\r\n\r\n',NULL,'1881','2','3626','5',NULL,'1561','1','2011-09-13 00:52:18','2011-09-15 23:05:14','2011-09-13','0',NULL,NULL,'30399','1','2','0');
+INSERT INTO `issues` VALUES ('30401','2','2379','Add \'approve\' action in mass action on cashregister overview','',NULL,'1881','2','3626','6',NULL,'1561','3','2011-09-13 00:56:14','2011-09-16 19:05:28','2011-09-13','0',NULL,NULL,'30401','1','2','0');
 INSERT INTO `issues` VALUES ('30404','1','2379','Cashregister doesn\'t get status \'approved\' after being signed succesfully','Also it doesn\'t add the signer in column \'Signed by\' in the cashregister overview.',NULL,NULL,'2','3626','7',NULL,'1561','2','2011-09-13 01:05:27','2011-09-13 17:42:37','2011-09-13','0',NULL,NULL,'30404','1','2','0');
 INSERT INTO `issues` VALUES ('30406','2','2379','Add management dashboard','Info will follow.',NULL,NULL,'2','1561','4',NULL,'1561','0','2011-09-13 01:07:14','2011-09-13 01:07:14','2011-09-13','0',NULL,NULL,'30406','1','2','0');
-INSERT INTO `issues` VALUES ('30408','2','2379','Employer edit > Phonenumber','Right now in the profile settings of an employer we can fill in a mobile number. It happens that they fill in this number like this: 063434...\r\n\r\nInstead of internat. notation: +3163434....\r\n\r\nIf they don\'t fill in this correctly, the system will not send smses with the SMS api. We need to do the following:\r\n\r\n- Parse automatically +31, +32 or +49, based on the chosen country in dropdown \'Country\'. So if they have set as country \'Netherlands\' then it should parse automatically +31 in mobile phonenumber inputfield. Here under a specification:\r\n\r\nNetherlands -> +31\r\nBelgium -> +32\r\nGermany -> +49',NULL,'1630','2','3626','5',NULL,'1561','0','2011-09-13 01:14:26','2011-09-13 01:14:26','2011-09-13','0',NULL,NULL,'30408','1','2','0');
+INSERT INTO `issues` VALUES ('30408','2','2379','Employer edit > Phonenumber','Right now in the profile settings of an employer we can fill in a mobile number. It happens that they fill in this number like this: 063434...\r\n\r\nInstead of internat. notation: +3163434....\r\n\r\nIf they don\'t fill in this correctly, the system will not send smses with the SMS api. We need to do the following:\r\n\r\n- Parse automatically +31, +32 or +49, based on the chosen country in dropdown \'Country\'. So if they have set as country \'Netherlands\' then it should parse automatically +31 in mobile phonenumber inputfield. Here under a specification:\r\n\r\nNetherlands -> +31\r\nBelgium -> +32\r\nGermany -> +49',NULL,'1881','2','3626','5',NULL,'1561','1','2011-09-13 01:14:26','2011-09-15 23:05:15','2011-09-13','0',NULL,NULL,'30408','1','2','0');
+INSERT INTO `issues` VALUES ('30851','2','1066','Can we remove progress editing field?','It was made temporary to input existing projects, but editing it on running projects can cause problems, this is a possible reason for duplicate subprojects issue, for example.',NULL,NULL,'2','1561','4',NULL,'990','1','2011-09-16 13:17:03','2011-09-16 13:18:51','2011-09-16','0',NULL,NULL,'30851','1','2','0');
 
 
 ###################
@@ -1973,7 +1986,7 @@ CREATE TABLE `journal_details` (
   `value` text COLLATE utf8_unicode_ci,
   PRIMARY KEY (`id`),
   KEY `journal_details_journal_id` (`journal_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=68737 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=69483 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -1985,7 +1998,7 @@ CREATE TABLE `journal_details` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-14  7:03:17
+-- Dump completed on 2011-09-17 10:24:44
 
 INSERT INTO `journal_details` VALUES ('20785','17299','attr','estimated_hours',NULL,'1.0');
 INSERT INTO `journal_details` VALUES ('20786','17303','attr','fixed_version_id','503','504');
@@ -5526,6 +5539,57 @@ INSERT INTO `journal_details` VALUES ('68615','57796','attr','assigned_to_id','1
 INSERT INTO `journal_details` VALUES ('68616','57797','attr','assigned_to_id','1561','990');
 INSERT INTO `journal_details` VALUES ('68621','57802','attr','assigned_to_id','1561','3626');
 INSERT INTO `journal_details` VALUES ('68675','57853','attr','assigned_to_id','3626','1561');
+INSERT INTO `journal_details` VALUES ('68856','58005','attr','assigned_to_id','3626','1561');
+INSERT INTO `journal_details` VALUES ('68864','58009','attr','assigned_to_id','3626','1561');
+INSERT INTO `journal_details` VALUES ('68868','58012','attr','status_id','2','5');
+INSERT INTO `journal_details` VALUES ('68869','58012','attr','assigned_to_id','1561','3626');
+INSERT INTO `journal_details` VALUES ('68881','58019','attr','assigned_to_id','3626','1561');
+INSERT INTO `journal_details` VALUES ('68889','58025','attr','assigned_to_id','1561','3626');
+INSERT INTO `journal_details` VALUES ('68892','58028','attr','assigned_to_id','1561','3626');
+INSERT INTO `journal_details` VALUES ('68900','58035','attr','assigned_to_id','3626','1561');
+INSERT INTO `journal_details` VALUES ('69053','58156','attr','assigned_to_id','3626','1561');
+INSERT INTO `journal_details` VALUES ('69060','58163','attr','assigned_to_id','3626','1561');
+INSERT INTO `journal_details` VALUES ('69090','58191','attr','assigned_to_id','1561','3626');
+INSERT INTO `journal_details` VALUES ('69130','58231','attr','assigned_to_id','1561','3626');
+INSERT INTO `journal_details` VALUES ('69138','58244','attr','category_id',NULL,'1630');
+INSERT INTO `journal_details` VALUES ('69139','58244','attr','assigned_to_id','1561','3626');
+INSERT INTO `journal_details` VALUES ('69143','58246','attr','category_id','1630','1881');
+INSERT INTO `journal_details` VALUES ('69144','58247','attr','category_id','1630','1881');
+INSERT INTO `journal_details` VALUES ('69145','58248','attr','category_id','1630','1881');
+INSERT INTO `journal_details` VALUES ('69146','58249','attr','category_id','1630','1881');
+INSERT INTO `journal_details` VALUES ('69147','58250','attr','category_id','1630','1881');
+INSERT INTO `journal_details` VALUES ('69148','58251','attr','category_id','1630','1881');
+INSERT INTO `journal_details` VALUES ('69149','58252','attr','category_id','1630','1881');
+INSERT INTO `journal_details` VALUES ('69150','58253','attr','category_id','1630','1881');
+INSERT INTO `journal_details` VALUES ('69151','58254','attr','category_id','1630','1881');
+INSERT INTO `journal_details` VALUES ('69152','58255','attr','category_id','1630','1881');
+INSERT INTO `journal_details` VALUES ('69154','58257','attr','category_id','1630','1881');
+INSERT INTO `journal_details` VALUES ('69155','58258','attr','category_id','1630','1881');
+INSERT INTO `journal_details` VALUES ('69156','58259','attr','category_id','1630','1881');
+INSERT INTO `journal_details` VALUES ('69161','58268','attr','assigned_to_id','3626','1561');
+INSERT INTO `journal_details` VALUES ('69169','58277','attr','status_id','2','5');
+INSERT INTO `journal_details` VALUES ('69170','58277','attr','assigned_to_id','1561','3626');
+INSERT INTO `journal_details` VALUES ('69292','58380','attr','subject','Can we remove ','Can we remove progress editing field?');
+INSERT INTO `journal_details` VALUES ('69293','58380','attr','description','','It was made temporary to input existing projects, but editing it on running projects can cause problems, this is a possible reason for duplicate subprojects issue, for example.');
+INSERT INTO `journal_details` VALUES ('69294','58380','attr','status_id','1','2');
+INSERT INTO `journal_details` VALUES ('69295','58380','attr','assigned_to_id',NULL,'1561');
+INSERT INTO `journal_details` VALUES ('69308','58396','attr','status_id','2','3');
+INSERT INTO `journal_details` VALUES ('69309','58396','attr','assigned_to_id','990','1561');
+INSERT INTO `journal_details` VALUES ('69323','58409','attr','assigned_to_id','3626','1561');
+INSERT INTO `journal_details` VALUES ('69324','58410','attr','assigned_to_id','1561','3626');
+INSERT INTO `journal_details` VALUES ('69325','58411','attr','assigned_to_id','3626','1561');
+INSERT INTO `journal_details` VALUES ('69329','58420','attr','assigned_to_id','3626','1561');
+INSERT INTO `journal_details` VALUES ('69332','58423','attr','assigned_to_id','3626','1561');
+INSERT INTO `journal_details` VALUES ('69339','58427','attr','assigned_to_id','1561','3626');
+INSERT INTO `journal_details` VALUES ('69348','58437','attr','assigned_to_id','3626','1561');
+INSERT INTO `journal_details` VALUES ('69352','58442','attr','assigned_to_id','3626','1561');
+INSERT INTO `journal_details` VALUES ('69353','58443','attr','assigned_to_id','1561','3626');
+INSERT INTO `journal_details` VALUES ('69362','58452','attr','assigned_to_id','1561','3626');
+INSERT INTO `journal_details` VALUES ('69365','58455','attr','status_id','2','5');
+INSERT INTO `journal_details` VALUES ('69366','58455','attr','assigned_to_id','1561','3626');
+INSERT INTO `journal_details` VALUES ('69373','58461','attr','assigned_to_id','1561','3626');
+INSERT INTO `journal_details` VALUES ('69374','58462','attr','status_id','2','5');
+INSERT INTO `journal_details` VALUES ('69375','58463','attr','status_id','2','5');
 
 
 ###################
@@ -5568,7 +5632,7 @@ CREATE TABLE `journals` (
   KEY `index_journals_on_user_id` (`user_id`),
   KEY `index_journals_on_journalized_id` (`journalized_id`),
   KEY `index_journals_on_created_on` (`created_on`)
-) ENGINE=InnoDB AUTO_INCREMENT=57908 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=58574 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -5580,7 +5644,7 @@ CREATE TABLE `journals` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-14  7:03:19
+-- Dump completed on 2011-09-17 10:24:47
 
 INSERT INTO `journals` VALUES ('17299','9335','Issue','990','','2011-01-06 23:15:34');
 INSERT INTO `journals` VALUES ('17302','9347','Issue','990','Michel: I need to define the exact templates for the report. Also including page margin. We can implement margin to be used for PDF/DOC ?\r\n\r\nYuri:For pdf probably yes. For doc probably not. We can try that commercial solution for this. Or maybe try using OpenOffice on server, if itís possible.','2011-01-06 23:35:33');
@@ -8276,7 +8340,7 @@ INSERT INTO `journals` VALUES ('55854','24309','Issue','990','Now its clear. Pro
 INSERT INTO `journals` VALUES ('55860','24309','Issue','1561','Okay, so you have enough info now to fix this?','2011-09-05 21:38:17');
 INSERT INTO `journals` VALUES ('55861','23645','Issue','1561','will test it. Please next time don\'t use leuconoe email adress in user settings to test. Use some gmail or other generic one next time. Thanks.','2011-09-05 21:39:11');
 INSERT INTO `journals` VALUES ('55862','29472','Issue','1561','i understand this is now only available on test server?','2011-09-05 21:39:39');
-INSERT INTO `journals` VALUES ('55876','29474','Issue','990','Don\'t know what could cause this yet, so I removed those looked safe to remove.\r\nBut some of the duplicate subprojects were already planned in:\r\n\r\n2011.134-GT [10]\r\n2011.134-HF [10]\r\n2011.134-HL [10]\r\n2011.134-HN [10]\r\n2011.134-HP [10]\r\n\r\nshould I delete them too?\r\n\r\nAlso, for project 266-L [1] there are two archived records with \'archived\' status, one of them have report assigned, another one doesn\'t. Don\'t know what to do with them.\r\n\r\nAlso recovering subprojects from trashcan can cause duplicates, I don\'t think this is a case, but probably we need to think about removing/restricting this feature for subprojects and other things too.\r\n\r\n\r\nI have also set up notification in scheduled jobs if such error occur again.','2011-09-05 22:39:42');
+INSERT INTO `journals` VALUES ('55876','29474','Issue','990','Don\'t know what could cause this yet, so I removed those looked safe to remove.\n-But some of the duplicate subprojects were already planned in:-\n\n-2011.134-GT [10]-\n-2011.134-HF [10]-\n-2011.134-HL [10]-\n-2011.134-HN [10]-\n-2011.134-HP [10]-\n\n-should I delete them too?-\n\n*Also, for project 266-L [1] there are two archived records with \'archived\' status, one of them have report assigned, another one doesn\'t. Don\'t know what to do with them.*\n\nAlso recovering subprojects from trashcan can cause duplicates, I don\'t think this is a case, but probably we need to think about removing/restricting this feature for subprojects and other things too.\n\n\nI have also set up notification in scheduled jobs if such error occur again.','2011-09-05 22:39:42');
 INSERT INTO `journals` VALUES ('55891','18778','Issue','990','no, I needed details from you.','2011-09-05 23:33:32');
 INSERT INTO `journals` VALUES ('55895','26818','Issue','990','I remember to have it fixed, if it\'s not, I need more details.','2011-09-05 23:39:00');
 INSERT INTO `journals` VALUES ('55896','29472','Issue','990','yes, I only uploaded important fixes for frequencies on production today.','2011-09-05 23:40:30');
@@ -8439,6 +8503,51 @@ INSERT INTO `journals` VALUES ('57796','9403','Issue','1561','super, we can depl
 INSERT INTO `journals` VALUES ('57797','23030','Issue','1561','Yuri Lopukhov wrote:\r\n> need translations:\r\n>     \'Any type\' => \'Elk type\',\r\n>     \'All clients\' => \'Alle klanten\',\r\n>     \'Any mail category\' => \'Alle categoriÎen\',\r\n>     \'next check\' => \'Volgende controle\',\r\n\r\n','2011-09-13 22:22:41');
 INSERT INTO `journals` VALUES ('57802','21623','Issue','1561','As i read in the README file, it\'s possible to install this extension remotely. Can you verify this? Hereunder copy from readme:\r\n\r\n\r\n<pre>\r\n\r\n\r\n                      The ionCube Loader \r\n                      ------------------\r\n\r\nThis package contains:\r\n\r\n* the latest available Loaders for the platform(s) selected\r\n\r\n* a Loader Wizard script to assist with Loader installation (loader-wizard.php)\r\n\r\n* the License document for use of the Loader and encoded files (LICENSE)\r\n\r\n\r\nINSTALLATION\r\n------------\r\n\r\n** Installing to a remote SHARED server\r\n\r\n1. Upload the contents of this package to a directory/folder called ioncube\r\n   within your main web scripts area. \r\n\r\n2. Launch the Loader Wizard script in your browser. For example:\r\n     http://yourdomain/ioncube/loader-wizard.php\r\n\r\nIf the wizard is not found, carefully check the location where you uploaded\r\nthe Loaders and the wizard script to on your server.\r\n\r\n\r\n** Installing to a remote UNIX/LINUX DEDICATED or VPS server\r\n\r\n1. Upload the contents of this package to /usr/local/ioncube\r\n\r\n2. Copy the loader-wizard.php script to the root web directory of a \r\n   configured domain on the server\r\n\r\n2. Launch the Loader Wizard script in your browser. For example:\r\n     http://yourdomain/loader-wizard.php\r\n\r\n\r\n** Installing to a remote WINDOWS DEDICATED or VPS server\r\n\r\n1. Upload the contents of this package to C:\\windows\\system32\r\n\r\n2. Copy the loader-wizard.php script to the root web folder of a \r\n   configured domain on the server\r\n\r\n2. Launch the Loader Wizard script in your browser. For example:\r\n     http://yourdomain/loader-wizard.php\r\n\r\n\r\nXCACHE and XDEBUG\r\n-----------------\r\n\r\nIf you wish to enable *both* XCache and Xdebug whilst running the Loader, please\r\nuse XCache as an ordinary extension rather than a Zend engine extension. That\r\nis, install XCache using the following line in the ini file and with xcache.so\r\nin the extensions directory:  \r\n\r\nextension = xcache.so\r\n\r\nIf you are only running XCache then it can be installed as a Zend engine \r\nextension when the Loader is also installed.\r\n\r\n\r\nCopyright (c) 2002-2011 ionCube Ltd.                  Last revised 21-Jan-2011\r\n</pre>\r\n','2011-09-13 22:33:35');
 INSERT INTO `journals` VALUES ('57853','21623','Issue','3626','Yes, it is possible if we have access. \r\nAlso good practice is to check/test whole solution with ionCube before you decide to buy commercial version... This is because sometimes (very rare), some scripts don\'t work with solution like ionCube.','2011-09-14 00:29:53');
+INSERT INTO `journals` VALUES ('58005','29124','Issue','3626','It is done on all overviews in finance module, I don\'t see this problem in any other places.','2011-09-14 21:51:48');
+INSERT INTO `journals` VALUES ('58009','29136','Issue','3626','Solution is on test server.','2011-09-14 22:20:57');
+INSERT INTO `journals` VALUES ('58012','29124','Issue','1561','we can deploy this to production','2011-09-14 22:26:04');
+INSERT INTO `journals` VALUES ('58019','29124','Issue','3626','Michel Michel wrote:\r\n> we can deploy this to production\r\n\r\nDeployed.','2011-09-14 22:42:50');
+INSERT INTO `journals` VALUES ('58025','29136','Issue','1561','Seems working, need to test better on production server. We can deploy it.','2011-09-14 22:51:02');
+INSERT INTO `journals` VALUES ('58028','21623','Issue','1561','Leuconoe S&H wrote:\r\n> Yes, it is possible if we have access. \r\n> Also good practice is to check/test whole solution with ionCube before you decide to buy commercial version... This is because sometimes (very rare), some scripts don\'t work with solution like ionCube.\r\n\r\nAcces to back-end PLESK environment is enough?','2011-09-14 23:05:41');
+INSERT INTO `journals` VALUES ('58035','29136','Issue','3626','Michel Michel wrote:\r\n> Seems working, need to test better on production server. We can deploy it.\r\n\r\nDeployed.','2011-09-14 23:25:54');
+INSERT INTO `journals` VALUES ('58156','29933','Issue','3626','Solution is now available on test server.','2011-09-15 17:23:04');
+INSERT INTO `journals` VALUES ('58163','29134','Issue','3626','Fix is available on test server. Pleas also test this solution.','2011-09-15 18:08:32');
+INSERT INTO `journals` VALUES ('58191','29933','Issue','1561','Is some issues:\r\n\r\n- When in date-picker we select for example 07-11-2011, in the the days it doesn\'t show well the day\'s date:\r\n\r\nMonday, 12 - 09 - 2011\r\nTuesday, 13 - 09 - 2011\r\netc.\r\n\r\n- When planning form is open, and we change date pagination, the form picker date is not updated (and also not days date)','2011-09-15 19:50:27');
+INSERT INTO `journals` VALUES ('58231','29134','Issue','1561','In print view the bonus ammount to be divided is not shown well. It still shows old value:\r\n\r\n<pre>\r\n5. Bonus\r\nTotale bonus Ä 200,00 x 7.5% = Ä 15,00\r\n</pre>\r\n\r\nWe need to check this','2011-09-15 22:15:20');
+INSERT INTO `journals` VALUES ('58244','30385','Issue','1561','In this file you see in right corner of footer, the logo \'LM Automatisering\'. We need to add it in EVERY window. Also it needs to be placed on a blank row (so only logo will be on that height). Design can be seen here: http://www.amigu.nl/downloads/lm.rar\r\n\r\npass: leuconoe','2011-09-15 23:01:17');
+INSERT INTO `journals` VALUES ('58246','21522','Issue','1561',NULL,'2011-09-15 23:05:11');
+INSERT INTO `journals` VALUES ('58247','29134','Issue','1561',NULL,'2011-09-15 23:05:11');
+INSERT INTO `journals` VALUES ('58248','29136','Issue','1561',NULL,'2011-09-15 23:05:11');
+INSERT INTO `journals` VALUES ('58249','29933','Issue','1561',NULL,'2011-09-15 23:05:12');
+INSERT INTO `journals` VALUES ('58250','30380','Issue','1561',NULL,'2011-09-15 23:05:13');
+INSERT INTO `journals` VALUES ('58251','30388','Issue','1561',NULL,'2011-09-15 23:05:13');
+INSERT INTO `journals` VALUES ('58252','30391','Issue','1561',NULL,'2011-09-15 23:05:14');
+INSERT INTO `journals` VALUES ('58253','30399','Issue','1561',NULL,'2011-09-15 23:05:14');
+INSERT INTO `journals` VALUES ('58254','30401','Issue','1561',NULL,'2011-09-15 23:05:15');
+INSERT INTO `journals` VALUES ('58255','30408','Issue','1561',NULL,'2011-09-15 23:05:15');
+INSERT INTO `journals` VALUES ('58257','21621','Issue','1561',NULL,'2011-09-15 23:08:35');
+INSERT INTO `journals` VALUES ('58258','22926','Issue','1561',NULL,'2011-09-15 23:08:35');
+INSERT INTO `journals` VALUES ('58259','23692','Issue','1561',NULL,'2011-09-15 23:08:36');
+INSERT INTO `journals` VALUES ('58268','29134','Issue','3626','Michel Michel wrote:\r\n> In print view the bonus ammount to be divided is not shown well. It still shows old value:\r\n> \r\n> [...]\r\n> \r\n> We need to check this\r\n\r\nIt should be ok right now. Pleas also check.','2011-09-15 23:50:53');
+INSERT INTO `journals` VALUES ('58277','29134','Issue','1561','looks working now. Please deploy this. Is it possible to remove from sms sent to V&D Shops the following text: \r\n\r\nGem. omz. p. klant: 0 \r\n\r\nLet me know.','2011-09-16 00:15:48');
+INSERT INTO `journals` VALUES ('58380','30851','Issue','990','','2011-09-16 13:18:51');
+INSERT INTO `journals` VALUES ('58381','29474','Issue','990','There are two duplicates for 134-GT, both planned, one is actually for 12th occurrence, which is last one, so another one should be deleted, shall I do it?\nSame issue for 134-HL, 134-HN and 134-HP\nAlso still need answer for project 266-L [1] to resolve it. It lacks report record for duplicate, but both were invoiced.','2011-09-16 13:21:34');
+INSERT INTO `journals` VALUES ('58396','23030','Issue','990','','2011-09-16 16:33:49');
+INSERT INTO `journals` VALUES ('58409','29134','Issue','3626','Michel Michel wrote:\r\n> looks working now. Please deploy this. Is it possible to remove from sms sent to V&D Shops the following text: \r\n> \r\n> Gem. omz. p. klant: 0 \r\n> \r\n> Let me know.\r\n\r\nReady on test server.\r\n','2011-09-16 18:01:34');
+INSERT INTO `journals` VALUES ('58410','29134','Issue','1561','we can deploy','2011-09-16 18:08:12');
+INSERT INTO `journals` VALUES ('58411','29134','Issue','3626','Michel Michel wrote:\r\n> we can deploy\r\n\r\ndeployed.','2011-09-16 18:16:03');
+INSERT INTO `journals` VALUES ('58420','30380','Issue','3626','Solution is ready on test server.','2011-09-16 18:40:08');
+INSERT INTO `journals` VALUES ('58423','30401','Issue','3626','Solution is ready on test server.','2011-09-16 18:54:18');
+INSERT INTO `journals` VALUES ('58427','30401','Issue','1561','seems working, please deploy and add dutch translation:\r\n\r\napprove --> Accorderen\r\n\r\nWich usergroups have this option?','2011-09-16 19:05:28');
+INSERT INTO `journals` VALUES ('58437','30388','Issue','3626','Solution is ready on test server.','2011-09-16 19:41:49');
+INSERT INTO `journals` VALUES ('58442','29933','Issue','3626','Michel Michel wrote:\r\n> Is some issues:\r\n> \r\n> - When in date-picker we select for example 07-11-2011, in the the days it doesn\'t show well the day\'s date:\r\n> \r\n> Monday, 12 - 09 - 2011\r\n> Tuesday, 13 - 09 - 2011\r\n> etc.\r\n> \r\n> - When planning form is open, and we change date pagination, the form picker date is not updated (and also not days date)\r\n\r\nI test it, and it should work correctly now. Also date in form should automatically been updated.','2011-09-16 20:00:19');
+INSERT INTO `journals` VALUES ('58443','30388','Issue','1561','tested and works, can be deployed','2011-09-16 20:06:47');
+INSERT INTO `journals` VALUES ('58452','29933','Issue','1561','Tested everything. Date in form is updated. Only the 7 days of week date is not updated. If we fix this, it can be deployed.','2011-09-16 20:21:47');
+INSERT INTO `journals` VALUES ('58455','30380','Issue','1561','we can deploy','2011-09-16 20:24:18');
+INSERT INTO `journals` VALUES ('58461','27959','Issue','1561','this one is already done?','2011-09-16 20:38:14');
+INSERT INTO `journals` VALUES ('58462','27961','Issue','1561','','2011-09-16 20:38:53');
+INSERT INTO `journals` VALUES ('58463','28066','Issue','1561','','2011-09-16 20:41:07');
+INSERT INTO `journals` VALUES ('58468','23692','Issue','1561','Some request:\r\n\r\nIn this overview http://www.teamsabon.nl/finance/nettoBonuses we want that, the logged in user will only see their bonusses. Only usergroups \'Afdeling HR\' and \'Administrators\' will be able to see all bonusses from all users.','2011-09-16 21:14:54');
 
 
 ###################
@@ -8477,7 +8586,7 @@ CREATE TABLE `member_roles` (
   PRIMARY KEY (`id`),
   KEY `index_member_roles_on_member_id` (`member_id`),
   KEY `index_member_roles_on_role_id` (`role_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8618 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8721 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -8489,7 +8598,7 @@ CREATE TABLE `member_roles` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-14  7:03:22
+-- Dump completed on 2011-09-17 10:24:54
 
 INSERT INTO `member_roles` VALUES ('2659','1913','3',NULL);
 INSERT INTO `member_roles` VALUES ('2660','1913','4',NULL);
@@ -8546,7 +8655,7 @@ CREATE TABLE `members` (
   UNIQUE KEY `index_members_on_user_id_and_project_id` (`user_id`,`project_id`),
   KEY `index_members_on_user_id` (`user_id`),
   KEY `index_members_on_project_id` (`project_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6300 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6387 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -8558,7 +8667,7 @@ CREATE TABLE `members` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-14  7:03:22
+-- Dump completed on 2011-09-17 10:24:54
 
 INSERT INTO `members` VALUES ('1913','990','1066','2011-01-06 21:22:29','0');
 INSERT INTO `members` VALUES ('1914','1561','1066','2011-01-06 21:36:18','0');
@@ -8617,7 +8726,7 @@ CREATE TABLE `messages` (
   KEY `index_messages_on_last_reply_id` (`last_reply_id`),
   KEY `index_messages_on_author_id` (`author_id`),
   KEY `index_messages_on_created_on` (`created_on`)
-) ENGINE=InnoDB AUTO_INCREMENT=1887 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=1894 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -8629,7 +8738,7 @@ CREATE TABLE `messages` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-14  7:03:22
+-- Dump completed on 2011-09-17 10:24:54
 
 
 
@@ -8674,7 +8783,7 @@ CREATE TABLE `news` (
   KEY `news_project_id` (`project_id`),
   KEY `index_news_on_author_id` (`author_id`),
   KEY `index_news_on_created_on` (`created_on`)
-) ENGINE=InnoDB AUTO_INCREMENT=478 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=483 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -8686,7 +8795,7 @@ CREATE TABLE `news` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-14  7:03:22
+-- Dump completed on 2011-09-17 10:24:54
 
 
 
@@ -8739,7 +8848,7 @@ CREATE TABLE `open_id_authentication_associations` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-14  7:03:22
+-- Dump completed on 2011-09-17 10:24:54
 
 INSERT INTO `open_id_authentication_associations` VALUES ('1','1315779665','1799','oida-1315779668040-1825990640','HMAC-SHA1','http://www.blogger.com/openid-server.g','¶ù~∫º\ZEE—⁄◊Bmnµ');
 INSERT INTO `open_id_authentication_associations` VALUES ('2','1315779793','1208213','1315779787:gdUJM3N2isvB7WIZcqOA:c709525541','HMAC-SHA1','http://www.livejournal.com/openid/server.bml','˚fÈö\"9 aﬂ1Õáe*÷∂Uo');
@@ -8791,7 +8900,7 @@ CREATE TABLE `open_id_authentication_nonces` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-14  7:03:22
+-- Dump completed on 2011-09-17 10:24:54
 
 INSERT INTO `open_id_authentication_nonces` VALUES ('1','1315779817','http://www.livejournal.com/openid/server.bml','E5gZfM');
 
@@ -8840,7 +8949,7 @@ CREATE TABLE `projects` (
   PRIMARY KEY (`id`),
   KEY `index_projects_on_lft` (`lft`),
   KEY `index_projects_on_rgt` (`rgt`)
-) ENGINE=InnoDB AUTO_INCREMENT=3181 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3207 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -8852,11 +8961,11 @@ CREATE TABLE `projects` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-14  7:03:22
+-- Dump completed on 2011-09-17 10:24:54
 
-INSERT INTO `projects` VALUES ('1066','ERP system','ERP system for Biolab','http://erp.biolab.nl','0',NULL,'2011-01-06 21:22:28','2011-01-07 01:21:04','biolab-erp','1','367','370');
-INSERT INTO `projects` VALUES ('1307','GebouwDossier','Objects manager for ERP project','','0','1066','2011-02-11 17:18:15','2011-02-11 17:18:15','gebouwdossier','1','368','369');
-INSERT INTO `projects` VALUES ('2379','SBN ERP','','','0',NULL,'2011-06-23 21:28:32','2011-06-23 21:28:32','sbn-erp','1','1301','1302');
+INSERT INTO `projects` VALUES ('1066','ERP system','ERP system for Biolab','http://erp.biolab.nl','0',NULL,'2011-01-06 21:22:28','2011-01-07 01:21:04','biolab-erp','1','377','380');
+INSERT INTO `projects` VALUES ('1307','GebouwDossier','Objects manager for ERP project','','0','1066','2011-02-11 17:18:15','2011-02-11 17:18:15','gebouwdossier','1','378','379');
+INSERT INTO `projects` VALUES ('2379','SBN ERP','','','0',NULL,'2011-06-23 21:28:32','2011-06-23 21:28:32','sbn-erp','1','1315','1316');
 
 
 ###################
@@ -8904,7 +9013,7 @@ CREATE TABLE `projects_trackers` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-14  7:03:22
+-- Dump completed on 2011-09-17 10:24:54
 
 INSERT INTO `projects_trackers` VALUES ('1066','1');
 INSERT INTO `projects_trackers` VALUES ('1066','2');
@@ -8961,7 +9070,7 @@ CREATE TABLE `queries` (
   PRIMARY KEY (`id`),
   KEY `index_queries_on_project_id` (`project_id`),
   KEY `index_queries_on_user_id` (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=547 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=550 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -8973,7 +9082,7 @@ CREATE TABLE `queries` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-14  7:03:22
+-- Dump completed on 2011-09-17 10:24:54
 
 INSERT INTO `queries` VALUES ('291','1066','Tasks','--- \nsubproject_id: \n  :values: \n  - \"1307\"\n  :operator: \"!*\"\ntracker_id: \n  :values: \n  - \"4\"\n  :operator: \"=\"\nstatus_id: \n  :values: \n  - \"1\"\n  - \"2\"\n  :operator: o\n','990','1','--- \n- :tracker\n- :subject\n- :parent\n- :fixed_version\n','--- []\n\n','priority');
 INSERT INTO `queries` VALUES ('313','1066','Current','--- \nsubproject_id: \n  :values: \n  - \"1307\"\n  :operator: \"!*\"\nassigned_to_id: \n  :values: \n  - \"990\"\n  :operator: \"=\"\ntracker_id: \n  :values: \n  - \"4\"\n  :operator: \"!\"\nstatus_id: \n  :values: \n  - \"1\"\n  - \"2\"\n  :operator: \"=\"\n','990','1','--- \n- :tracker\n- :subject\n- :parent\n- :estimated_hours\n- :fixed_version\n','--- \n- - priority\n  - desc\n- - tracker\n  - desc\n- - fixed_version\n  - asc\n','priority');
@@ -9029,7 +9138,7 @@ CREATE TABLE `repositories` (
   `extra_info` text COLLATE utf8_unicode_ci,
   PRIMARY KEY (`id`),
   KEY `index_repositories_on_project_id` (`project_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=610 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=613 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -9041,7 +9150,7 @@ CREATE TABLE `repositories` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-14  7:03:22
+-- Dump completed on 2011-09-17 10:24:54
 
 
 
@@ -9094,7 +9203,7 @@ CREATE TABLE `roles` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-14  7:03:22
+-- Dump completed on 2011-09-17 10:24:54
 
 INSERT INTO `roles` VALUES ('1','Non member','1','1','1','--- \n- :add_project\n- :add_messages\n- :view_calendar\n- :view_documents\n- :view_files\n- :view_gantt\n- :view_issues\n- :add_issues\n- :add_issue_notes\n- :comment_news\n- :browse_repository\n- :view_changesets\n- :view_wiki_pages\n- :view_wiki_edits\n- :edit_wiki_pages\n','default');
 INSERT INTO `roles` VALUES ('2','Anonymous','2','1','2','--- \n- :view_calendar\n- :view_documents\n- :view_files\n- :view_gantt\n- :view_issues\n- :browse_repository\n- :view_changesets\n- :view_wiki_pages\n','default');
@@ -9147,7 +9256,7 @@ CREATE TABLE `schema_migrations` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-14  7:03:22
+-- Dump completed on 2011-09-17 10:24:54
 
 INSERT INTO `schema_migrations` VALUES ('1');
 INSERT INTO `schema_migrations` VALUES ('1-redmine_theme_changer');
@@ -9391,7 +9500,7 @@ CREATE TABLE `settings` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-14  7:03:22
+-- Dump completed on 2011-09-17 10:24:54
 
 INSERT INTO `settings` VALUES ('1','text_formatting','textile','2010-03-26 23:31:32');
 INSERT INTO `settings` VALUES ('2','protocol','http','2011-06-08 19:11:29');
@@ -9489,7 +9598,7 @@ CREATE TABLE `theme_changer_user_settings` (
   `theme` varchar(255) DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2286 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2322 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -9501,7 +9610,7 @@ CREATE TABLE `theme_changer_user_settings` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-14  7:03:22
+-- Dump completed on 2011-09-17 10:24:54
 
 INSERT INTO `theme_changer_user_settings` VALUES ('222','990','ModulaMartini','2011-04-13 19:47:06');
 INSERT INTO `theme_changer_user_settings` VALUES ('229','1561','__system_setting__','2011-01-10 19:45:42');
@@ -9558,7 +9667,7 @@ CREATE TABLE `time_entries` (
   KEY `index_time_entries_on_activity_id` (`activity_id`),
   KEY `index_time_entries_on_user_id` (`user_id`),
   KEY `index_time_entries_on_created_on` (`created_on`)
-) ENGINE=InnoDB AUTO_INCREMENT=9111 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=9203 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -9570,7 +9679,7 @@ CREATE TABLE `time_entries` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-14  7:03:22
+-- Dump completed on 2011-09-17 10:24:54
 
 INSERT INTO `time_entries` VALUES ('29','28','2','190','2','','8','2010-04-14','2010','4','15','2010-04-14 17:55:37','2010-04-14 17:55:37');
 INSERT INTO `time_entries` VALUES ('42','28','2','196','1.5','','8','2010-04-20','2010','4','16','2010-04-20 01:27:26','2010-04-20 01:27:26');
@@ -9708,7 +9817,7 @@ CREATE TABLE `tokens` (
   `created_on` datetime NOT NULL,
   PRIMARY KEY (`id`),
   KEY `index_tokens_on_user_id` (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=22483 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=22707 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -9720,7 +9829,7 @@ CREATE TABLE `tokens` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-14  7:03:22
+-- Dump completed on 2011-09-17 10:24:54
 
 INSERT INTO `tokens` VALUES ('11263','2','recovery','9297b56e757c08c07724bf44da116616ceff23e9','2011-02-28 10:08:19');
 INSERT INTO `tokens` VALUES ('4960','990','feeds','9051a8e465d0e9baab05d3fdb3cb7eb6a1e900da','2010-10-22 15:49:14');
@@ -9786,7 +9895,7 @@ CREATE TABLE `trackers` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-14  7:03:22
+-- Dump completed on 2011-09-17 10:24:54
 
 INSERT INTO `trackers` VALUES ('1','Bug','1','3','1');
 INSERT INTO `trackers` VALUES ('2','Feature','1','1','1');
@@ -9830,7 +9939,7 @@ CREATE TABLE `user_preferences` (
   `time_zone` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `index_user_preferences_on_user_id` (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4390 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4437 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -9842,7 +9951,7 @@ CREATE TABLE `user_preferences` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-14  7:03:22
+-- Dump completed on 2011-09-17 10:24:54
 
 INSERT INTO `user_preferences` VALUES ('2','2','--- {}\n\n','0',NULL);
 INSERT INTO `user_preferences` VALUES ('906','990','--- \n:comments_sorting: asc\n:diff_type: inline\n:no_self_notified: true\n:gantt_zoom: 4\n:gantt_months: 1\n','0','Ekaterinburg');
@@ -9902,7 +10011,7 @@ CREATE TABLE `users` (
   KEY `index_users_on_id_and_type` (`id`,`type`),
   KEY `index_users_on_auth_source_id` (`auth_source_id`),
   KEY `index_users_on_type` (`type`)
-) ENGINE=InnoDB AUTO_INCREMENT=4588 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4635 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -9914,14 +10023,14 @@ CREATE TABLE `users` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-14  7:03:23
+-- Dump completed on 2011-09-17 10:24:54
 
 INSERT INTO `users` VALUES ('2','','','','Anonymous','','0','0',NULL,'',NULL,'2010-03-26 22:55:32','2010-03-26 22:55:32','AnonymousUser',NULL,'only_my_events',NULL);
-INSERT INTO `users` VALUES ('990','yuri_lopukhov','2535e055ec721afeeecbaa5ab90384bc46a218ec','Yuri','Lopukhov','yuvl32@gmail.com','0','1','2011-08-31 03:23:56','en',NULL,'2010-10-22 15:48:48','2011-08-31 03:23:56','User',NULL,'all','28463f7a351901fffef286e385d3df37');
-INSERT INTO `users` VALUES ('1561','brancom','ac9f9826a6c0521c1b2bbfb673dff260185186e2','Michel','Michel','michel@brancom.nl','0','1','2011-09-13 17:40:35','en',NULL,'2011-01-06 21:35:23','2011-09-13 17:40:35','User',NULL,'all','94fa8ae8ad51746ba4ccc8047a867a8b');
+INSERT INTO `users` VALUES ('990','yuri_lopukhov','edc117537d1fdaa8b75e1e7b0f7177c9fe080197','Yuri','Lopukhov','yuvl32@gmail.com','0','1','2011-09-16 13:09:19','en',NULL,'2010-10-22 15:48:48','2011-09-16 13:09:19','User',NULL,'all','367c38d22843aa493e53d8334e555de4');
+INSERT INTO `users` VALUES ('1561','brancom','ac9f9826a6c0521c1b2bbfb673dff260185186e2','Michel','Michel','michel@brancom.nl','0','1','2011-09-16 23:04:04','en',NULL,'2011-01-06 21:35:23','2011-09-16 23:04:04','User',NULL,'all','94fa8ae8ad51746ba4ccc8047a867a8b');
 INSERT INTO `users` VALUES ('2684','bartek','09eb248be74e2d7b28047a8636354eb717361e6e','Bartosz','WÛjcik','bartek@procreative.eu','0','1','2011-09-05 22:00:37','en',NULL,'2011-04-11 21:33:29','2011-09-05 22:00:37','User',NULL,'only_my_events','c534b356e736679d7827b87ed4823cd8');
 INSERT INTO `users` VALUES ('3581','sercul','af901e508f131b6207362e70ef31be0b71f681b3','Serghei','Culesov','sercul@gmail.com','0','1','2011-07-08 02:47:59','ru',NULL,'2011-06-29 22:32:47','2011-07-08 02:47:59','User',NULL,'only_my_events','9179b8e095c9bcb2614e8b1c56a94680');
-INSERT INTO `users` VALUES ('3626','leuconoe','206a77034b23feb3d1f9b7ee16857f8eac67da05','Leuconoe','S&H','michal@leuconoe.pl','0','1','2011-09-13 17:09:03','pl',NULL,'2011-07-04 20:12:18','2011-09-13 17:09:03','User',NULL,'only_my_events','c628da1ad9390c031383583d4bfa03a6');
+INSERT INTO `users` VALUES ('3626','leuconoe','206a77034b23feb3d1f9b7ee16857f8eac67da05','Leuconoe','S&H','michal@leuconoe.pl','0','1','2011-09-16 17:28:29','pl',NULL,'2011-07-04 20:12:18','2011-09-16 17:28:29','User',NULL,'only_my_events','c628da1ad9390c031383583d4bfa03a6');
 
 
 ###################
@@ -9966,7 +10075,7 @@ CREATE TABLE `versions` (
   PRIMARY KEY (`id`),
   KEY `versions_project_id` (`project_id`),
   KEY `index_versions_on_sharing` (`sharing`)
-) ENGINE=InnoDB AUTO_INCREMENT=1236 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=1248 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -9978,7 +10087,7 @@ CREATE TABLE `versions` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-14  7:03:23
+-- Dump completed on 2011-09-17 10:24:54
 
 INSERT INTO `versions` VALUES ('503','1066','0.7','Bug fixes','2011-04-15','2011-01-06 21:30:00','2011-04-18 20:56:52','','closed','none');
 INSERT INTO `versions` VALUES ('504','1066','0.8','Dashboard, settings, sales ','2011-04-22','2011-01-06 21:53:37','2011-04-21 23:01:27','','open','none');
@@ -10025,7 +10134,7 @@ CREATE TABLE `watchers` (
   KEY `watchers_user_id_type` (`user_id`,`watchable_type`),
   KEY `index_watchers_on_user_id` (`user_id`),
   KEY `index_watchers_on_watchable_id_and_watchable_type` (`watchable_id`,`watchable_type`)
-) ENGINE=InnoDB AUTO_INCREMENT=24859 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=25250 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -10037,7 +10146,7 @@ CREATE TABLE `watchers` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-14  7:03:23
+-- Dump completed on 2011-09-17 10:24:54
 
 
 
@@ -10082,7 +10191,7 @@ CREATE TABLE `wiki_content_versions` (
   PRIMARY KEY (`id`),
   KEY `wiki_content_versions_wcid` (`wiki_content_id`),
   KEY `index_wiki_content_versions_on_updated_on` (`updated_on`)
-) ENGINE=InnoDB AUTO_INCREMENT=8099 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8223 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -10094,7 +10203,7 @@ CREATE TABLE `wiki_content_versions` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-14  7:03:23
+-- Dump completed on 2011-09-17 10:24:54
 
 INSERT INTO `wiki_content_versions` VALUES ('5165','1236','1236','1503','h1. Datos sitio web dancingmonkeyscomar\r\n\r\nbase: alejorot_dancingmonkeys\r\nalejorot_dancing\r\npass: v9@#.+,TzA3]\r\n\r\nFtp: \r\nFTP Username: dancingmonkeys@alejorotemberg.com\r\nFTP Server: ftp.alejorotemberg.com\r\npassword: 3_m1979\r\n\r\nAdministrador Joomla:\r\n\r\nuser: admin\r\nclave: qwerty','','','2011-06-01 23:31:31','1');
 
@@ -10138,7 +10247,7 @@ CREATE TABLE `wiki_contents` (
   PRIMARY KEY (`id`),
   KEY `wiki_contents_page_id` (`page_id`),
   KEY `index_wiki_contents_on_author_id` (`author_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1932 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=1952 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -10150,7 +10259,7 @@ CREATE TABLE `wiki_contents` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-14  7:03:23
+-- Dump completed on 2011-09-17 10:24:55
 
 INSERT INTO `wiki_contents` VALUES ('1236','1236','1503','h1. Datos sitio web dancingmonkeyscomar\r\n\r\nbase: alejorot_dancingmonkeys\r\nalejorot_dancing\r\npass: v9@#.+,TzA3]\r\n\r\nFtp: \r\nFTP Username: dancingmonkeys@alejorotemberg.com\r\nFTP Server: ftp.alejorotemberg.com\r\npassword: 3_m1979\r\n\r\nAdministrador Joomla:\r\n\r\nuser: admin\r\nclave: qwerty','','2011-06-01 23:31:31','1');
 
@@ -10194,7 +10303,7 @@ CREATE TABLE `wiki_pages` (
   KEY `wiki_pages_wiki_id_title` (`wiki_id`,`title`),
   KEY `index_wiki_pages_on_wiki_id` (`wiki_id`),
   KEY `index_wiki_pages_on_parent_id` (`parent_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1932 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=1952 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -10206,7 +10315,7 @@ CREATE TABLE `wiki_pages` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-14  7:03:23
+-- Dump completed on 2011-09-17 10:24:55
 
 INSERT INTO `wiki_pages` VALUES ('628','1006','Acl','2011-01-19 05:43:54','0',NULL);
 INSERT INTO `wiki_pages` VALUES ('629','1006','Logging','2011-01-19 05:45:06','0',NULL);
@@ -10250,7 +10359,7 @@ CREATE TABLE `wiki_redirects` (
   PRIMARY KEY (`id`),
   KEY `wiki_redirects_wiki_id_title` (`wiki_id`,`title`),
   KEY `index_wiki_redirects_on_wiki_id` (`wiki_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=75 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=76 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -10262,7 +10371,7 @@ CREATE TABLE `wiki_redirects` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-14  7:03:23
+-- Dump completed on 2011-09-17 10:24:55
 
 
 
@@ -10301,7 +10410,7 @@ CREATE TABLE `wikis` (
   `status` int(11) NOT NULL DEFAULT '1',
   PRIMARY KEY (`id`),
   KEY `wikis_project_id` (`project_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2963 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2986 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -10313,7 +10422,7 @@ CREATE TABLE `wikis` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-14  7:03:23
+-- Dump completed on 2011-09-17 10:24:55
 
 INSERT INTO `wikis` VALUES ('1006','1066','Task','1');
 INSERT INTO `wikis` VALUES ('1236','1307','Wiki','1');
@@ -10372,7 +10481,7 @@ CREATE TABLE `workflows` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-14  7:03:23
+-- Dump completed on 2011-09-17 10:24:55
 
 INSERT INTO `workflows` VALUES ('31','2','1','2','3','0','0');
 INSERT INTO `workflows` VALUES ('32','2','1','3','3','0','0');
