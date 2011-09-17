@@ -267,7 +267,7 @@ foreach ($tables as $t) {
 			if (!empty($projects)) $data = $e->get_data($t, "`project_id` IN ($projects)");
 			break;
 		case 'enumerations':
-			if (!empty($projects)) $data = $e->get_data($t, "`project_id` IN ($projects)");
+			if (!empty($projects)) $data = $e->get_data($t, "`project_id` IN ($projects) OR `project_id` IS NULL");
 			break;
 		case 'gitosis_public_keys':
 			$data = $e->get_data($t, "FALSE");
