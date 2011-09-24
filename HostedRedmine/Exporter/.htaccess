@@ -6,11 +6,6 @@ AddType application/x-httpd-php-source .phps
 order deny,allow
 deny from all
 
-<Files database.php>
+<Files index.php>
   allow from all
 </Files>
-
-<Files files.php>
-  allow from all
-</Files>
-

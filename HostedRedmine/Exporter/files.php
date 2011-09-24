@@ -1,9 +1,12 @@
 <?php
 
-require("sql.inc.php");
-require("zip.inc.php");
+if (!isset($userId)) {
+	die("You did not set the input User ID!\n");
+}
 
-mail("bitbot@bitbot.com.au", "HostedRedmine files download - user {$userId}", "");
+require_once("sql.inc.php");
+require_once("zip.inc.php");
+
 
 $file = "files_{$userId}.zip";
 $disk_filename_path = "files";
@@ -102,12 +105,22 @@ while ($row = mysql_fetch_array($result, MYSQL_NUM)) {
 $attachments = substr($attachments, 0, -1);
 
 
+// All the filenames to include in zip
+$disk_filename = array();
+
+
+// Export the database
+$database_file = "database_{$userId}.sql";
+exec("php database.php {$userId} > {$database_file}");
+$disk_filename[] = $database_file;
+
+
+// Prepare attachments
 if (!empty($attachments)) {
 	
 	// Get attachment disk filenames
 	$query = "SELECT `disk_filename` FROM `attachments` where `id` IN ($attachments)";
 	$result = mysql_query($query) or die("Query messages failed: ".mysql_error()."\n");
-	$disk_filename = array();
 	while ($row = mysql_fetch_array($result, MYSQL_NUM)) {
 		//$disk_filename .= '"' . $disk_filename_path . "/" . $row[0] . '"' . ",";
 		$disk_filename[] = $disk_filename_path . "/" . $row[0];
@@ -115,20 +128,25 @@ if (!empty($attachments)) {
 	}
 	//print_r($disk_filename);
 	
-	if (create_zip($disk_filename, $file)) {
-		//echo "Successful!\n";
+}
 
-		// Stream the file to the client
-		header("Content-Type: application/zip");
-		header("Content-Length: " . filesize($file));
-		header("Content-Disposition: attachment; filename={$file}");
-		readfile($file);
-		unlink($file);
-
-	} else {
-		echo "Failed to create zip file!\n";
-	}
+// Create the zip file
+if (create_zip($disk_filename, $file)) {
 	
+	// Clean up inputs
+	unlink($database_file)
+	
+	// Stream the file to the client
+	header("Content-Type: application/zip");
+	header("Content-Length: " . filesize($file));
+	header("Content-Disposition: attachment; filename={$file}");
+	readfile($file);
+	
+	// Clean up outputs
+	unlink($file);
+	
+} else {
+	echo "Failed to create zip file!\n";
 }
 
 ?>

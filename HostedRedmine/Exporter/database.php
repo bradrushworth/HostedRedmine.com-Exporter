@@ -1,12 +1,18 @@
 <?php
 
-require("sql.inc.php");
-require("sql_export.inc.php");
+if (!isset($userId)) {
+	die("You did not set the input User ID!\n");
+}
 
-mail("bitbot@bitbot.com.au", "HostedRedmine database download - user {$userId}", "");
+require_once("sql.inc.php");
+require_once("sql_export.inc.php");
 
-header("Content-Type: text/sql");
-header("Content-Disposition:attachment;filename=database_{$userId}.sql");
+
+// No HTML headers for CLI
+if (PHP_SAPI !== 'cli') {
+	header("Content-Type: text/sql");
+	header("Content-Disposition:attachment;filename=database_{$userId}.sql");
+}
 
 
 /*
