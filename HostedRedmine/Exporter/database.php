@@ -216,14 +216,14 @@ if (!empty($projects)) {
 		//echo "journals: {$row[0]}\n";
 		//echo "users: {$row[1]}\n";
 	}
-	$journals = substr($journals, 0, -1);
-	$users = substr($users, 0, -1);
+	if ($journals[-1]==',') $journals = substr($journals, 0, -1);
+	if ($users[-1]==',') $users = substr($users, 0, -1);
 	
 	// Find custom_values
 	$query = "SELECT `id` FROM `custom_values` where ";
-	if (!empty($issues))   $query .= "(`customized_type`='Issue' AND `customized_id` IN ($issues)) OR ";
+	if (!empty($issues))   $query .= "(`customized_type`='Issue'     AND `customized_id` IN ($issues)) OR ";
 	if (!empty($users))    $query .= "(`customized_type`='Principal' AND `customized_id` IN ($users)) OR ";
-	if (!empty($projects)) $query .= "(`customized_type`='Project' AND `customized_id` IN ($projects)) OR ";
+	if (!empty($projects)) $query .= "(`customized_type`='Project'   AND `customized_id` IN ($projects)) OR ";
 	$query .= "FALSE";
 	$result = mysql_query($query) or die("Query custom_values failed: ".mysql_error()."\n");
 	$custom_values = "";
@@ -265,7 +265,7 @@ foreach ($tables as $t) {
 			if (!empty($changesets)) $data = $e->get_data($t, "`id` IN ($changesets)");
 			break;
 		case 'changesets_issues':
-			if (!empty($changesets)) $data = $e->get_data($t, "`changeset_id` IN ($changesets) OR `issue_id` IN ($issues)");
+			if (!empty($changesets) and !empty($issues)) $data = $e->get_data($t, "`changeset_id` IN ($changesets) OR `issue_id` IN ($issues)");
 			break;
 		case 'comments':
 			if (!empty($news)) $data = $e->get_data($t, "`commented_id` IN ($news)");
