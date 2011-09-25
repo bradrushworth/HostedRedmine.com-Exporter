@@ -216,8 +216,9 @@ if (!empty($projects)) {
 		//echo "journals: {$row[0]}\n";
 		//echo "users: {$row[1]}\n";
 	}
-	if ($journals[-1]==',') $journals = substr($journals, 0, -1);
-	if ($users[-1]==',') $users = substr($users, 0, -1);
+	$journals = substr($journals, 0, -1);
+	
+	if (substr($users,-1)==',') $users = substr($users, 0, -1);
 	
 	// Find custom_values
 	$query = "SELECT `id` FROM `custom_values` where ";
