@@ -45,7 +45,7 @@ CREATE TABLE `attachments` (
   KEY `index_attachments_on_container_id_and_container_type` (`container_id`,`container_type`),
   KEY `index_attachments_on_author_id` (`author_id`),
   KEY `index_attachments_on_created_on` (`created_on`)
-) ENGINE=InnoDB AUTO_INCREMENT=6746 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6996 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -57,7 +57,7 @@ CREATE TABLE `attachments` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-17 10:29:50
+-- Dump completed on 2011-09-25 12:15:47
 
 INSERT INTO `attachments` VALUES ('1','2','WikiPage','Step6.png','100329134606_Step6.png','7933','image/png','1abe5a5878a96502e4b73912c92b5926','0','3','2010-03-29 13:46:06','');
 INSERT INTO `attachments` VALUES ('2','2','WikiPage','Step7.png','100329134606_Step7.png','8721','image/png','876ddd12e94a7f1e0a89459afbb7e3e3','0','3','2010-03-29 13:46:06','');
@@ -141,7 +141,7 @@ CREATE TABLE `auth_sources` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-17 10:29:50
+-- Dump completed on 2011-09-25 12:15:47
 
 
 
@@ -185,7 +185,7 @@ CREATE TABLE `boards` (
   PRIMARY KEY (`id`),
   KEY `boards_project_id` (`project_id`),
   KEY `index_boards_on_last_message_id` (`last_message_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=344 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=352 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -197,7 +197,7 @@ CREATE TABLE `boards` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-17 10:29:50
+-- Dump completed on 2011-09-25 12:15:47
 
 INSERT INTO `boards` VALUES ('1','1','General Chat','This forum is used for general chat about Redmine, BitBot and anything else.','1','17','61','1622');
 
@@ -241,7 +241,7 @@ CREATE TABLE `changes` (
   `branch` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `changesets_changeset_id` (`changeset_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=617335 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=634353 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -253,7 +253,7 @@ CREATE TABLE `changes` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-17 10:29:50
+-- Dump completed on 2011-09-25 12:15:47
 
 INSERT INTO `changes` VALUES ('452605','40692','A','/trunk',NULL,NULL,NULL,NULL);
 INSERT INTO `changes` VALUES ('452606','40693','A','/trunk/redmine',NULL,NULL,NULL,NULL);
@@ -24386,7 +24386,7 @@ CREATE TABLE `changesets` (
   KEY `index_changesets_on_repository_id` (`repository_id`),
   KEY `index_changesets_on_committed_on` (`committed_on`),
   KEY `changesets_repos_scmid` (`repository_id`,`scmid`)
-) ENGINE=InnoDB AUTO_INCREMENT=53320 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=54733 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -24398,7 +24398,7 @@ CREATE TABLE `changesets` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-17 10:31:44
+-- Dump completed on 2011-09-25 12:17:14
 
 INSERT INTO `changesets` VALUES ('40692','424','1','jplang','2006-06-29 03:26:26','Initial setup','2006-06-29',NULL,NULL);
 INSERT INTO `changesets` VALUES ('40693','424','3','jplang','2006-06-29 04:09:47','Initial import.','2006-06-29',NULL,NULL);
@@ -29365,7 +29365,7 @@ CREATE TABLE `changesets_issues` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-17 10:31:54
+-- Dump completed on 2011-09-25 12:17:16
 
 INSERT INTO `changesets_issues` VALUES ('41797','838');
 INSERT INTO `changesets_issues` VALUES ('41808','859');
@@ -29411,7 +29411,7 @@ CREATE TABLE `comments` (
   PRIMARY KEY (`id`),
   KEY `index_comments_on_commented_id_and_commented_type` (`commented_id`,`commented_type`),
   KEY `index_comments_on_author_id` (`author_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=311 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=314 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -29423,7 +29423,7 @@ CREATE TABLE `comments` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-17 10:31:54
+-- Dump completed on 2011-09-25 12:17:16
 
 INSERT INTO `comments` VALUES ('12','News','141','3','I\'ve just updated to version 1.1.1. See http://www.redmine.org/projects/redmine/versions/30','2011-02-05 09:57:28','2011-02-05 09:57:28');
 INSERT INTO `comments` VALUES ('93','News','334','3319','Would you still provide a https connection in some other port if possible?\r\nI want the data is securied when transfering in website.\r\nI strongly need this feature, thanks.\r\n','2011-06-09 23:54:16','2011-06-09 23:54:16');
@@ -29493,7 +29493,7 @@ CREATE TABLE `custom_fields` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-17 10:31:54
+-- Dump completed on 2011-09-25 12:17:16
 
 INSERT INTO `custom_fields` VALUES ('1','UserCustomField','Country','string','--- []\n\n','','3','20','1','0','0','1','0','','1','1');
 INSERT INTO `custom_fields` VALUES ('2','IssueCustomField','Sequencing','int','--- []\n\n','','0','0','0','0','1','1','0','','1','1');
@@ -29546,7 +29546,7 @@ CREATE TABLE `custom_fields_projects` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-17 10:31:54
+-- Dump completed on 2011-09-25 12:17:16
 
 
 
@@ -29594,7 +29594,7 @@ CREATE TABLE `custom_fields_trackers` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-17 10:31:54
+-- Dump completed on 2011-09-25 12:17:16
 
 INSERT INTO `custom_fields_trackers` VALUES ('2','1');
 INSERT INTO `custom_fields_trackers` VALUES ('2','2');
@@ -29639,7 +29639,7 @@ CREATE TABLE `custom_values` (
   PRIMARY KEY (`id`),
   KEY `custom_values_customized` (`customized_type`,`customized_id`),
   KEY `index_custom_values_on_custom_field_id` (`custom_field_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=17706 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=18489 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -29651,7 +29651,7 @@ CREATE TABLE `custom_values` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-17 10:31:54
+-- Dump completed on 2011-09-25 12:17:16
 
 INSERT INTO `custom_values` VALUES ('2','Principal','33','1','Japan');
 INSERT INTO `custom_values` VALUES ('143','Principal','169','1','Italy');
@@ -29777,7 +29777,7 @@ CREATE TABLE `documents` (
   KEY `documents_project_id` (`project_id`),
   KEY `index_documents_on_category_id` (`category_id`),
   KEY `index_documents_on_created_on` (`created_on`)
-) ENGINE=InnoDB AUTO_INCREMENT=632 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=684 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -29789,7 +29789,7 @@ CREATE TABLE `documents` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-17 10:31:54
+-- Dump completed on 2011-09-25 12:17:16
 
 
 
@@ -29827,7 +29827,7 @@ CREATE TABLE `enabled_modules` (
   `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`id`),
   KEY `enabled_modules_project_id` (`project_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=28053 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=28940 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -29839,7 +29839,7 @@ CREATE TABLE `enabled_modules` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-17 10:31:54
+-- Dump completed on 2011-09-25 12:17:16
 
 INSERT INTO `enabled_modules` VALUES ('1','1','issue_tracking');
 INSERT INTO `enabled_modules` VALUES ('3','1','news');
@@ -29900,7 +29900,7 @@ CREATE TABLE `enumerations` (
   PRIMARY KEY (`id`),
   KEY `index_enumerations_on_project_id` (`project_id`),
   KEY `index_enumerations_on_id_and_type` (`id`,`type`)
-) ENGINE=InnoDB AUTO_INCREMENT=95 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=105 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -29912,7 +29912,7 @@ CREATE TABLE `enumerations` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-17 10:31:54
+-- Dump completed on 2011-09-25 12:17:16
 
 INSERT INTO `enumerations` VALUES ('1','User documentation','1','0','DocumentCategory','1',NULL,NULL);
 INSERT INTO `enumerations` VALUES ('2','Technical documentation','2','0','DocumentCategory','1',NULL,NULL);
@@ -29977,7 +29977,7 @@ CREATE TABLE `gitosis_public_keys` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-17 10:31:54
+-- Dump completed on 2011-09-25 12:17:16
 
 
 
@@ -30025,7 +30025,7 @@ CREATE TABLE `groups_users` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-17 10:31:54
+-- Dump completed on 2011-09-25 12:17:16
 
 INSERT INTO `groups_users` VALUES ('5','1');
 INSERT INTO `groups_users` VALUES ('5','3');
@@ -30067,7 +30067,7 @@ CREATE TABLE `issue_categories` (
   PRIMARY KEY (`id`),
   KEY `issue_categories_project_id` (`project_id`),
   KEY `index_issue_categories_on_assigned_to_id` (`assigned_to_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1895 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=1936 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -30079,7 +30079,7 @@ CREATE TABLE `issue_categories` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-17 10:31:54
+-- Dump completed on 2011-09-25 12:17:16
 
 INSERT INTO `issue_categories` VALUES ('1','1','HostedRedmine.com','3');
 INSERT INTO `issue_categories` VALUES ('2','1','External Repository','3');
@@ -30125,7 +30125,7 @@ CREATE TABLE `issue_relations` (
   PRIMARY KEY (`id`),
   KEY `index_issue_relations_on_issue_from_id` (`issue_from_id`),
   KEY `index_issue_relations_on_issue_to_id` (`issue_to_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=796 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=841 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -30137,7 +30137,7 @@ CREATE TABLE `issue_relations` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-17 10:31:54
+-- Dump completed on 2011-09-25 12:17:17
 
 INSERT INTO `issue_relations` VALUES ('48','811','9','blocks',NULL);
 INSERT INTO `issue_relations` VALUES ('49','838','9','relates',NULL);
@@ -30200,7 +30200,7 @@ CREATE TABLE `issue_statuses` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-17 10:31:54
+-- Dump completed on 2011-09-25 12:17:17
 
 INSERT INTO `issue_statuses` VALUES ('1','New','0','1','1',NULL);
 INSERT INTO `issue_statuses` VALUES ('2','Assigned','0','0','2',NULL);
@@ -30273,7 +30273,7 @@ CREATE TABLE `issues` (
   KEY `index_issues_on_author_id` (`author_id`),
   KEY `index_issues_on_created_on` (`created_on`),
   KEY `index_issues_on_root_id_and_lft_and_rgt` (`root_id`,`lft`,`rgt`)
-) ENGINE=InnoDB AUTO_INCREMENT=30962 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=31919 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -30285,7 +30285,7 @@ CREATE TABLE `issues` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-17 10:31:54
+-- Dump completed on 2011-09-25 12:17:17
 
 INSERT INTO `issues` VALUES ('9','2','1','Improve the speed of HostedRedmine.com','I have implemented HostedRedmine.com using Apache/fcgid on a VPS on the East Coast of the USA.\r\n\r\nWhile this site is sufficiently fast, we will be shortly migrating to a new VPS host on the West Coast of the USA.\r\n\r\nThis will improve the speed of HostedRedmine.com:\r\n* the hardware is significantly faster\r\n* the network latency is lower, especially to Australia and Asia\r\n* security is increased by using more advanced firewalls and FreeBSD jails\r\n\r\nFor the new server, we are experimenting with nginx and Phusion Passenger. I think this will provide a noticeable speed improvement.',NULL,'1','5','3','5','4','3','2','2010-04-01 00:16:55','2010-06-20 10:57:14','2010-04-01','0',NULL,NULL,'9','1','2','0');
 INSERT INTO `issues` VALUES ('118','3','1','Issue connecting to Codesion SVN','After providing Codesion SVN URL, username & password, I get the following error in Redmine:\r\n\"The entry or revision was not found in the repository.\"\r\n\r\nPretty sure I have everything correct, so I think it might be a hostedredmine.com issue.  Some resolutions can be found here: http://www.redmine.org/boards/2/topics/1325\r\n\r\nBtw, many thanks for providing a Redmine service!',NULL,'2','5','3','4','4','55','6','2010-04-09 11:24:45','2010-05-31 21:10:02','2010-04-09','100',NULL,NULL,'118','1','2','0');
@@ -30357,14 +30357,14 @@ INSERT INTO `issues` VALUES ('21902','2','1','Feeds','Feeds',NULL,NULL,'1',NULL,
 INSERT INTO `issues` VALUES ('24350','3','1','how hard would it be to migrate data to another redmine instance?','I\'m thinking about installing my own Redmine so I can easily control permissions and also to use my LDAP server.\r\nHow hard is it to migrate ALL the data for \"TA\" project?',NULL,'107','5','3','4','4','421','1','2011-07-22 04:01:15','2011-07-22 07:33:11','2011-07-22','0',NULL,NULL,'24350','1','2','0');
 INSERT INTO `issues` VALUES ('24377','3','1','Resetting password through forgot-password not working','Hi,\r\n\r\nOne of my colleagues has forgotten his password. He tried \"Lost your password\" link and he was sent instructions to change his password. He changed the password using those instructions, and a message came that his password was changed.\r\nBut when tries to log-in with new password, he is not allowed saying incorrect password.\r\n\r\nPlease check.\r\n\r\nThanks,\r\nMukesh',NULL,'107','5','3','4',NULL,'3500','1','2011-07-22 16:12:15','2011-07-22 16:50:56','2011-07-22','0',NULL,NULL,'24377','1','2','0');
 INSERT INTO `issues` VALUES ('25765','1','1','I can\'t however update the tasks from inside eclipse','From http://www.hostedredmine.com/boards/1/topics/1517\r\n\r\n> Also, I\'m having a problem with redmine and eclipse and just wanted to find out on whose side the error is.\r\n> I can connect to my hosted project with the api key without problems, also create a query and sync tasks. I can\'t however update the tasks from inside eclipse. All I get when I enter a comment for example is \"Submit failed: Server error\". I don\'t know if the problem is a bug inside the mylyn-redmine connector, my configuration or the hosted project so my question is: is anyone experiencing the same problem or can someone confirm that updating tasks from inside eclipse is working at all? I\'m grateful for any information on the problem.\r\n> Best wishes and thanks,\r\n> Daniel\r\n\r\nAlexey,\r\n\r\nCould you please tell me if Eclipse is working for you? It would be much appreciated.\r\n\r\nBrad',NULL,'4','5','3','5','4','3','4','2011-08-07 08:59:51','2011-09-16 21:11:15','2011-08-07','0',NULL,NULL,'25765','1','2','0');
-INSERT INTO `issues` VALUES ('25861','3','1','Application Error on creating an issue with attachment','Application Error on creating an issue with attachment\r\n\r\n\r\nI get following error when I create an issue with png attachments in it.\r\n\r\n\"Application error\r\nRails application failed to start properly\"\r\n\r\nPlease check.\r\n\r\nSometimes it works okay too.',NULL,'1','5','3','4',NULL,'3500','2','2011-08-08 15:51:35','2011-09-05 21:07:04','2011-08-08','0',NULL,NULL,'25861','1','2','0');
+INSERT INTO `issues` VALUES ('25861','3','1','Application Error on creating an issue with attachment','Application Error on creating an issue with attachment\r\n\r\n\r\nI get following error when I create an issue with png attachments in it.\r\n\r\n\"Application error\r\nRails application failed to start properly\"\r\n\r\nPlease check.\r\n\r\nSometimes it works okay too.',NULL,'1','5','3','4',NULL,'3500','3','2011-08-08 15:51:35','2011-09-20 16:16:23','2011-08-08','0',NULL,NULL,'25861','1','2','0');
 INSERT INTO `issues` VALUES ('27035','1','1','Cannot upload file','Cannot upload file in Files section and as Document attachment.\r\n\r\nError: \"Rails application cannot start properly\"',NULL,'1','5','3','5',NULL,'3390','2','2011-08-15 18:13:22','2011-09-01 21:59:12','2011-08-15','0',NULL,NULL,'27035','1','2','0');
 INSERT INTO `issues` VALUES ('27036','1','1','Testing file upload','',NULL,NULL,'6',NULL,'4',NULL,'3','2','2011-08-15 18:25:58','2011-08-15 18:26:25','2011-08-15','0',NULL,NULL,'27036','1','2','0');
 INSERT INTO `issues` VALUES ('28020','3','1','what\'s the exact Redmine version currently installed?','(including the SVN commit number)\r\n\r\nI\'m trying to debug a problem for one of my customers who uses Redmine.',NULL,NULL,'5','3','4',NULL,'421','1','2011-08-25 01:45:49','2011-08-25 07:08:10','2011-08-25','0',NULL,NULL,'28020','1','2','0');
 INSERT INTO `issues` VALUES ('28485','2','1','Avatar','Hello, how can I change my avatar?\r\n\r\nThnx.',NULL,'1','5','3','4',NULL,'3390','1','2011-08-29 20:34:54','2011-08-29 20:38:57','2011-08-29','0',NULL,NULL,'28485','1','2','0');
 INSERT INTO `issues` VALUES ('28981','1','1','Error to upload document / file.','I can\'t upload document and file anymore!\r\nScreenshot in annex.',NULL,'1','5','3','5','4','4364','2','2011-09-01 21:48:18','2011-09-03 14:55:58','2011-09-01','0',NULL,NULL,'28981','1','2','0');
 INSERT INTO `issues` VALUES ('29636','1','1','Error: bulk update','I got this error when I try change the start date of issues (by bulk update).',NULL,'3','1','3','4','4','4364','0','2011-09-06 21:50:53','2011-09-06 21:50:53','2011-09-06','0',NULL,NULL,'29636','1','2','0');
-INSERT INTO `issues` VALUES ('29981','3','1','My project named M-Fin has been deleted. ','Today I didn\'t find my project named M-Fin. I confirmed with my project members that they have not deleted it. I would like to get it recovered with all the issues it has and also suggest to give delete authority only to the creator of the project.\r\n\r\nLooking forward for your response. \r\n\r\nThank you',NULL,'107','2','3','6',NULL,'2774','1','2011-09-09 02:56:07','2011-09-09 07:52:43','2011-09-09','0',NULL,NULL,'29981','1','2','0');
+INSERT INTO `issues` VALUES ('29981','3','1','My project named M-Fin has been deleted. ','Today I didn\'t find my project named M-Fin. I confirmed with my project members that they have not deleted it. I would like to get it recovered with all the issues it has and also suggest to give delete authority only to the creator of the project.\r\n\r\nLooking forward for your response. \r\n\r\nThank you',NULL,'107','5','3','6',NULL,'2774','2','2011-09-09 02:56:07','2011-09-25 11:22:59','2011-09-09','0',NULL,NULL,'29981','1','2','0');
 INSERT INTO `issues` VALUES ('30885','2','1','???????? ???????','???????? ???????????',NULL,'3','6','3','4',NULL,'2236','1','2011-09-16 20:19:50','2011-09-17 09:21:10',NULL,'0','0',NULL,'30885','1','2','0');
 INSERT INTO `issues` VALUES ('30886','2','1','???????? ???????','???????? ???????????',NULL,'3','6','3','4',NULL,'2236','1','2011-09-16 20:21:05','2011-09-17 09:21:23',NULL,'0','0',NULL,'30886','1','2','0');
 INSERT INTO `issues` VALUES ('30887','2','1','???????? ???????','???????? ???????????',NULL,'3','6','3','4',NULL,'2236','1','2011-09-16 20:23:03','2011-09-17 09:21:24',NULL,'0','0',NULL,'30887','1','2','0');
@@ -30407,7 +30407,7 @@ CREATE TABLE `journal_details` (
   `value` text COLLATE utf8_unicode_ci,
   PRIMARY KEY (`id`),
   KEY `journal_details_journal_id` (`journal_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=69484 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=71959 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -30419,7 +30419,7 @@ CREATE TABLE `journal_details` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-17 10:31:54
+-- Dump completed on 2011-09-25 12:17:17
 
 INSERT INTO `journal_details` VALUES ('341','239','attr','category_id',NULL,'2');
 INSERT INTO `journal_details` VALUES ('342','239','attr','status_id','1','2');
@@ -30652,6 +30652,7 @@ INSERT INTO `journal_details` VALUES ('68006','57260','attr','assigned_to_id','4
 INSERT INTO `journal_details` VALUES ('69477','58570','attr','status_id','1','6');
 INSERT INTO `journal_details` VALUES ('69478','58571','attr','status_id','1','6');
 INSERT INTO `journal_details` VALUES ('69479','58572','attr','status_id','1','6');
+INSERT INTO `journal_details` VALUES ('71958','60702','attr','status_id','2','5');
 
 
 ###################
@@ -30694,7 +30695,7 @@ CREATE TABLE `journals` (
   KEY `index_journals_on_user_id` (`user_id`),
   KEY `index_journals_on_journalized_id` (`journalized_id`),
   KEY `index_journals_on_created_on` (`created_on`)
-) ENGINE=InnoDB AUTO_INCREMENT=58575 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=60703 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -30706,7 +30707,7 @@ CREATE TABLE `journals` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-17 10:31:55
+-- Dump completed on 2011-09-25 12:17:17
 
 INSERT INTO `journals` VALUES ('239','118','Issue','3','Sorry for the delay in getting back to you. I\'ll take a look at this tomorrow.','2010-04-12 21:29:40');
 INSERT INTO `journals` VALUES ('262','118','Issue','3','Karl,\r\n\r\nThe problem seems to be due to the following:\r\n\r\n<pre>\r\nsvn: OPTIONS of \'https://codeprone.svn.cvsdude.com/quiosk\': Server certificate verification failed: issuer is not trusted (https://codeprone.svn.cvsdude.com)\r\n</pre>\r\n\r\nI have further confirmed that using:\r\n\r\n<pre>\r\n[root@1526 ~]# svn log https://codeprone.svn.cvsdude.com/quiosk/\r\nError validating server certificate for \'https://codeprone.svn.cvsdude.com:443\':\r\n - The certificate is not issued by a trusted authority. Use the\r\n   fingerprint to validate the certificate manually!\r\nCertificate information:\r\n - Hostname: *.svn.cvsdude.com\r\n - Valid: from Mon, 15 Jun 2009 14:00:00 GMT until Thu, 19 Aug 2010 13:59:59 GMT\r\n - Issuer: www.digicert.com, DigiCert Inc, US\r\n - Fingerprint: cd:9e:e4:b0:1d:49:c7:f8:f9:83:4a:aa:5c:46:7e:fd:36:eb:cc:49\r\n(R)eject, accept (t)emporarily or accept (p)ermanently?\r\n</pre>\r\n\r\nIt seems you aren\'t the only user suffering this problem either.\r\n\r\nThe problem only affected secure HTTPS repositories. I\'ve now installed the correct root CA certificates to resolve this issue. However, when I now try to connect to your repository, I get the following:\r\n\r\n<pre>\r\nsvn: OPTIONS of \'https://codeprone.svn.cvsdude.com/quiosk\': authorization failed: Could not authenticate to server: rejected Basic challenge (https://codeprone.svn.cvsdude.com)\r\n</pre>\r\n\r\nI assume this means your password is entered wrongly.\r\n\r\nCan you please confirm the problem is now corrected?','2010-04-13 15:16:42');
@@ -30916,6 +30917,8 @@ INSERT INTO `journals` VALUES ('58466','25765','Issue','2236','I got the same er
 INSERT INTO `journals` VALUES ('58570','30885','Issue','3','','2011-09-17 09:21:10');
 INSERT INTO `journals` VALUES ('58571','30886','Issue','3',NULL,'2011-09-17 09:21:23');
 INSERT INTO `journals` VALUES ('58572','30887','Issue','3',NULL,'2011-09-17 09:21:24');
+INSERT INTO `journals` VALUES ('59173','25861','Issue','3500','Thanks. Much appreciated.','2011-09-20 16:16:23');
+INSERT INTO `journals` VALUES ('60702','29981','Issue','3','','2011-09-25 11:22:59');
 
 
 ###################
@@ -30954,7 +30957,7 @@ CREATE TABLE `member_roles` (
   PRIMARY KEY (`id`),
   KEY `index_member_roles_on_member_id` (`member_id`),
   KEY `index_member_roles_on_role_id` (`role_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8721 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8965 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -30966,7 +30969,7 @@ CREATE TABLE `member_roles` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-17 10:31:55
+-- Dump completed on 2011-09-25 12:17:17
 
 INSERT INTO `member_roles` VALUES ('1','1','3',NULL);
 INSERT INTO `member_roles` VALUES ('4','1','3','2');
@@ -31020,7 +31023,7 @@ CREATE TABLE `members` (
   UNIQUE KEY `index_members_on_user_id_and_project_id` (`user_id`,`project_id`),
   KEY `index_members_on_user_id` (`user_id`),
   KEY `index_members_on_project_id` (`project_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6387 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6585 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -31032,7 +31035,7 @@ CREATE TABLE `members` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-17 10:31:55
+-- Dump completed on 2011-09-25 12:17:17
 
 INSERT INTO `members` VALUES ('1','3','1','2010-03-27 00:04:55','0');
 INSERT INTO `members` VALUES ('2','5','1','2010-03-27 00:14:21','0');
@@ -31090,7 +31093,7 @@ CREATE TABLE `messages` (
   KEY `index_messages_on_last_reply_id` (`last_reply_id`),
   KEY `index_messages_on_author_id` (`author_id`),
   KEY `index_messages_on_created_on` (`created_on`)
-) ENGINE=InnoDB AUTO_INCREMENT=1894 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=1974 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -31102,7 +31105,7 @@ CREATE TABLE `messages` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-17 10:31:55
+-- Dump completed on 2011-09-25 12:17:17
 
 INSERT INTO `messages` VALUES ('29','1',NULL,'Redmine plugins','Wich redmines plugins are available at the moment?\r\nWhat to do in future if a plugin or more plugins are desidered?','217','3','1133','2010-05-28 20:20:45','2011-06-24 08:35:33','0','0');
 INSERT INTO `messages` VALUES ('30','1','29','RE: Redmine plugins','None are currently installed.\r\n\r\nIf you would like one, just let me know and I will look into if we can support it.','3','0',NULL,'2010-05-28 21:51:33','2010-05-28 21:51:33','0','0');
@@ -31208,7 +31211,7 @@ CREATE TABLE `news` (
   KEY `news_project_id` (`project_id`),
   KEY `index_news_on_author_id` (`author_id`),
   KEY `index_news_on_created_on` (`created_on`)
-) ENGINE=InnoDB AUTO_INCREMENT=483 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=501 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -31220,7 +31223,7 @@ CREATE TABLE `news` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-17 10:31:55
+-- Dump completed on 2011-09-25 12:17:17
 
 INSERT INTO `news` VALUES ('1','1','Welcome to Hosted Redmine','','Welcome to \"BitBot Software\'s\":http://www.bitbot.com.au/ new and free service called \"Hosted Redmine\":https://www.hostedredmine.com/.\r\n\r\nThis service will remain free and is currently advertisement supported. We are considering a very low cost additional service which provides you with a full administrative access. Let us know if there is any interest in the community for this service.\r\n\r\nWe are long-term users of Redmine and are hosting this service as a contribution to the community. This service can be used for commercial purposes. Your data is private and will be kept confidential. This service runs from a Virtual Private Server (VPS) in the United States, and only BitBot Software Pty Ltd (an Australian company) has data access. You may request an SQL backup of your data on this service for a fee of AU$50 (as we have to separate your data from everyone else\'s). If we are forced to close down the service for any reason, we will provide an SQL backup free of charge, on request.\r\n\r\nIf you are just looking to experiment with Redmine\'s features, we recommend you use the official demo instead: http://demo.redmine.org/\r\n\r\nAny inappropriate use (such as spamming) will be monitored and your access may be permanently blocked at our sole discretion. The service is provided \"as is\", without warranty of any kind, express or implied.\r\n','3','2010-03-30 12:15:32','0');
 INSERT INTO `news` VALUES ('25','1','Improved the speed of HostedRedmine.com','','Whilst the old sever was sufficiently fast, we recently migrated to a new VPS host on the West Coast of the USA.\r\n\r\nThis improves the speed of HostedRedmine.com because:\r\n\r\n    * the hardware is significantly faster\r\n    * the network latency is significantly lower, especially to Australia and Asia\r\n    * security is increased by using more advanced firewalls and FreeBSD jails\r\n\r\nThe migration is now complete. If anyone is still having problems, please report an issue in \"Hosted Redmine Support\".\r\n','3','2010-05-19 09:35:06','0');
@@ -31232,6 +31235,7 @@ INSERT INTO `news` VALUES ('214','1','Redmine updated to Redmine 1.1.2.stable.52
 INSERT INTO `news` VALUES ('215','1','Short outage caused by chat feature','','Please accept my apologies for an outage today. It was indirectly caused by the Chat plugin which was continually polling the server for updates. Rather than tune the server for this service, we decided that due to low usage of the JChat plugin, we would just remove it. Sorry for any inconvenience.','3','2011-03-26 16:54:12','0');
 INSERT INTO `news` VALUES ('334','1','Change away from secure website and Redmine 1.2.0 upgrade','','The owners of HostedRedmine.com have decided to move away from providing a HTTPS secure website, and provide a regular HTTP website instead. There were a number of factors contributing to this decision. If you feel strongly about this change, please contact us.\r\n\r\nWe have also upgraded HostedRedmine.com to @Redmine 1.2.0.stable.6005@. This upgrade was complex and resulted in unexpected downtime for HostedRedmine.com. I apologise to anyone inconvenienced.','3','2011-06-08 21:12:38','5');
 INSERT INTO `news` VALUES ('363','1','Secure website is now reavailable and Mylyn updated','','Due to popular demand, HostedRedmine.com is now available as both \"secure HTTPS\":https://www.hostedredmine.com/ and \"regular HTTP\":http://www.hostedredmine.com/.\r\n\r\nFor those users of Eclipse, we have updated the Mylyn Repository plug-in to 2.7.2.stable. This is a major upgrade which may require an upgrade to your client programs.','3','2011-06-27 19:37:27','1');
+INSERT INTO `news` VALUES ('500','1','Export your HostedRedmine.com projects','','You can now export your HostedRedmine.com projects free of charge. Simply go to https://www.hostedredmine.com/export/index.php and enter your login details. This will export your data in MySQL format and zip up all your uploaded files.\r\n\r\nWhen you export your HostedRedmine.com data, it will export your private data along with any other user\'s data that is accessible within projects you are involved in. This should enable easy migration of company data to your new private Redmine installation.\r\n\r\nThe version of Redmine and plugins in use on HostedRedmine.com can be found on the [[Plugins]] page.\r\n\r\nThis service is free of charge and fully automated. Support for non-English character sets may be limited, if this is causing you problems please let me know.\r\n\r\nIf you have any problems with this service, please raise a new \"support issue\":https://www.hostedredmine.com/projects/hosted-redmine/issues/new.','3','2011-09-25 11:32:09','0');
 
 
 ###################
@@ -31283,7 +31287,7 @@ CREATE TABLE `open_id_authentication_associations` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-17 10:31:55
+-- Dump completed on 2011-09-25 12:17:17
 
 INSERT INTO `open_id_authentication_associations` VALUES ('1','1315779665','1799','oida-1315779668040-1825990640','HMAC-SHA1','http://www.blogger.com/openid-server.g','¶ù~∫º\ZEE—⁄◊Bmnµ');
 INSERT INTO `open_id_authentication_associations` VALUES ('2','1315779793','1208213','1315779787:gdUJM3N2isvB7WIZcqOA:c709525541','HMAC-SHA1','http://www.livejournal.com/openid/server.bml','˚fÈö\"9 aﬂ1Õáe*÷∂Uo');
@@ -31335,7 +31339,7 @@ CREATE TABLE `open_id_authentication_nonces` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-17 10:31:55
+-- Dump completed on 2011-09-25 12:17:17
 
 INSERT INTO `open_id_authentication_nonces` VALUES ('1','1315779817','http://www.livejournal.com/openid/server.bml','E5gZfM');
 
@@ -31384,7 +31388,7 @@ CREATE TABLE `projects` (
   PRIMARY KEY (`id`),
   KEY `index_projects_on_lft` (`lft`),
   KEY `index_projects_on_rgt` (`rgt`)
-) ENGINE=InnoDB AUTO_INCREMENT=3207 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3307 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -31396,10 +31400,10 @@ CREATE TABLE `projects` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-17 10:31:55
+-- Dump completed on 2011-09-25 12:17:17
 
-INSERT INTO `projects` VALUES ('1','HostedRedmine.com Support','This is the \"HostedRedmine.com\":http://www.hostedredmine.com/ support project. Please use this project to get in touch with the HostedRedmine.com administrators. If you need to contact us privately, please email \"bitbot@bitbot.com.au\":mailto:bitbot@bitbot.com.au.\r\n','','1',NULL,'2010-03-27 00:03:00','2011-06-09 18:47:06','hosted-redmine','1','655','656');
-INSERT INTO `projects` VALUES ('2','Brads Private Test','This is my private testing project.','','0',NULL,'2010-03-27 00:19:57','2010-03-27 00:19:57','private-test','1','207','208');
+INSERT INTO `projects` VALUES ('1','HostedRedmine.com Support','This is the \"HostedRedmine.com\":http://www.hostedredmine.com/ support project. Please use this project to get in touch with the HostedRedmine.com administrators. If you need to contact us privately, please email \"bitbot@bitbot.com.au\":mailto:bitbot@bitbot.com.au.\r\n','','1',NULL,'2010-03-27 00:03:00','2011-06-09 18:47:06','hosted-redmine','1','681','682');
+INSERT INTO `projects` VALUES ('2','Brads Private Test','This is my private testing project.','','0',NULL,'2010-03-27 00:19:57','2010-03-27 00:19:57','private-test','1','221','222');
 
 
 ###################
@@ -31447,7 +31451,7 @@ CREATE TABLE `projects_trackers` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-17 10:31:55
+-- Dump completed on 2011-09-25 12:17:17
 
 INSERT INTO `projects_trackers` VALUES ('1','1');
 INSERT INTO `projects_trackers` VALUES ('1','2');
@@ -31500,7 +31504,7 @@ CREATE TABLE `queries` (
   PRIMARY KEY (`id`),
   KEY `index_queries_on_project_id` (`project_id`),
   KEY `index_queries_on_user_id` (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=550 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=561 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -31512,7 +31516,7 @@ CREATE TABLE `queries` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-17 10:31:55
+-- Dump completed on 2011-09-25 12:17:17
 
 
 
@@ -31557,7 +31561,7 @@ CREATE TABLE `repositories` (
   `extra_info` text COLLATE utf8_unicode_ci,
   PRIMARY KEY (`id`),
   KEY `index_repositories_on_project_id` (`project_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=613 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=624 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -31569,7 +31573,7 @@ CREATE TABLE `repositories` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-17 10:31:55
+-- Dump completed on 2011-09-25 12:17:17
 
 INSERT INTO `repositories` VALUES ('424','1','http://redmine.rubyforge.org/svn/branches/1.2-stable','','','http://redmine.rubyforge.org/svn','Subversion',NULL,NULL,'--- {}\n\n');
 INSERT INTO `repositories` VALUES ('437','2','/usr/local/git/repositories/private-test.git','','','/usr/local/git/repositories/private-test.git','Git',NULL,NULL,'--- \nbranches: \n  master: \n    last_scmid: 038b5f60a494476d93d6ce0ba2f3ad364b14b207\ndb_consistent: \n  ordering: 1\n');
@@ -31624,7 +31628,7 @@ CREATE TABLE `roles` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-17 10:31:55
+-- Dump completed on 2011-09-25 12:17:17
 
 INSERT INTO `roles` VALUES ('1','Non member','1','1','1','--- \n- :add_project\n- :add_messages\n- :view_calendar\n- :view_documents\n- :view_files\n- :view_gantt\n- :view_issues\n- :add_issues\n- :add_issue_notes\n- :comment_news\n- :browse_repository\n- :view_changesets\n- :view_wiki_pages\n- :view_wiki_edits\n- :edit_wiki_pages\n','default');
 INSERT INTO `roles` VALUES ('2','Anonymous','2','1','2','--- \n- :view_calendar\n- :view_documents\n- :view_files\n- :view_gantt\n- :view_issues\n- :browse_repository\n- :view_changesets\n- :view_wiki_pages\n','default');
@@ -31677,7 +31681,7 @@ CREATE TABLE `schema_migrations` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-17 10:31:55
+-- Dump completed on 2011-09-25 12:17:17
 
 INSERT INTO `schema_migrations` VALUES ('1');
 INSERT INTO `schema_migrations` VALUES ('1-redmine_theme_changer');
@@ -31921,11 +31925,11 @@ CREATE TABLE `settings` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-17 10:31:56
+-- Dump completed on 2011-09-25 12:17:17
 
 INSERT INTO `settings` VALUES ('1','text_formatting','textile','2010-03-26 23:31:32');
 INSERT INTO `settings` VALUES ('2','protocol','http','2011-06-08 19:11:29');
-INSERT INTO `settings` VALUES ('3','welcome_text','Welcome to \"BitBot Software\'s\":http://www.bitbot.com.au/ free service called \"Hosted Redmine\":http://www.hostedredmine.com/. This site has been operating since March 2010 and provides free project management software.\r\n\r\nWe host \"Redmine\":http://www.redmine.org/ projects free of charge within our high quality server environment. All we ask in return is a simple link of appreciation from your website to ours. And yes, you are welcome to use this website for commercial activities, provided you properly attribute our efforts.\r\n\r\nWe are long-term users of Redmine. Hosting this service is part of our contribution back to the community.\r\n\r\nIf you are just looking to experiment with Redmine\'s features, we recommend you use the \"official demo\":http://demo.redmine.org/ instead.\r\n\r\nPlease register for your \"free account here\":http://www.hostedredmine.com/account/register. After you have registered and verified your email address, feel free to create your own private or public project. Instructions on \"registering can be found here\":http://www.hostedredmine.com/projects/hosted-redmine/wiki/Register.\r\n\r\nHostedRedmine.com has the following features:\r\n* Redmine 1.2 Stable branch (standard and improved workflows and trackers).\r\n* Subversion (SVN) repositories can be used remotely.\r\n* Secure \"SSL HTTPS\":https://www.hostedredmine.com/ is also available.\r\n* Theme changer plugin to allow you to choose your own theme (including Mar≠tini Mod≠ula).\r\n* Mylyn connector plugin for Eclipse.\r\n* Redmine issue notification plugin emails you when the due date is near.\r\n* Other plugins are available.\r\n\r\nIf you need support or want to suggest a feature, please do so in the \"Hosted Redmine project\":http://www.hostedredmine.com/projects/hosted-redmine after signing in. If you are having problems signing in or need to discuss a matter privately, please email bitbot at bitbot.com.au.\r\n\r\nWe respect the privacy and confidentiality of your data. This service runs from a Virtual Private Server (VPS) in the United States of America, and only BitBot Software Pty Ltd (an Australian company) has data access. You may request an SQL backup of your data on this service for a fee of AU$50 (as we have to separate your data from everyone else\'s). If we are forced to close down the service for any reason, we will provide an SQL backup free of charge, on request.\r\n\r\nNote that we do reserve the right to terminate access to the site for any account that we believe is detrimental to this service at our sole discretion. We reserve the right to display advertisements. The data entered into Redmine remains yours, however you permit us to make copies as necessary for backups and other maintenance activities.\r\n\r\nHosted Redmine is proudly brought to you by \"BitBot Software Pty Ltd\":http://www.bitbot.com.au/. We help strengthen businesses with open-source software. BitBot was founded in June 2008 and we are based in Newcastle, NSW, Australia.','2011-06-12 21:00:51');
+INSERT INTO `settings` VALUES ('3','welcome_text','Welcome to \"BitBot Software\'s\":http://www.bitbot.com.au/ free service called \"Hosted Redmine\":http://www.hostedredmine.com/. This site has been operating since March 2010 and provides free project management software.\r\n\r\nWe host \"Redmine\":http://www.redmine.org/ projects free of charge within our high quality server environment. All we ask in return is a simple link of appreciation from your website to ours. And yes, you are welcome to use this website for commercial activities, provided you properly attribute our efforts.\r\n\r\nWe are long-term users of Redmine. Hosting this service is part of our contribution back to the community.\r\n\r\nIf you are just looking to experiment with Redmine\'s features, we recommend you use the \"official demo\":http://demo.redmine.org/ instead.\r\n\r\nPlease register for your \"free account here\":http://www.hostedredmine.com/account/register. After you have registered and verified your email address, feel free to create your own private or public project. Instructions on \"registering can be found here\":http://www.hostedredmine.com/projects/hosted-redmine/wiki/Register.\r\n\r\nHostedRedmine.com has the following features:\r\n* Redmine 1.2 Stable branch (standard and improved workflows and trackers).\r\n* Subversion (SVN) repositories can be used remotely.\r\n* Secure \"SSL HTTPS\":https://www.hostedredmine.com/ is also available.\r\n* Theme changer plugin to allow you to choose your own theme (including Mar≠tini Mod≠ula).\r\n* Mylyn connector plugin for Eclipse.\r\n* Redmine issue notification plugin emails you when the due date is near.\r\n* Other plugins are available.\r\n\r\nIf you need support or want to suggest a feature, please do so in the \"Hosted Redmine project\":http://www.hostedredmine.com/projects/hosted-redmine after signing in. If you are having problems signing in or need to discuss a matter privately, please email bitbot at bitbot.com.au.\r\n\r\nWe respect the privacy and confidentiality of your data. This service runs from a Virtual Private Server (VPS) in the United States of America, and only BitBot Software Pty Ltd (an Australian company) has data access.\r\n\r\nYou may \"download an export\":https://www.hostedredmine.com/export/index.php of your data from HostedRedmine.com at any time free of charge. We ask that you please delete your projects from HostedRedmine.com if you no longer need them, to save disk space for other users.\r\n\r\nNote that we do reserve the right to terminate access to the site for any account that we believe is detrimental to this service at our sole discretion. We reserve the right to display advertisements, such as Google AdWords. The data entered into Redmine remains yours, however you permit us to make copies as necessary for backups and other maintenance activities.\r\n\r\nHosted Redmine is proudly brought to you by \"BitBot Software Pty Ltd\":http://www.bitbot.com.au/. We help strengthen businesses with open-source software. BitBot was founded in June 2008 and we are based in Newcastle, NSW, Australia.','2011-09-25 11:20:10');
 INSERT INTO `settings` VALUES ('4','app_title','Free Redmine Hosting :: Manage Your Projects','2011-06-09 18:45:02');
 INSERT INTO `settings` VALUES ('5','feeds_limit','15','2010-03-26 23:31:32');
 INSERT INTO `settings` VALUES ('6','wiki_compression','','2010-03-26 23:31:32');
@@ -32019,7 +32023,7 @@ CREATE TABLE `theme_changer_user_settings` (
   `theme` varchar(255) DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2322 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2434 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -32031,7 +32035,7 @@ CREATE TABLE `theme_changer_user_settings` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-17 10:31:56
+-- Dump completed on 2011-09-25 12:17:17
 
 INSERT INTO `theme_changer_user_settings` VALUES ('1','3','__system_setting__','2011-09-11 22:52:01');
 INSERT INTO `theme_changer_user_settings` VALUES ('2','1094','__system_setting__','2010-11-06 20:23:44');
@@ -32104,7 +32108,7 @@ CREATE TABLE `time_entries` (
   KEY `index_time_entries_on_activity_id` (`activity_id`),
   KEY `index_time_entries_on_user_id` (`user_id`),
   KEY `index_time_entries_on_created_on` (`created_on`)
-) ENGINE=InnoDB AUTO_INCREMENT=9203 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=9453 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -32116,7 +32120,7 @@ CREATE TABLE `time_entries` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-17 10:31:56
+-- Dump completed on 2011-09-25 12:17:17
 
 INSERT INTO `time_entries` VALUES ('29','28','2','190','2','','8','2010-04-14','2010','4','15','2010-04-14 17:55:37','2010-04-14 17:55:37');
 INSERT INTO `time_entries` VALUES ('42','28','2','196','1.5','','8','2010-04-20','2010','4','16','2010-04-20 01:27:26','2010-04-20 01:27:26');
@@ -32317,6 +32321,22 @@ INSERT INTO `time_entries` VALUES ('9176','939','421','30857','1.5','','10','201
 INSERT INTO `time_entries` VALUES ('9177','939','421','29884','0.5','','9','2011-09-16','2011','9','37','2011-09-16 15:38:07','2011-09-16 15:38:07');
 INSERT INTO `time_entries` VALUES ('9179','939','421','30861','0.25','','9','2011-09-16','2011','9','37','2011-09-16 16:15:45','2011-09-16 16:15:45');
 INSERT INTO `time_entries` VALUES ('9180','939','421','29160','3','','9','2011-09-16','2011','9','37','2011-09-16 17:51:58','2011-09-16 17:51:58');
+INSERT INTO `time_entries` VALUES ('9219','939','421','29160','2','','9','2011-09-17','2011','9','37','2011-09-18 04:52:53','2011-09-18 04:52:53');
+INSERT INTO `time_entries` VALUES ('9220','939','421','30314','1','','10','2011-09-17','2011','9','37','2011-09-18 04:53:11','2011-09-18 04:53:11');
+INSERT INTO `time_entries` VALUES ('9247','939','421','29160','1.5','','9','2011-09-18','2011','9','37','2011-09-19 13:07:58','2011-09-19 13:07:58');
+INSERT INTO `time_entries` VALUES ('9248','939','421','8536','0.5','','9','2011-09-18','2011','9','37','2011-09-19 13:16:35','2011-09-19 13:16:35');
+INSERT INTO `time_entries` VALUES ('9279','939','421','29713','0.5','','10','2011-09-19','2011','9','38','2011-09-20 13:42:04','2011-09-20 13:42:04');
+INSERT INTO `time_entries` VALUES ('9280','939','421','29712','0.5','','10','2011-09-20','2011','9','38','2011-09-20 13:43:18','2011-09-20 13:43:18');
+INSERT INTO `time_entries` VALUES ('9282','939','421','29160','1.5','','9','2011-09-20','2011','9','38','2011-09-20 15:22:58','2011-09-20 15:22:58');
+INSERT INTO `time_entries` VALUES ('9288','2974','4364','31330','0.666667','Criando o programa fonte e testando.','9','2011-09-19','2011','9','38','2011-09-20 19:36:09','2011-09-20 19:36:09');
+INSERT INTO `time_entries` VALUES ('9303','939','421','29712','0.25','','10','2011-09-21','2011','9','38','2011-09-21 00:55:11','2011-09-21 00:55:11');
+INSERT INTO `time_entries` VALUES ('9305','939','421','29713','0.25','','10','2011-09-20','2011','9','38','2011-09-21 00:55:26','2011-09-21 00:55:26');
+INSERT INTO `time_entries` VALUES ('9311','939','421','29712','1','','10','2011-09-20','2011','9','38','2011-09-21 04:14:38','2011-09-21 04:14:38');
+INSERT INTO `time_entries` VALUES ('9327','939','421','29712','4','','9','2011-09-21','2011','9','38','2011-09-21 11:19:31','2011-09-21 11:19:31');
+INSERT INTO `time_entries` VALUES ('9417','939','421','18550','0.25','','9','2011-09-23','2011','9','38','2011-09-23 10:03:25','2011-09-23 10:03:25');
+INSERT INTO `time_entries` VALUES ('9419','939','421','31385','0.5','','9','2011-09-23','2011','9','38','2011-09-23 14:18:09','2011-09-23 14:18:09');
+INSERT INTO `time_entries` VALUES ('9439','939','421','29160','4','','9','2011-09-22','2011','9','38','2011-09-24 09:33:19','2011-09-24 09:33:19');
+INSERT INTO `time_entries` VALUES ('9452','2974','4364','28310','2','Prova 01 - Limites.','9','2011-09-25','2011','9','38','2011-09-25 07:19:51','2011-09-25 07:19:51');
 
 
 ###################
@@ -32355,7 +32375,7 @@ CREATE TABLE `tokens` (
   `created_on` datetime NOT NULL,
   PRIMARY KEY (`id`),
   KEY `index_tokens_on_user_id` (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=22707 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=23340 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -32367,7 +32387,7 @@ CREATE TABLE `tokens` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-17 10:31:57
+-- Dump completed on 2011-09-25 12:17:17
 
 INSERT INTO `tokens` VALUES ('2','1','feeds','9ef23c0daf67450a6b88232a579e7588313c442e','2010-03-26 23:24:44');
 INSERT INTO `tokens` VALUES ('11263','2','recovery','9297b56e757c08c07724bf44da116616ceff23e9','2011-02-28 10:08:19');
@@ -32394,7 +32414,7 @@ INSERT INTO `tokens` VALUES ('10320','364','autologin','18bae66fd93d2b06a03accbd
 INSERT INTO `tokens` VALUES ('10321','364','api','d454fcd8adffc8dea2b1244700e5563bd78d3471','2011-02-12 20:06:45');
 INSERT INTO `tokens` VALUES ('2023','421','feeds','839c61d9522d5692cc02169f7064c59cb15449fe','2010-07-28 14:42:58');
 INSERT INTO `tokens` VALUES ('7202','421','api','92ade9f62bef667f644b2c8aef45d9a4cb96d8ab','2010-12-10 05:55:39');
-INSERT INTO `tokens` VALUES ('22577','421','autologin','8f3148281fcdfc6cf1f9beff267e80fafe7e3426','2011-09-15 16:00:41');
+INSERT INTO `tokens` VALUES ('23091','421','autologin','f5e0e89b871676b465eb1b3502031994359f9d8d','2011-09-22 13:39:22');
 INSERT INTO `tokens` VALUES ('2519','517','feeds','0ea90c27ec2a6c7e8f3cd6677701913f87a9aa3e','2010-08-13 19:06:24');
 INSERT INTO `tokens` VALUES ('2526','517','api','718dd16ed8e09c7c3c150c1faea1ab48705777d3','2010-08-14 00:16:43');
 INSERT INTO `tokens` VALUES ('3941','804','feeds','9512531aaa89206980d0f64648fc2cb9696e1134','2010-09-27 19:04:52');
@@ -32490,7 +32510,7 @@ CREATE TABLE `trackers` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-17 10:31:57
+-- Dump completed on 2011-09-25 12:17:17
 
 INSERT INTO `trackers` VALUES ('1','Bug','1','3','1');
 INSERT INTO `trackers` VALUES ('2','Feature','1','1','1');
@@ -32534,7 +32554,7 @@ CREATE TABLE `user_preferences` (
   `time_zone` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `index_user_preferences_on_user_id` (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4437 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4581 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -32546,7 +32566,7 @@ CREATE TABLE `user_preferences` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-17 10:31:57
+-- Dump completed on 2011-09-25 12:17:17
 
 INSERT INTO `user_preferences` VALUES ('1','1','--- {}\n\n','0',NULL);
 INSERT INTO `user_preferences` VALUES ('2','2','--- {}\n\n','0',NULL);
@@ -32632,7 +32652,7 @@ CREATE TABLE `users` (
   KEY `index_users_on_id_and_type` (`id`,`type`),
   KEY `index_users_on_auth_source_id` (`auth_source_id`),
   KEY `index_users_on_type` (`type`)
-) ENGINE=InnoDB AUTO_INCREMENT=4635 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4779 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -32644,7 +32664,7 @@ CREATE TABLE `users` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-17 10:31:57
+-- Dump completed on 2011-09-25 12:17:17
 
 INSERT INTO `users` VALUES ('1','admin','4b48fa7f19db858f6118d4f4553dca813bd82fa2','BitBot','Software','bitbot@bitbot.com.au','1','1','2010-03-26 23:24:43','en',NULL,'2010-03-26 22:44:21','2010-03-26 23:25:47','User',NULL,'all','5f62fb3abdce782f5f1e7de988be49b6');
 INSERT INTO `users` VALUES ('2','','','','Anonymous','','0','0',NULL,'',NULL,'2010-03-26 22:55:32','2010-03-26 22:55:32','AnonymousUser',NULL,'only_my_events',NULL);
@@ -32659,16 +32679,16 @@ INSERT INTO `users` VALUES ('226','Cip','2ed4b52dfb447408ed893b422831dba5708c184
 INSERT INTO `users` VALUES ('260','Mika56','d201f88a5180a7d595a47d9629cb5f92de0b0150','Mikael','Peigney','mikael.56@live.fr','0','1','2011-08-28 01:58:37','fr',NULL,'2010-06-15 23:52:19','2011-08-28 01:58:37','User',NULL,'all','fdc31658f20e1092e8c6fb68af8c7a80');
 INSERT INTO `users` VALUES ('271','raffertyd','4430adec038608d348da6090ec265bd1a9585b78','Damian','Rafferty','damian.rafferty@pulseplm.com','0','1','2010-11-19 08:17:40','en',NULL,'2010-06-20 06:17:23','2010-11-19 08:17:40','User',NULL,'only_my_events','bd89df6bfd88a60dd3b461831a9bbfd5');
 INSERT INTO `users` VALUES ('364','pbrada','3bb6a0249e64437c415db3cb6ee96bb38ac3d1f2','P?emek','Brada','brada@kiv.zcu.cz','0','1','2011-06-14 23:21:32','en',NULL,'2010-07-13 07:00:05','2011-06-14 23:21:32','User',NULL,'only_my_events','805b29cc33089f7926e0f8c7cfa29f0f');
-INSERT INTO `users` VALUES ('421','java','d6fda7cfc73f3e2610766e63dae815c20b63f53b','Alexey','Java','alskor@gmail.com','0','1','2011-09-16 15:29:05','en',NULL,'2010-07-28 14:41:34','2011-09-16 15:29:05','User',NULL,'selected','c2d263b137d452f309cb9e8799ef2598');
+INSERT INTO `users` VALUES ('421','java','d6fda7cfc73f3e2610766e63dae815c20b63f53b','Alexey','Java','alskor@gmail.com','0','1','2011-09-24 13:57:22','en',NULL,'2010-07-28 14:41:34','2011-09-24 13:57:22','User',NULL,'selected','c2d263b137d452f309cb9e8799ef2598');
 INSERT INTO `users` VALUES ('517','tnowak','2c29dd12407bd59cc8026fab02bcc97be1a41106','Thierry','Nowak','thinow@gmail.Com','0','1','2011-01-17 00:59:43','fr',NULL,'2010-08-13 18:58:34','2011-01-17 00:59:43','User',NULL,'only_my_events','8acd73797bc0ca7bc91ecd4e3fa0ddb0');
 INSERT INTO `users` VALUES ('804','HUan','f432905f0ea00b60b7b763f5c2dc73962b92d467','HU','an','huan@zjiaju.com','0','1','2011-09-02 17:41:10','zh',NULL,'2010-09-27 19:03:15','2011-09-02 17:41:27','User',NULL,'only_my_events','d1742843d11d85d21b999cac83bca402');
-INSERT INTO `users` VALUES ('1094','captainc','8d5bcf79b69da75e19e3c03e16b6a6e2b8211c52','Clemens','Maas','haraldblatand@mac.com','0','1','2011-09-16 03:30:30','en',NULL,'2010-11-05 21:17:39','2011-09-16 03:30:30','User',NULL,'only_my_events','f8d5df6dbef4061781cd94ca9c76245b');
+INSERT INTO `users` VALUES ('1094','captainc','8d5bcf79b69da75e19e3c03e16b6a6e2b8211c52','Clemens','Maas','haraldblatand@mac.com','0','1','2011-09-22 20:01:31','en',NULL,'2010-11-05 21:17:39','2011-09-22 20:01:31','User',NULL,'only_my_events','f8d5df6dbef4061781cd94ca9c76245b');
 INSERT INTO `users` VALUES ('1585','dmi','4936ae75e38ff9767f26348068dc92cbbe9624cb','Dmitry','Chernyak','dmi.chernyak@gmail.com','0','1','2011-02-27 08:58:30','en',NULL,'2011-01-11 20:58:48','2011-02-27 08:58:30','User',NULL,'all','3535fac94a95ee1fee39b4ba1c01ba9b');
 INSERT INTO `users` VALUES ('1611','mumford','f6185b18e1232ffd6c0b57eee5d0269fd120b38a','Tyler','Lastname','maddogx93@gmail.com','0','1','2011-01-13 05:12:47','en',NULL,'2011-01-13 03:32:01','2011-01-13 05:12:47','User',NULL,'all','5ae6c42b9fec627f94a0d3096d01d048');
 INSERT INTO `users` VALUES ('1863','NoWiS','68253a05fd1ace1aaf50ca02bf074c85de603f98','Simon','Vernhes','simon@vernhes.eu','0','1','2011-02-06 07:42:03','fr',NULL,'2011-02-05 08:07:38','2011-02-06 07:42:03','User',NULL,'only_my_events','bd024b9976eab6e918d2a24a032bc94e');
 INSERT INTO `users` VALUES ('1953','realsonic','d1c0be2d82d447f7cb1d5c2f4a4783df53afc9d0','Michael','Balanov','realsonic3@gmail.com','0','1','2011-09-08 16:57:16','ru',NULL,'2011-02-14 23:24:04','2011-09-08 16:57:16','User',NULL,'all','427f27e98f55cd798d21fb0da7268aa5');
 INSERT INTO `users` VALUES ('2107','baksa','3628a3a705ded91b7b10072fd1051aaeb1dfe68a','Istvan','Baksa','Istvan.Baksa@gmail.com','0','1','2011-06-23 19:16:43','en',NULL,'2011-02-28 06:30:07','2011-06-23 19:16:43','User',NULL,'only_my_events','a07dd41c21de5fb29ca9a5a90aa27c80');
-INSERT INTO `users` VALUES ('2236','lentsman','5e8fbe13e9d0ee4e737956b16b95eaa3922bdac1','?????','??????','denis.lentsov@inpec.ua','0','1','2011-09-16 20:03:37','ru',NULL,'2011-03-11 22:34:37','2011-09-16 20:03:37','User',NULL,'all','1a62623a87f829cf34e00023a1546853');
+INSERT INTO `users` VALUES ('2236','lentsman','5e8fbe13e9d0ee4e737956b16b95eaa3922bdac1','?????','??????','denis.lentsov@inpec.ua','0','1','2011-09-21 23:59:29','ru',NULL,'2011-03-11 22:34:37','2011-09-21 23:59:29','User',NULL,'all','1a62623a87f829cf34e00023a1546853');
 INSERT INTO `users` VALUES ('2321','speechkey','fe5f2799765d8d33265fe43ff85df0001f9d7e79','Artem','Grebenkin','artem.grebenkin@gmail.com','0','1','2011-06-09 08:04:42','en',NULL,'2011-03-20 00:38:44','2011-06-09 08:04:42','User',NULL,'all','77a4f9f291eddadddd44e8d0636a723f');
 INSERT INTO `users` VALUES ('2451','WayneS','5482bb6101c90af0dae71e1e374ccbebb8ab5e7c','Wayne','Sowry','wsowry@gmail.com','0','1','2011-04-20 20:46:06','en',NULL,'2011-03-29 21:45:45','2011-04-20 20:46:06','User',NULL,'only_my_events','57ae0a0ed53fac3efcfeacefd23e596c');
 INSERT INTO `users` VALUES ('2719','tomohern','921235533d0186ac3a4545ef6e339bf76181e0b3','Tom','O\'Hern','tom@ohern.net','0','1','2011-07-25 22:58:05','en',NULL,'2011-04-14 12:05:50','2011-07-25 22:59:46','User',NULL,'none','7c1e0456fc599993ba23066c280526d1');
@@ -32678,7 +32698,7 @@ INSERT INTO `users` VALUES ('3319','Yongfeng','c532477d52e7ac28395e8585237be9b2b
 INSERT INTO `users` VALUES ('3500','mukesh@commonfloor.com','4949a47eca35fb43078593e3e12e18ce84b00979','Mukesh','Ghatiya','mukesh@commonfloor.com','0','1','2011-09-03 15:17:46','en',NULL,'2011-06-23 18:50:54','2011-09-03 15:17:46','User',NULL,'only_my_events','7c6c5e49d8fb884e93feeb045b3e7e71');
 INSERT INTO `users` VALUES ('4031','joe42','1916083d9b69e474af6264e18fd071214b497d5f','Johannes','M¸ller','quirksquarks@web.de','0','1','2011-08-21 18:21:21','en',NULL,'2011-07-29 21:48:20','2011-08-21 18:21:21','User',NULL,'only_my_events','843da06ccc5591f5eb61428a76c4a11c');
 INSERT INTO `users` VALUES ('4224','mario','f4620741dac974c6ca310ff35824c5dabf90f382','Mario','Paulsen','mariopaulsen@yahoo.com','0','1','2011-08-16 11:27:14','en',NULL,'2011-08-14 03:24:56','2011-08-16 11:27:14','User',NULL,'only_my_events','549fbd0b785094f4759bfad229ceb893');
-INSERT INTO `users` VALUES ('4364','foguinho.peruca','5efaa9e5920a9bc189615979272260f510a18cfb','Jefferson','Campos','foguinho.peruca@gmail.com','0','1','2011-09-16 09:51:58','en',NULL,'2011-08-26 21:02:44','2011-09-16 09:51:58','User',NULL,'all','693ae57a4e9f14e535efa7c4a454440c');
+INSERT INTO `users` VALUES ('4364','foguinho.peruca','5efaa9e5920a9bc189615979272260f510a18cfb','Jefferson','Campos','foguinho.peruca@gmail.com','0','1','2011-09-25 06:42:09','en',NULL,'2011-08-26 21:02:44','2011-09-25 06:42:09','User',NULL,'all','693ae57a4e9f14e535efa7c4a454440c');
 
 
 ###################
@@ -32723,7 +32743,7 @@ CREATE TABLE `versions` (
   PRIMARY KEY (`id`),
   KEY `versions_project_id` (`project_id`),
   KEY `index_versions_on_sharing` (`sharing`)
-) ENGINE=InnoDB AUTO_INCREMENT=1248 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=1270 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -32735,7 +32755,7 @@ CREATE TABLE `versions` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-17 10:31:57
+-- Dump completed on 2011-09-25 12:17:17
 
 INSERT INTO `versions` VALUES ('1','1','Paid Subscriptions','',NULL,'2010-03-27 00:05:50','2010-03-27 00:05:50','','open','none');
 INSERT INTO `versions` VALUES ('4','1','Maintenance','',NULL,'2010-04-01 00:14:05','2010-04-01 00:14:05',NULL,'open','none');
@@ -32779,7 +32799,7 @@ CREATE TABLE `watchers` (
   KEY `watchers_user_id_type` (`user_id`,`watchable_type`),
   KEY `index_watchers_on_user_id` (`user_id`),
   KEY `index_watchers_on_watchable_id_and_watchable_type` (`watchable_id`,`watchable_type`)
-) ENGINE=InnoDB AUTO_INCREMENT=25251 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=26542 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -32791,7 +32811,7 @@ CREATE TABLE `watchers` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-17 10:31:57
+-- Dump completed on 2011-09-25 12:17:17
 
 INSERT INTO `watchers` VALUES ('146','Issue','118','3');
 INSERT INTO `watchers` VALUES ('707','Issue','859','3');
@@ -32884,6 +32904,7 @@ INSERT INTO `watchers` VALUES ('23592','Issue','25861','3');
 INSERT INTO `watchers` VALUES ('24152','Issue','29981','3');
 INSERT INTO `watchers` VALUES ('25200','Issue','25765','2236');
 INSERT INTO `watchers` VALUES ('25249','Issue','30885','3');
+INSERT INTO `watchers` VALUES ('26541','News','500','3');
 
 
 ###################
@@ -32927,7 +32948,7 @@ CREATE TABLE `wiki_content_versions` (
   PRIMARY KEY (`id`),
   KEY `wiki_content_versions_wcid` (`wiki_content_id`),
   KEY `index_wiki_content_versions_on_updated_on` (`updated_on`)
-) ENGINE=InnoDB AUTO_INCREMENT=8223 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8433 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -32939,7 +32960,7 @@ CREATE TABLE `wiki_content_versions` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-17 10:31:57
+-- Dump completed on 2011-09-25 12:17:17
 
 INSERT INTO `wiki_content_versions` VALUES ('1','1','1','3','h1. Welcome to Free Hosted Redmine\r\n\r\nh2. How Tos\r\n\r\n* [[Register|Register, create new projects and join existing projects]]\r\n* [[Repository|Add an SVN repository to your project]]\r\n\r\n','','','2010-03-29 13:17:52','1');
 INSERT INTO `wiki_content_versions` VALUES ('2','2','2','3','h1. Register, create new projects and join existing projects\r\n\r\n\r\nh2. Register\r\n\r\n\r\n\r\n\r\nh2. Create new projects\r\n\r\n\r\n\r\n\r\nh2. Join existing projects','','','2010-03-29 13:42:25','1');
@@ -32991,7 +33012,7 @@ CREATE TABLE `wiki_contents` (
   PRIMARY KEY (`id`),
   KEY `wiki_contents_page_id` (`page_id`),
   KEY `index_wiki_contents_on_author_id` (`author_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1952 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2000 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -33003,7 +33024,7 @@ CREATE TABLE `wiki_contents` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-17 10:31:57
+-- Dump completed on 2011-09-25 12:17:18
 
 INSERT INTO `wiki_contents` VALUES ('1','1','3','h1. Welcome to Free Hosted Redmine\r\n\r\nh2. How Tos\r\n\r\n* [[Register|Register, create new projects and join existing projects]]\r\n* [[Repository|Add an SVN repository to your project]]\r\n* [[Permissions|HostedRedmine.com User Permissions]]\r\n* [[Workflows|HostedRedmine.com Workflows]]\r\n* [[Plugins|HostedRedmine.com Plugins]]\r\n','','2011-03-23 19:14:44','4');
 INSERT INTO `wiki_contents` VALUES ('2','2','3','h1. Register, create new projects and join existing projects\r\n\r\n---\r\n\r\nh2. Register\r\n\r\nh3. Step 1: Click on the \"Register\" link.\r\n\r\n!Step1.png!\r\n\r\nh3. Step 2: Fill in your account details.\r\n\r\n!Step2.png!\r\n\r\nh3. Step 3: -Confirm your email address by clicking on the link in your Inbox.- We now have automatic activation turned on.\r\n\r\n!Step3.png!\r\n\r\nh3. Step 4: Login with your new account details.\r\n\r\n!Step4.png!\r\n\r\n\r\n---\r\n\r\nh2. Create new projects\r\n\r\nh3. Step 1: Click on the \"Projects\" link.\r\n\r\n!Step5.png!\r\n\r\nh3. Step 2: Click on the \"New Project\" link.\r\n\r\n!Step6.png!\r\n\r\nh3. Step 3: Fill in the project details.\r\n\r\n!Step7.png!\r\n\r\nh3. Step 4: Configure the project settings to your needs.\r\n\r\nIf you would like your project to be viewable by anybody, please tick the @Public@ button. Remember that your contributors need their own HostedRedmine.com account to add/edit content in your project and you need to configure their permissions.\r\n\r\nCongratulations, your new project is now ready to use.\r\n\r\n\r\n---\r\n\r\nh2. Join existing projects\r\n\r\nh3. Add contributors\r\n\r\nYou can add other HostedRedmine.com users to your project. This allows you to collaborate with other people.\r\n\r\n!Step8.png!\r\n\r\nYou should now have multiple contributors on your project.\r\n\r\nh3. Roles\r\n\r\nThe project roles available are Manager, Developer, Reporter and Guest. You can learn more about [[Workflows]] on the wiki page.\r\n\r\n\r\n---','','2011-04-17 22:00:45','5');
@@ -33048,7 +33069,7 @@ CREATE TABLE `wiki_pages` (
   KEY `wiki_pages_wiki_id_title` (`wiki_id`,`title`),
   KEY `index_wiki_pages_on_wiki_id` (`wiki_id`),
   KEY `index_wiki_pages_on_parent_id` (`parent_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1952 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2000 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -33060,7 +33081,7 @@ CREATE TABLE `wiki_pages` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-17 10:31:57
+-- Dump completed on 2011-09-25 12:17:18
 
 INSERT INTO `wiki_pages` VALUES ('577','1','My_Heading','2011-01-15 08:25:14','0',NULL);
 INSERT INTO `wiki_pages` VALUES ('568','1','Permissions','2011-01-13 18:57:05','0',NULL);
@@ -33108,7 +33129,7 @@ CREATE TABLE `wiki_redirects` (
   PRIMARY KEY (`id`),
   KEY `wiki_redirects_wiki_id_title` (`wiki_id`,`title`),
   KEY `index_wiki_redirects_on_wiki_id` (`wiki_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=76 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=81 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -33120,7 +33141,7 @@ CREATE TABLE `wiki_redirects` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-17 10:31:57
+-- Dump completed on 2011-09-25 12:17:18
 
 
 
@@ -33159,7 +33180,7 @@ CREATE TABLE `wikis` (
   `status` int(11) NOT NULL DEFAULT '1',
   PRIMARY KEY (`id`),
   KEY `wikis_project_id` (`project_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2986 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3077 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -33171,7 +33192,7 @@ CREATE TABLE `wikis` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-17 10:31:57
+-- Dump completed on 2011-09-25 12:17:18
 
 INSERT INTO `wikis` VALUES ('1','1','Wiki','1');
 INSERT INTO `wikis` VALUES ('2','2','Wiki','1');
@@ -33230,7 +33251,7 @@ CREATE TABLE `workflows` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-09-17 10:31:57
+-- Dump completed on 2011-09-25 12:17:18
 
 INSERT INTO `workflows` VALUES ('31','2','1','2','3','0','0');
 INSERT INTO `workflows` VALUES ('32','2','1','3','3','0','0');
