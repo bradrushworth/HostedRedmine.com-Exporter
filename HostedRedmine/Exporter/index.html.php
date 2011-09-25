@@ -30,9 +30,6 @@
 <div id="wrapper">
 <div id="wrapper2">
 <div id="top-menu">
-    <div id="account">
-        <ul><li><a href="/login" class="login">Sign in</a></li>
-<li><a href="/account/register" class="register">Register</a></li></ul>    </div>
     
     <ul><li><a href="/" class="home">Home</a></li>
 <li><a href="/projects" class="projects">Projects</a></li>
@@ -68,10 +65,16 @@
  
     <div id="content">
 
-<div><?= @$login_message ?></div>
-        
+<?php
+if (isset($login_message)) {
+?>
+<div class="flash error"><?php echo $login_message ?></div>
+<?php
+}
+?>
+      
 <div id="login-form">
-<form action="." method="post">
+<form action="index.php" method="post">
 <table>
 <tr>
     <td align="right"><label for="username">Login:</label></td>
@@ -97,10 +100,14 @@ Form.Element.focus('username');
 </script>
 </form>
 </div>
+
+<br/><br/><br/>
+
+<p align="center">After you login, the system will generate your export zip file and will present it for your download.
+<br/>Please be patient, the process may take a few minutes.</p>
+
+<div style="clear:both;"></div>
  
- 
-        
-				<div style="clear:both;"></div>
     </div>
 </div>
  

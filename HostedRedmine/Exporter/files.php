@@ -111,7 +111,7 @@ $disk_filename = array();
 
 // Export the database
 $database_file = "database_{$userId}.sql";
-exec("php database.php {$userId} > {$database_file}");
+exec("/usr/local/bin/php database.php {$userId} > {$database_file}");
 $disk_filename[] = $database_file;
 
 
@@ -134,7 +134,7 @@ if (!empty($attachments)) {
 if (create_zip($disk_filename, $file)) {
 	
 	// Clean up inputs
-	unlink($database_file)
+	unlink($database_file);
 	
 	// Stream the file to the client
 	header("Content-Type: application/zip");

@@ -1,5 +1,15 @@
 <?php
 
+if (PHP_SAPI === 'cli') {
+	if (count($argv)==2) {
+		$userId = $argv[1];
+	}
+} else {
+	if (isset($_GET['user'])) {
+		$userId = $_GET['user'];
+	}
+}
+
 if (!isset($userId)) {
 	die("You did not set the input User ID!\n");
 }

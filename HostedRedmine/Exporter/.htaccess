@@ -7,6 +7,6 @@ DirectoryIndex index.php
 order deny,allow
 deny from all
 
-<Files .>
+<Files index.php>
   allow from all
 </Files>
