@@ -1,14 +1,16 @@
 <?php
 
+
 if (!isset($userId)) {
 	die("You did not set the input User ID!\n");
 }
+
 
 require_once("sql.inc.php");
 require_once("zip.inc.php");
 
 
-$file = "files_{$userId}.zip";
+$zip_file = "files_{$userId}.zip";
 $disk_filename_path = "files";
 
 
@@ -120,28 +122,32 @@ if (!empty($attachments)) {
 	$query = "SELECT `disk_filename` FROM `attachments` where `id` IN ($attachments)";
 	$result = mysql_query($query) or die("Query messages failed: ".mysql_error()."\n");
 	while ($row = mysql_fetch_array($result, MYSQL_NUM)) {
-		//$disk_filenames .= '"' . $disk_filename_path . "/" . $row[0] . '"' . ",";
 		$disk_filenames[] = $disk_filename_path . "/" . $row[0];
-		//echo "disk_filenames: {$row[0]}\n";
 	}
-	print_r($disk_filenames);
-	
+
 }
 
+
 // Create the zip file
-if (false and create_zip($disk_filenames, $file)) {
+if (create_zip($disk_filenames, $zip_file, true)) {
 	
 	// Clean up inputs
 	unlink($database_file);
 	
 	// Stream the file to the client
 	header("Content-Type: application/zip");
-	header("Content-Length: " . filesize($file));
-	header("Content-Disposition: attachment; filename={$file}");
-	readfile($file);
+	header("Content-Length: " . filesize($zip_file));
+	header("Content-Disposition: attachment; filename={$zip_file}");
+	header('Content-Transfer-Encoding: binary');
+	header('Expires: 0');
+	header('Cache-Control: must-revalidate, post-check=0, pre-check=0');
+	header('Pragma: public');
+	ob_clean();
+	flush();
+	readfile($zip_file);
 	
 	// Clean up outputs
-	unlink($file);
+	unlink($zip_file);
 	
 } else {
 	echo "Failed to create zip file!\n";

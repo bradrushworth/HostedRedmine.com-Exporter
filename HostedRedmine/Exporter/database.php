@@ -239,11 +239,6 @@ if (!empty($projects)) {
 }
 
 
-
-
-// Export data into file
-//$backupFile = "hostedredmine_user_{$userId}_date_".date("Ymd_Hm").".sql";
-
 //Instantiate the SQL_Export class
 $e = new SQL_Export($server, $username, $password, $db);
 
@@ -253,6 +248,8 @@ $tables = $e->get_tables();
 // Open the output file
 $database_file = "database_{$userId}.sql";
 $fp = fopen($database_file, 'w');
+# Now UTF-8 - Add byte order mark
+fwrite($fp, pack("CCC",0xef,0xbb,0xbf));
 
 //Run the export
 foreach ($tables as $t) {

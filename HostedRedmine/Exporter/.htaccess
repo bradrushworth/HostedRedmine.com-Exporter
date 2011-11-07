@@ -10,3 +10,12 @@ deny from all
 <Files index.php>
   allow from all
 </Files>
+
+#<Files files_*.zip>
+#  allow from all
+#</Files>
+
+#<Files database_*.sql>
+#  allow from all
+#</Files>
+
