@@ -105,14 +105,19 @@ while ($row = mysql_fetch_array($result, MYSQL_NUM)) {
 $attachments = substr($attachments, 0, -1);
 
 
-// All the filenames to include in zip
-$disk_filename = array();
-
-
 // Export the database
 $database_file = "database_{$userId}.sql";
-exec("/usr/local/bin/php database.php {$userId} > {$database_file}");
-$disk_filename[] = $database_file;
+ob_start('database');
+require 'database.php';
+$output = ob_get_clean();
+
+$handle = fopen($database_file, 'w') or die("Cannot open file for writing!\n");
+fwrite($handle, $output);
+fclose($handle);
+
+
+// All the filenames to include in zip
+$disk_filename = array($database_file);
 
 
 // Prepare attachments
