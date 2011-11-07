@@ -107,17 +107,13 @@ $attachments = substr($attachments, 0, -1);
 
 // Export the database
 $database_file = "database_{$userId}.sql";
-ob_start('database');
-require 'database.php';
-$output = ob_get_clean();
-
-$handle = fopen($database_file, 'w') or die("Cannot open file for writing!\n");
-fwrite($handle, $output);
-fclose($handle);
-
+ob_start();
+require('database.php');
+$flushed = ob_get_flush();
+file_put_contents($database_file, $flushed) or die("Cannot open database file for writing!\n");
 
 // All the filenames to include in zip
-$disk_filename = array($database_file);
+$disk_filenames = array($database_file);
 
 
 // Prepare attachments
@@ -127,16 +123,16 @@ if (!empty($attachments)) {
 	$query = "SELECT `disk_filename` FROM `attachments` where `id` IN ($attachments)";
 	$result = mysql_query($query) or die("Query messages failed: ".mysql_error()."\n");
 	while ($row = mysql_fetch_array($result, MYSQL_NUM)) {
-		//$disk_filename .= '"' . $disk_filename_path . "/" . $row[0] . '"' . ",";
-		$disk_filename[] = $disk_filename_path . "/" . $row[0];
-		//echo "disk_filename: {$row[0]}\n";
+		//$disk_filenames .= '"' . $disk_filename_path . "/" . $row[0] . '"' . ",";
+		$disk_filenames[] = $disk_filename_path . "/" . $row[0];
+		//echo "disk_filenames: {$row[0]}\n";
 	}
-	//print_r($disk_filename);
+	print_r($disk_filenames);
 	
 }
 
 // Create the zip file
-if (create_zip($disk_filename, $file)) {
+if (false and create_zip($disk_filenames, $file)) {
 	
 	// Clean up inputs
 	unlink($database_file);

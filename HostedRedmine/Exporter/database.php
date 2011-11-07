@@ -14,15 +14,17 @@ if (!isset($userId)) {
 	die("You did not set the input User ID!\n");
 }
 
-require_once("sql.inc.php");
+require("sql.inc.php");
 require_once("sql_export.inc.php");
 
 
 // No HTML headers for CLI
+/*
 if (PHP_SAPI !== 'cli') {
 	header("Content-Type: text/sql");
 	header("Content-Disposition:attachment;filename=database_{$userId}.sql");
 }
+*/
 
 
 /*
