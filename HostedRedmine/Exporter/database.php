@@ -250,6 +250,10 @@ $e = new SQL_Export($server, $username, $password, $db);
 // Define the database tables
 $tables = $e->get_tables();
 
+// Open the output file
+$database_file = "database_{$userId}.sql";
+$fp = fopen($database_file, 'w');
+
 //Run the export
 foreach ($tables as $t) {
 	$header = $e->create_header($t);
@@ -373,7 +377,8 @@ foreach ($tables as $t) {
 			$data = $e->get_data($t);
 			break;
 	}
-	echo "\n###################\n# Dumping table `$t`\n###################\n\n$header\n$data\n";
+	fwrite($fp, "\n###################\n# Dumping table `$t`\n###################\n\n$header\n$data\n");
 }
+fclose($fp);
 
 ?>

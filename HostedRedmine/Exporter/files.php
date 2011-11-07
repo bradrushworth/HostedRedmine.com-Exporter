@@ -106,11 +106,8 @@ $attachments = substr($attachments, 0, -1);
 
 
 // Export the database
-$database_file = "database_{$userId}.sql";
-ob_start();
 require('database.php');
-$flushed = ob_get_flush();
-file_put_contents($database_file, $flushed) or die("Cannot open database file for writing!\n");
+
 
 // All the filenames to include in zip
 $disk_filenames = array($database_file);
