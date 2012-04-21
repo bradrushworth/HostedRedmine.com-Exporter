@@ -1,6 +1,6 @@
 <?php
 
-if($_POST['username'] and $_POST['password'] ) {
+if (isset($_POST['username']) and isset($_POST['password'])) {
 	
 	require_once("sql.inc.php");
 	

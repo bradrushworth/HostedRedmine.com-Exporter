@@ -214,13 +214,12 @@ if (!empty($projects)) {
 	//$users is already initalised
 	while ($row = mysql_fetch_array($result, MYSQL_NUM)) {
 		$journals .= $row[0] . ",";
-		$users .= $row[1] . ",";
+		//$users .= $row[1] . ",";
 		//echo "journals: {$row[0]}\n";
 		//echo "users: {$row[1]}\n";
 	}
 	$journals = substr($journals, 0, -1);
-	
-	if (substr($users,-1)==',') $users = substr($users, 0, -1);
+	//if (substr($users,-1)==',') $users = substr($users, 0, -1);
 	
 	// Find custom_values
 	$query = "SELECT `id` FROM `custom_values` where ";
@@ -334,11 +333,8 @@ foreach ($tables as $t) {
 		case 'repositories':
 			if (!empty($repositories)) $data = $e->get_data($t, "`id` IN ($repositories)");
 			break;
-		case 'theme_changer_user_settings':
-			if (!empty($users)) $data = $e->get_data($t, "`user_id` IN ($users)");
-			break;
 		case 'time_entries':
-			if (!empty($projects)) $data = $e->get_data($t, "`project_id` IN ($projects) OR `user_id` IN ($users)");
+			if (!empty($projects)) $data = $e->get_data($t, "`project_id` IN ($projects)");
 			break;
 		case 'tokens':
 			if (!empty($users)) $data = $e->get_data($t, "`user_id` IN ($users)");
@@ -369,6 +365,22 @@ foreach ($tables as $t) {
 			break;
 		case 'wiki_redirects':
 			if (!empty($wikis)) $data = $e->get_data($t, "`wiki_id` IN ($wikis)");
+			break;
+		# Plugins
+		case 'theme_changer_user_settings':
+			if (!empty($users)) $data = $e->get_data($t, "`user_id` IN ($users)");
+			break;
+		case 'chart_done_ratios':
+			if (!empty($projects)) $data = $e->get_data($t, "`project_id` IN ($projects)");
+			break;
+		case 'chart_issue_statuses':
+			if (!empty($projects)) $data = $e->get_data($t, "`project_id` IN ($projects)");
+			break;
+		case 'chart_saved_conditions':
+			if (!empty($projects)) $data = $e->get_data($t, "`project_id` IN ($projects)");
+			break;
+		case 'chart_time_entries':
+			if (!empty($projects)) $data = $e->get_data($t, "`project_id` IN ($projects)");
 			break;
 		default:
 			$data = $e->get_data($t);
