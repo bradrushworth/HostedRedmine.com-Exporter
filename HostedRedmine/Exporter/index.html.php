@@ -65,11 +65,9 @@
  
     <div id="content">
 
-
-<!--
+<?php /*
 <div class="flash error">Export function currently under maintenance. Come back in 1 hour.</div>
--->
-
+*/ ?>
 
 <?php
 if (isset($login_message)) {
