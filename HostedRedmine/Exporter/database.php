@@ -288,9 +288,6 @@ foreach ($tables as $t) {
 		case 'enumerations':
 			if (!empty($projects)) $data = $e->get_data($t, "`project_id` IN ($projects) OR `project_id` IS NULL");
 			break;
-		case 'gitosis_public_keys':
-			$data = $e->get_data($t, "FALSE");
-			break;
 		case 'groups_users':
 			if (!empty($users)) $data = $e->get_data($t, "`user_id` IN ($users)");
 			break;
@@ -367,6 +364,9 @@ foreach ($tables as $t) {
 			if (!empty($wikis)) $data = $e->get_data($t, "`wiki_id` IN ($wikis)");
 			break;
 		# Plugins
+		case 'gitosis_public_keys':
+			$data = $e->get_data($t, "FALSE");
+			break;
 		case 'theme_changer_user_settings':
 			if (!empty($users)) $data = $e->get_data($t, "`user_id` IN ($users)");
 			break;
