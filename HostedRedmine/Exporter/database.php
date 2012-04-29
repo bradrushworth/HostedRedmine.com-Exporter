@@ -270,6 +270,18 @@ foreach ($tables as $t) {
 		case 'changesets_issues':
 			if (!empty($changesets) and !empty($issues)) $data = $e->get_data($t, "`changeset_id` IN ($changesets) OR `issue_id` IN ($issues)");
 			break;
+		case 'chart_done_ratios': # Plugin
+			if (!empty($projects)) $data = $e->get_data($t, "`project_id` IN ($projects)");
+			break;
+		case 'chart_issue_statuses': # Plugin
+			if (!empty($projects)) $data = $e->get_data($t, "`project_id` IN ($projects)");
+			break;
+		case 'chart_saved_conditions': # Plugin
+			if (!empty($projects)) $data = $e->get_data($t, "`project_id` IN ($projects)");
+			break;
+		case 'chart_time_entries': # Plugin
+			if (!empty($projects)) $data = $e->get_data($t, "`project_id` IN ($projects)");
+			break;
 		case 'comments':
 			if (!empty($news)) $data = $e->get_data($t, "`commented_id` IN ($news)");
 			break;
@@ -288,6 +300,9 @@ foreach ($tables as $t) {
 		case 'enumerations':
 			if (!empty($projects)) $data = $e->get_data($t, "`project_id` IN ($projects) OR `project_id` IS NULL");
 			break;
+		case 'gitosis_public_keys': # Plugin
+			$data = $e->get_data($t, "FALSE");
+			break;
 		case 'groups_users':
 			if (!empty($users)) $data = $e->get_data($t, "`user_id` IN ($users)");
 			break;
@@ -296,6 +311,9 @@ foreach ($tables as $t) {
 			break;
 		case 'issue_categories':
 			if (!empty($projects)) $data = $e->get_data($t, "`project_id` IN ($projects)");
+			break;
+		case 'issue_checklists': # Plugin
+			if (!empty($issues)) $data = $e->get_data($t, "`id` IN ($issues)");
 			break;
 		case 'issue_relations':
 			if (!empty($issues)) $data = $e->get_data($t, "`issue_from_id` IN ($issues) OR `issue_to_id` IN ($issues)");
@@ -330,6 +348,9 @@ foreach ($tables as $t) {
 		case 'repositories':
 			if (!empty($repositories)) $data = $e->get_data($t, "`id` IN ($repositories)");
 			break;
+		case 'theme_changer_user_settings': # Plugin
+			if (!empty($users)) $data = $e->get_data($t, "`user_id` IN ($users)");
+			break;
 		case 'time_entries':
 			if (!empty($projects)) $data = $e->get_data($t, "`project_id` IN ($projects)");
 			break;
@@ -362,25 +383,6 @@ foreach ($tables as $t) {
 			break;
 		case 'wiki_redirects':
 			if (!empty($wikis)) $data = $e->get_data($t, "`wiki_id` IN ($wikis)");
-			break;
-		# Plugins
-		case 'gitosis_public_keys':
-			$data = $e->get_data($t, "FALSE");
-			break;
-		case 'theme_changer_user_settings':
-			if (!empty($users)) $data = $e->get_data($t, "`user_id` IN ($users)");
-			break;
-		case 'chart_done_ratios':
-			if (!empty($projects)) $data = $e->get_data($t, "`project_id` IN ($projects)");
-			break;
-		case 'chart_issue_statuses':
-			if (!empty($projects)) $data = $e->get_data($t, "`project_id` IN ($projects)");
-			break;
-		case 'chart_saved_conditions':
-			if (!empty($projects)) $data = $e->get_data($t, "`project_id` IN ($projects)");
-			break;
-		case 'chart_time_entries':
-			if (!empty($projects)) $data = $e->get_data($t, "`project_id` IN ($projects)");
 			break;
 		default:
 			$data = $e->get_data($t);
