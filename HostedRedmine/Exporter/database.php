@@ -64,6 +64,16 @@ if (!empty($projects)) {
 	}
 	$wikis = substr($wikis, 0, -1);
 	
+	// Find pages by wiki
+	$query = "SELECT `id` FROM `wiki_pages` where `wiki_id` IN ($wikis)";
+	$result = mysql_query($query) or die("Query wiki_pages failed: ".mysql_error()."\n");
+	$wiki_pages = "";
+	while ($row = mysql_fetch_array($result, MYSQL_NUM)) {
+		$wiki_pages .= $row[0] . ",";
+		//echo "wiki_pages: {$row[0]}\n";
+	}
+	$wiki_pages = substr($wiki_pages, 0, -1);
+
 	// Find issues by project
 	$query = "SELECT `id` FROM `issues` where `project_id` IN ($projects)";
 	$result = mysql_query($query) or die("Query issues failed: ".mysql_error()."\n");
@@ -373,10 +383,10 @@ foreach ($tables as $t) {
 			if (!empty($wikis)) $data = $e->get_data($t, "`id` IN ($wikis)");
 			break;
 		case 'wiki_contents':
-			if (!empty($wikis)) $data = $e->get_data($t, "`page_id` IN ($wikis)");
+			if (!empty($wiki_pages)) $data = $e->get_data($t, "`page_id` IN ($wiki_pages)");
 			break;
 		case 'wiki_content_versions':
-			if (!empty($wikis)) $data = $e->get_data($t, "`page_id` IN ($wikis)");
+			if (!empty($wiki_pages)) $data = $e->get_data($t, "`page_id` IN ($wiki_pages)");
 			break;
 		case 'wiki_pages':
 			if (!empty($wikis)) $data = $e->get_data($t, "`wiki_id` IN ($wikis)");
