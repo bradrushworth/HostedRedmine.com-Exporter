@@ -107,6 +107,13 @@ Form.Element.focus('username');
 
 <br/><br/><br/>
 
+<p align="center">This exporter allows users of HostedRedmine.com to regularly export their database contents for both backup and migration purposes.
+<br/>You can therefore use this utility to keep a local copy of your data on your computer.
+<br/>The exporter format is a zip file containing both the database SQL and all of your uploaded attachments.
+<br/>You can use these files to import directly into a new private Redmine instance with minimal disruption.</p>
+
+<p align="center">You may download your export at any time without affecting your ongoing use of HostedRedmine.com.</p>
+
 <p align="center">After you login, the system will generate your export zip file and will present it for your download.
 <br/>Please be patient, the process may take a few minutes.</p>
 
