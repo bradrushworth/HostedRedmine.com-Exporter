@@ -76,7 +76,9 @@ if (isset($login_message)) {
 <?php
 }
 ?>
-      
+
+<h3 align="center">Export Your Projects from HostedRedmine.com</h3>
+
 <div id="login-form">
 <form action="index.php" method="post">
 <table>
@@ -119,6 +121,14 @@ Form.Element.focus('username');
 
 <p align="center">The exporter now supports UTF-8 for international characters/languages.
 <br/>If you experience any issues with this, <a href="http://www.hostedredmine.com/projects/hosted-redmine/issues/new">please let me know</a>.</p>
+
+<p align="center">If you require a full Redmine instance with unrestricted Administrator access, 
+we recommend our partner <a href="https://plan.io/redmine-hosting/?ref=bitbot">Planio Redmine Hosting</a>. 
+<br/>Planio offers <a href="https://plan.io/pricing/?ref=bitbot">paid hosted Redmine</a> instances 
+including <a href="https://plan.io/subversion-hosting-and-git-hosting/?ref=bitbot">hosted Subversion and Git</a>. 
+Existing <a href="https://www.hostedredmine.com/">HostedRedmine.com</a> users 
+<br/>can also transition to Planio for free. Just export your data here and 
+<a href="https://plan.io/contact/?ref=bitbot">contact Planio</a> to request a free data import.</p>
 
 <div style="clear:both;"></div>
  
