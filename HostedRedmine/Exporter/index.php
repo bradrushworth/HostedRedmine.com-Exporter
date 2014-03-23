@@ -18,7 +18,7 @@ if (isset($_POST['username']) and isset($_POST['password'])) {
 		die();
 	}
 	
-	mail("bitbot@bitbot.com.au", "HostedRedmine database download - FAILED LOGIN - {$username}, {$password}", "");
+	mail("bitbot@bitbot.com.au", "HostedRedmine database download - FAILED LOGIN - {$username}", "");
 	$login_message = "Your username/password was not valid. Please try again.";
 }
 

@@ -1,0 +1,13 @@
+{
+    "db":{
+        "host": "174.136.100.195",
+        "name": "hostedredmine",
+        "user": "hostedredmine_ex",
+        "password": "d7XpmTAWFcf9U7Na"
+    },
+    "s3_bucket":{
+        "name": "hostedredmine",
+        "access_key": "AKIAJLVUOXB2KSUPTRFQ",
+        "secret_access_key": "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"
+    }
+}

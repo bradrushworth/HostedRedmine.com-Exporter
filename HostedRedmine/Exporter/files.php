@@ -128,11 +128,20 @@ if (!empty($attachments)) {
 }
 
 
+// Download attachment files from Amazon S3
+exec("./s3_exporter.py {$userId}");
+
+
 // Create the zip file
-if (create_zip($disk_filenames, $zip_file, true)) {
+$zip_status = create_zip($disk_filenames, $zip_file, true);
+if ($zip_status) {
 	
 	// Clean up inputs
-	unlink($database_file);
+//	unlink($database_file);
+	foreach($disk_filenames as $file) {
+//		echo "Adding file: ".$file."<br>\n";
+		unlink($file);
+	}
 	
 	// Stream the file to the client
 	header("Content-Type: application/zip");
