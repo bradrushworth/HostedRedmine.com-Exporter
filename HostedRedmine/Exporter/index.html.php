@@ -5,15 +5,11 @@
 <title>Free Redmine Hosting :: Export Your Projects</title>
 <meta name="description" content="Redmine" />
 <meta name="keywords" content="issue,bug,tracker" />
-<meta name="csrf-param" content="authenticity_token"/>
-<meta name="csrf-token" content="GnCduNvHtpIMTk439G4PGQinCR6ivWyfIQVUXoarPfU="/>
-<link rel='shortcut icon' href='/favicon.ico?1279937968' />
-<link href="/themes/ModulaMojito/stylesheets/application.css?1295041690" media="all" rel="stylesheet" type="text/css" />
+<link rel='shortcut icon' href='/favicon.ico?1393762153' />
+<link href="/stylesheets/jquery/jquery-ui-1.9.2.css?1369988629" media="all" rel="stylesheet" type="text/css" />
+<link href="/themes/coffee/stylesheets/application.css?1361909765" media="all" rel="stylesheet" type="text/css" />
  
-<script src="/javascripts/prototype.js?1307524965" type="text/javascript"></script>
-<script src="/javascripts/effects.js?1269601098" type="text/javascript"></script>
-<script src="/javascripts/dragdrop.js?1269601098" type="text/javascript"></script>
-<script src="/javascripts/controls.js?1269601098" type="text/javascript"></script>
+<script src="/javascripts/jquery-1.8.3-ui-1.9.2-ujs-2.0.3.js?1369988628" type="text/javascript"></script>
 <script src="/javascripts/application.js?1312192240" type="text/javascript"></script>
  
 <!--[if IE 6]>
@@ -26,12 +22,13 @@
 <!-- page specific tags -->
  
 </head>
-<body class="theme-Modulamojito controller-account action-login">
+<body class="theme-Coffee project-hosted-redmine controller-issues action-show">
 <div id="wrapper">
 <div id="wrapper2">
+<div id="wrapper3">
 <div id="top-menu">
     
-    <ul><li><a href="/" class="home">Home</a></li>
+<ul><li><a href="/" class="home">Home</a></li>
 <li><a href="/projects" class="projects">Projects</a></li>
 <li><a href="http://www.redmine.org/guide" class="help">Help</a></li></ul></div>
  
@@ -77,7 +74,7 @@ if (isset($login_message)) {
 }
 ?>
 
-<h3 align="center">Export Your Projects from HostedRedmine.com</h3>
+<h1 align="center">Export Your Projects from HostedRedmine.com</h1>
 
 <div id="login-form">
 <form action="index.php" method="post">
@@ -134,20 +131,21 @@ Existing <a href="https://www.hostedredmine.com/">HostedRedmine.com</a> users
  
     </div>
 </div>
+</div>
  
 <div id="ajax-indicator" style="display:none;"><span>Loading...</span></div>
-	
+<div id="ajax-modal" style="display:none;"></div>
+
 <div id="footer">
   <div class="bgl"><div class="bgr">
-    Proudly hosted by <a href="http://www.bitbot.com.au/">BitBot Software Pty Ltd</a>. Experts in <a href="http://www.bitbot.com.au/services/">Linux, FreeBSD and business open-source software</a>.
+    Powered by <a href="http://www.redmine.org/">Redmine</a> &copy; 2006-2014 Jean-Philippe Lang
     <br/>
-    Powered by <a href="http://www.redmine.org/">Redmine</a> &copy; 2006-2011 Jean-Philippe Lang
-    <br/>
-    Our content &copy; 2010 <a href="http://www.bitbot.com.au/contact-us/">BitBot Software Pty Ltd</a>. Licensed under <a rel="license" href="http://creativecommons.org/licenses/by-sa/2.5/au/">Creative Commons</a>.
+    Our content &copy; 2012 <a href="http://www.bitbot.com.au/contact-us/">BitBot Software Pty Ltd</a>. Licensed under <a rel="license" href="http://creativecommons.org/licenses/by-sa/2.5/au/">Creative Commons</a>.
   </div></div>
 </div>
 </div>
 </div>
+
 <script type="text/javascript"> 
  
   var _gaq = _gaq || [];
@@ -163,6 +161,7 @@ Existing <a href="https://www.hostedredmine.com/">HostedRedmine.com</a> users
   })();
  
 </script>
+
 </body>
 </html>
 
