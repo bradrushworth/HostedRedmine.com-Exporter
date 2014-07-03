@@ -36,7 +36,8 @@ if (!empty($attachments)) {
 
 
 // Download attachment files from Amazon S3
-exec("./s3_exporter.py {$userId}");
+echo "Running ./s3_exporter.py {$userId}";
+shell_exec("/usr/local/bin/python s3_exporter.py {$userId}");
 
 
 // Create the zip file
