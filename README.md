@@ -6,3 +6,6 @@ The original installation can be found here:
 https://www.hostedredmine.com/export/index.php
 
 If anyone would like to contribute improvements, please create a pull request.
+
+Note: The Python Amazon S3 Exporter script was originally donated by our friends at:
+https://github.com/vinay20045/s3_exporter
