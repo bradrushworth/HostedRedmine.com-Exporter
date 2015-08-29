@@ -1,5 +1,8 @@
 <?php
 
+if (isset($_GET['userId'])) {
+	$userId = $_GET['userId'];
+}
 
 if (!isset($userId)) {
 	die("You did not set the input User ID!\n");
@@ -30,6 +33,7 @@ if (!empty($attachments)) {
 	$result = mysql_query($query) or die("Query messages failed: ".mysql_error()."\n");
 	while ($row = mysql_fetch_array($result, MYSQL_NUM)) {
 		$disk_filenames[] = $disk_filename_path . "/" . $row[0];
+//		print $disk_filename_path . "/" . $row[0];
 	}
 
 }
