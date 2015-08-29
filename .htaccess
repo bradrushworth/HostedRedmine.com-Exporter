@@ -1,0 +1,20 @@
+# BR 2011-09-11
+AddType application/x-httpd-php .php
+AddType application/x-httpd-php-source .phps
+DirectoryIndex index.php
+
+order deny,allow
+deny from all
+
+<Files index.php>
+  allow from all
+</Files>
+
+#<Files files_*.zip>
+#  allow from all
+#</Files>
+
+#<Files database_*.sql>
+#  allow from all
+#</Files>
+
