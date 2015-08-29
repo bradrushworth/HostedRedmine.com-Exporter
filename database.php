@@ -64,15 +64,17 @@ if (!empty($projects)) {
 	}
 	$wikis = substr($wikis, 0, -1);
 	
-	// Find pages by wiki
-	$query = "SELECT `id` FROM `wiki_pages` where `wiki_id` IN ($wikis)";
-	$result = mysql_query($query) or die("Query wiki_pages failed: ".mysql_error()."\n");
-	$wiki_pages = "";
-	while ($row = mysql_fetch_array($result, MYSQL_NUM)) {
-		$wiki_pages .= $row[0] . ",";
-		//echo "wiki_pages: {$row[0]}\n";
+	if (!empty($wikis)) {
+		// Find pages by wiki
+		$query = "SELECT `id` FROM `wiki_pages` where `wiki_id` IN ($wikis)";
+		$result = mysql_query($query) or die("Query wiki_pages failed: ".mysql_error()."\n");
+		$wiki_pages = "";
+		while ($row = mysql_fetch_array($result, MYSQL_NUM)) {
+			$wiki_pages .= $row[0] . ",";
+			//echo "wiki_pages: {$row[0]}\n";
+		}
+		$wiki_pages = substr($wiki_pages, 0, -1);
 	}
-	$wiki_pages = substr($wiki_pages, 0, -1);
 
 	// Find issues by project
 	$query = "SELECT `id` FROM `issues` where `project_id` IN ($projects)";
