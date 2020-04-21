@@ -118,6 +118,7 @@ if __name__ == "__main__":
             db_cursor = db_conn.cursor()
             sql = """
                 SELECT
+                    CONCAT(CASE WHEN attachments.disk_directory IS NULL THEN '' ELSE CONCAT(attachments.disk_directory,'/') END, attachments.disk_filename)
                     attachments.disk_filename
                 FROM
                     attachments
@@ -130,7 +131,7 @@ if __name__ == "__main__":
                 UNION
 
                 SELECT
-                    attachments.disk_filename
+                    CONCAT(CASE WHEN attachments.disk_directory IS NULL THEN '' ELSE CONCAT(attachments.disk_directory,'/') END, attachments.disk_filename)
                 FROM
                     attachments
                 LEFT JOIN
@@ -142,7 +143,7 @@ if __name__ == "__main__":
                 UNION
 
                 SELECT
-                    attachments.disk_filename
+                    CONCAT(CASE WHEN attachments.disk_directory IS NULL THEN '' ELSE CONCAT(attachments.disk_directory,'/') END, attachments.disk_filename)
                 FROM
                     attachments
                 LEFT JOIN
@@ -154,7 +155,7 @@ if __name__ == "__main__":
                 UNION
 
                 SELECT
-                    attachments.disk_filename
+                    CONCAT(CASE WHEN attachments.disk_directory IS NULL THEN '' ELSE CONCAT(attachments.disk_directory,'/') END, attachments.disk_filename)
                 FROM
                     attachments
                 LEFT JOIN
@@ -166,7 +167,7 @@ if __name__ == "__main__":
                 UNION
 
                 SELECT
-                    attachments.disk_filename
+                    CONCAT(CASE WHEN attachments.disk_directory IS NULL THEN '' ELSE CONCAT(attachments.disk_directory,'/') END, attachments.disk_filename)
                 FROM
                     attachments
                 LEFT JOIN
@@ -178,7 +179,7 @@ if __name__ == "__main__":
                 UNION
 
                 SELECT
-                    attachments.disk_filename
+                    CONCAT(CASE WHEN attachments.disk_directory IS NULL THEN '' ELSE CONCAT(attachments.disk_directory,'/') END, attachments.disk_filename)
                 FROM
                     attachments
                 LEFT JOIN
